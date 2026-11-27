@@ -1,0 +1,676 @@
+{
+    "releases": [
+        {
+            "tag": "v0.21.6",
+            "name": "usql v0.21.6",
+            "date": "2026-09-22",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.21.5...v0.21.6\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.21.6-linux-amd64-9db2ab02](https://www.virustotal.com/gui/file-analysis/YTIwYjlmM2FmYTIyOWI1ZTc5MDdkYjY1MmFjMjEyMzU6MTc5MDExMjg2OA==/detection)\n* [usql_static-0.21.6-linux-arm64-be9387c4](https://www.virustotal.com/gui/file-analysis/ODhhYzc1MTRiNmY0MzM0OTYzZTMxYjE3ZWE3OWViNTk6MTc5MDExMjg3Mg==/detection)\n* [usql-0.21.6-darwin-amd64-d06038e6](https://www.virustotal.com/gui/file-analysis/ZDkyNjNmMWFhMTMzYWMwOGE1MDE5N2Y5MzUwMjY3NmI6MTc5MDExMjg3OA==/detection)\n* [usql-0.21.6-darwin-arm64-780abe9f](https://www.virustotal.com/gui/file-analysis/ZDMxZDliNDllZjRmNzVmYjgwN2FkMjE5NWJiOGU3MWU6MTc5MDExMjg4Mg==/detection)\n* [usql-0.21.6-darwin-universal-4ab4f5e6](https://www.virustotal.com/gui/file-analysis/NDEzZjNlZDU2M2U1YTEyMzdjMjgzNThlYzExMzdmMWU6MTc5MDExMjkzMA==/detection)\n* [usql-0.21.6-linux-amd64-56f26b8e](https://www.virustotal.com/gui/file-analysis/NDJhOWQzODFhNWI1NGFkOGJlOTg1ZWU3MjI4MjI2Zjk6MTc5MDExMjkzNA==/detection)\n* [usql-0.21.6-linux-arm-98eaa490](https://www.virustotal.com/gui/file-analysis/YzYxZGY0MjI4MTU1YTc3MjkwNTZiM2IxOWE4NDYwMjM6MTc5MDExMjkzOA==/detection)\n* [usql-0.21.6-linux-arm64-89e631c6](https://www.virustotal.com/gui/file-analysis/MzgzOTIxMmRlOWY3ZThhZGQ3MjYyNjllMGZlYmQ2Nzc6MTc5MDExMjk0Mg==/detection)\n* [usql-0.21.6-windows-amd64-ca515ff1.exe](https://www.virustotal.com/gui/file-analysis/ZWM5MTkyYWIwNzFjZWUyZWRmMTJhNGY4OGE3OGY5NzA6MTc5MDExMjk0NQ==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.21.6"
+        },
+        {
+            "tag": "v0.21.5",
+            "name": "usql v0.21.5",
+            "date": "2026-09-13",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.21.4...v0.21.5\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.21.5-linux-amd64-277a38e8](https://www.virustotal.com/gui/file-analysis/ODM3YzJjOTFhNGZkZDc0OTFhNTFmMzUzNTk5MWIzNDM6MTc4OTI4MzAzNA==/detection)\n* [usql_static-0.21.5-linux-arm64-dd77024f](https://www.virustotal.com/gui/file-analysis/YjU4YTBlMGJhY2FjOWM3NGE1YjlkYjIyZWNiMjE4YTc6MTc4OTI4MzAzOA==/detection)\n* [usql-0.21.5-darwin-amd64-38c0e984](https://www.virustotal.com/gui/file-analysis/ZmMxNGMzNWEzMDBlZTUyMmM0MTE0NWIyN2JhYzYzYjY6MTc4OTI4MzA0Mg==/detection)\n* [usql-0.21.5-darwin-arm64-bc68dfac](https://www.virustotal.com/gui/file-analysis/ODJiNmM5ZDgwZjYzZTRmYzRlNTEwOTM5YjFkZmVjMzI6MTc4OTI4MzA0NQ==/detection)\n* [usql-0.21.5-darwin-universal-05eaa429](https://www.virustotal.com/gui/file-analysis/NmM4ZTcxZWI2NmFhZWU1OTY3ZDZlMjBjZGYxNTVjYzE6MTc4OTI4MzA5Ng==/detection)\n* [usql-0.21.5-linux-amd64-3671f49f](https://www.virustotal.com/gui/file-analysis/ODExZTA1Y2M2ZjliOTdmZDM0YTk1MGE0NTQ3Mzc5NTc6MTc4OTI4MzEwMA==/detection)\n* [usql-0.21.5-linux-arm-06bdce94](https://www.virustotal.com/gui/file-analysis/YmQ4ZTI3NzUyYThjZjk1NGI4MWNiY2JmMTU0YjgxODk6MTc4OTI4MzEwNQ==/detection)\n* [usql-0.21.5-linux-arm64-061cf2f8](https://www.virustotal.com/gui/file-analysis/ODhjMTM0NWQ5N2Y4NTA4MDkwMTc2Njk2NjA0MGM5NzA6MTc4OTI4MzExMA==/detection)\n* [usql-0.21.5-windows-amd64-a7b4687b.exe](https://www.virustotal.com/gui/file-analysis/ZDA1NTMwNjQzNjVhMTI3ODZkZDI3MDJjN2RjODkzMWQ6MTc4OTI4MzExMw==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.21.5"
+        },
+        {
+            "tag": "v0.21.4",
+            "name": "usql v0.21.4",
+            "date": "2026-03-26",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.21.3...v0.21.4\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.21.4-linux-amd64-2d49bf75](https://www.virustotal.com/gui/file-analysis/MTdhZGU3ZmZjN2EwYzc0OWFmY2Q1MWNlNDAyMjMwODA6MTc3NDUxNzA1Nw==/detection)\n* [usql_static-0.21.4-linux-arm64-25bcf4d2](https://www.virustotal.com/gui/file-analysis/YThhYjFiMWQ1ZjEyMzZlNmQwYjVmZDk4M2U5OWYwYmY6MTc3NDUxNzA2MA==/detection)\n* [usql-0.21.4-darwin-amd64-b07a5afc](https://www.virustotal.com/gui/file-analysis/NDgyMGYyNWEzNTFiYmQyYmY5MGIyYjA1OTYzMWI4N2U6MTc3NDUxNzA2NA==/detection)\n* [usql-0.21.4-darwin-arm64-d6b62d2b](https://www.virustotal.com/gui/file-analysis/M2MzNDMyYzg2MTBjOGYzZTE0NTRkMmU2MTVkNDRlNGM6MTc3NDUxNzA2Nw==/detection)\n* [usql-0.21.4-darwin-universal-73069f7a](https://www.virustotal.com/gui/file-analysis/NTlmMDExZjk2OTJhNGZjYWE4MzkzZjJiZGViNWY0YWE6MTc3NDUxNzExOQ==/detection)\n* [usql-0.21.4-linux-amd64-262925b2](https://www.virustotal.com/gui/file-analysis/ZTdjMmYxMjNlYWNkYjQ0OGQ4MWZlZjQ5NWY4NDAxNzY6MTc3NDUxNzEyMw==/detection)\n* [usql-0.21.4-linux-arm-bce94a5c](https://www.virustotal.com/gui/file-analysis/ZjliNDZkYzQ4ZGE4YTdhZTcxYWIwYWRhYTY5MmE1OWY6MTc3NDUxNzEyNg==/detection)\n* [usql-0.21.4-linux-arm64-4fae1adb](https://www.virustotal.com/gui/file-analysis/YTg4YWQ0YTMyNWIwMjcxNDQyYzI1NWZhYjMyMzJjOTQ6MTc3NDUxNzEyOA==/detection)\n* [usql-0.21.4-windows-amd64-cdd4ac62.exe](https://www.virustotal.com/gui/file-analysis/ZjdhNjkwYTBjNWQ3ZGFhZDAxZDA0YTJmZjk2ZWQwY2Q6MTc3NDUxNzEzMQ==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.21.4"
+        },
+        {
+            "tag": "v0.21.3",
+            "name": "usql v0.21.3",
+            "date": "2026-03-25",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.21.2...v0.21.3\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.21.3-linux-amd64-40e9a45f](https://www.virustotal.com/gui/file-analysis/YWNmM2JjYjAxZjA2NDEwODRjMjc1ZTA1MjUyZDZjODg6MTc3NDQ3NzM1Ng==/detection)\n* [usql_static-0.21.3-linux-arm64-acfe66a7](https://www.virustotal.com/gui/file-analysis/ZTc1Mjg4NDM2ODRkY2U5OGJmN2RiNDc4NmU2OWM4YzY6MTc3NDQ3NzM1OQ==/detection)\n* [usql-0.21.3-darwin-amd64-7232ee04](https://www.virustotal.com/gui/file-analysis/MjlkZWUwNzNjNjRlZWJlMThkNTNjYTZhNzYyY2JiZDQ6MTc3NDQ3NzM2Mg==/detection)\n* [usql-0.21.3-darwin-arm64-3f46fcf0](https://www.virustotal.com/gui/file-analysis/Y2FhMjNhZjlhNjRjMmEwYzgyMDk3MGM5OWJjNjkzMzk6MTc3NDQ3NzM2NQ==/detection)\n* [usql-0.21.3-darwin-universal-fff0b8b3](https://www.virustotal.com/gui/file-analysis/YjQzNTgyOTliZTY2NmNmYjQ5MTI3YzYzYWY2ZjA1NWI6MTc3NDQ3NzQxOQ==/detection)\n* [usql-0.21.3-linux-amd64-6ceaaa46](https://www.virustotal.com/gui/file-analysis/OGI5NjI5Y2EwNTEwODc0OWNiYWZhYzc1MDEyMGVmNDM6MTc3NDQ3NzQyMw==/detection)\n* [usql-0.21.3-linux-arm-c7feb765](https://www.virustotal.com/gui/file-analysis/MmMyMTE4ODQzMWM2MmFhNDQzMTFiZmQxM2IzODUwYTg6MTc3NDQ3NzQyNg==/detection)\n* [usql-0.21.3-linux-arm64-e6b5759c](https://www.virustotal.com/gui/file-analysis/NjM4NjdhMzM1NzRhNWRiNzhjZmFmZjE3Yzk4NzUxY2I6MTc3NDQ3NzQzMA==/detection)\n* [usql-0.21.3-windows-amd64-32e5cc0b.exe](https://www.virustotal.com/gui/file-analysis/NzEwYTg1YmIxZWZiMWQ1YTdkN2NjNDQ5ODE2OTU5YTM6MTc3NDQ3NzQzMw==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.21.3"
+        },
+        {
+            "tag": "v0.21.2",
+            "name": "usql v0.21.2",
+            "date": "2026-03-25",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.21.1...v0.21.2\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.21.2-linux-amd64-f341b9e1](https://www.virustotal.com/gui/file-analysis/YWVkNmFiYTk0MzNhMzUyYjZlYmMzMzk0MGM4OGY3OGE6MTc3NDQ3NjUyMA==/detection)\n* [usql_static-0.21.2-linux-arm64-6ab6da68](https://www.virustotal.com/gui/file-analysis/M2UyNmY3MzM4ZDYwN2Q2OGJjNTdjYjRlOTA0ZjI4Nzk6MTc3NDQ3NjUyNA==/detection)\n* [usql-0.21.2-darwin-amd64-de8a9e75](https://www.virustotal.com/gui/file-analysis/NDdhZGFhMDRjZTgxOWNjNzVmZDBkMjI3NGIxOWE0YTc6MTc3NDQ3NjUyOA==/detection)\n* [usql-0.21.2-darwin-arm64-50e07350](https://www.virustotal.com/gui/file-analysis/NjcxOTQ5Njc1YjZmYTYyNjE3NmMwYjNmNGJkM2EwNTk6MTc3NDQ3NjUzMg==/detection)\n* [usql-0.21.2-darwin-universal-2595841d](https://www.virustotal.com/gui/file-analysis/ZTk0MmU3Y2VjOTU4MWZiYTAxODVhM2NiNDM4ZjQ4ZTE6MTc3NDQ3NjU4Mg==/detection)\n* [usql-0.21.2-linux-amd64-11bd5824](https://www.virustotal.com/gui/file-analysis/NjM2OGNmODcxMzU5YzM0ODUxODA1MDA2Y2M3N2I0NTQ6MTc3NDQ3NjU4Nw==/detection)\n* [usql-0.21.2-linux-arm-5609743b](https://www.virustotal.com/gui/file-analysis/ZDc4MDJhNzEwNTg3MGY1ZTliYzU2ZDYzMzkwYmEwY2I6MTc3NDQ3NjU5MA==/detection)\n* [usql-0.21.2-linux-arm64-1c71e472](https://www.virustotal.com/gui/file-analysis/YzBmMzU3ZGZlYjMxYjRiNTA4MTQ5YTM3ZTY4YzNkZmM6MTc3NDQ3NjU5Mw==/detection)\n* [usql-0.21.2-windows-amd64-f4357c39.exe](https://www.virustotal.com/gui/file-analysis/MTcyZWNlNzA3ODVmNTYzOWE5M2E4MTIxZDA2ZjlkZWU6MTc3NDQ3NjU5Nw==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.21.2"
+        },
+        {
+            "tag": "v0.21.1",
+            "name": "usql v0.21.1",
+            "date": "2026-03-03",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.21.0...v0.21.1\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.21.1-linux-amd64-2e2f7015](https://www.virustotal.com/gui/file-analysis/NzYyNTE5MTQ3ZWIwOWJjODg3Y2IzMzBmOWRhMzQxNzI6MTc3MjU3OTYzMw==/detection)\n* [usql_static-0.21.1-linux-arm64-f11b3317](https://www.virustotal.com/gui/file-analysis/M2Y5OTkyZGNmMDA3NDIwY2E4ZjRjZmVlZTU5NjkyOTU6MTc3MjU3OTYzOA==/detection)\n* [usql-0.21.1-darwin-amd64-944cc70a](https://www.virustotal.com/gui/file-analysis/MThmMDIyZjFhYzgzODZjZTAwMTQ0OTBjOTRmZmI3ZTc6MTc3MjU3OTY0Mw==/detection)\n* [usql-0.21.1-darwin-arm64-cbeadd24](https://www.virustotal.com/gui/file-analysis/OTYzMTE0N2RmM2Q3YmVkYWYxY2I1Y2IzOGYwYmU5MDY6MTc3MjU3OTY0Nw==/detection)\n* [usql-0.21.1-darwin-universal-00acc535](https://www.virustotal.com/gui/file-analysis/Y2JhNmU5ODZkZmJiNDA1YzVlODZiYWVkNmY2OWRlMzc6MTc3MjU3OTY5NQ==/detection)\n* [usql-0.21.1-linux-amd64-06700e43](https://www.virustotal.com/gui/file-analysis/MjU5ZTBiNTBjOWQ5MWYxZDk4ZTY5NWE2NjUwOGMwMTU6MTc3MjU3OTY5OQ==/detection)\n* [usql-0.21.1-linux-arm-d6716c97](https://www.virustotal.com/gui/file-analysis/ODc4MzkwZDBmMmQ0ODE4NTgxN2M1MDc1OWY5OGI2NmE6MTc3MjU3OTcwMw==/detection)\n* [usql-0.21.1-linux-arm64-3de17909](https://www.virustotal.com/gui/file-analysis/MGFiNWQ2ZTUyNWJmZWIyNzE0OGVlOGE2MmRlYThiOTc6MTc3MjU3OTcwNw==/detection)\n* [usql-0.21.1-windows-amd64-d85f6fd3.exe](https://www.virustotal.com/gui/file-analysis/MmZlODdmNTU4MGI0NDVjN2UyMDEzNGI3MmQxNDlhOGQ6MTc3MjU3OTcxMQ==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.21.1"
+        },
+        {
+            "tag": "v0.21.0",
+            "name": "usql v0.21.0",
+            "date": "2026-03-03",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.20.8...v0.21.0\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.21.0-linux-amd64-54b2eb90](https://www.virustotal.com/gui/file-analysis/Y2EzMTQwODg2NzU3ZDMyODc3MjljMjFiOWNmY2RmMWU6MTc3MjUyOTM5OQ==/detection)\n* [usql_static-0.21.0-linux-arm64-c2b2c3b2](https://www.virustotal.com/gui/file-analysis/ODc5MmI3ZWFiOTg4YjA1MjU4N2YwOWU0OGQyNjk1NDM6MTc3MjUyOTQwMg==/detection)\n* [usql-0.21.0-darwin-amd64-087d897b](https://www.virustotal.com/gui/file-analysis/OTU3OWNhMTkxNjRiNDI0YmJiNjJjYjFhYzc4MjcxNDE6MTc3MjUyOTQwNQ==/detection)\n* [usql-0.21.0-darwin-arm64-2c03cd1b](https://www.virustotal.com/gui/file-analysis/MWIyNGZhYWJmZmZhZDM2NTE2ZDYzMzU2MzI1YzcyMWQ6MTc3MjUyOTQwOQ==/detection)\n* [usql-0.21.0-darwin-universal-46e13ab5](https://www.virustotal.com/gui/file-analysis/MTc2OTQ1NzhlYjE4YWUwNmJiOWNlZDZkODI0OWM4ZjI6MTc3MjUyOTQ2MQ==/detection)\n* [usql-0.21.0-linux-amd64-b4ace47f](https://www.virustotal.com/gui/file-analysis/NDBjMjFmM2U3ZjVhZGE1MGRmZGU3MTFlMmY0ZTIwNWE6MTc3MjUyOTQ2NQ==/detection)\n* [usql-0.21.0-linux-arm-f82f6584](https://www.virustotal.com/gui/file-analysis/Njg3ZWVjNWExYzhlMGQyOTEyOWZmZTc1YzI5Mzc0NzY6MTc3MjUyOTQ2OA==/detection)\n* [usql-0.21.0-linux-arm64-57541983](https://www.virustotal.com/gui/file-analysis/Y2FmNWY2Nzc3NzZkMzQ3NjhlMGEyMmY3ZDEwNmMwMWU6MTc3MjUyOTQ3Mg==/detection)\n* [usql-0.21.0-windows-amd64-0751e5ab.exe](https://www.virustotal.com/gui/file-analysis/ZjRhMmM5ZDFiNGI3NDdjNjljNmQyZjg3M2E3ZjU0NTQ6MTc3MjUyOTQ3Ng==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.21.0"
+        },
+        {
+            "tag": "v0.20.8",
+            "name": "usql v0.20.8",
+            "date": "2026-01-11",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.20.7...v0.20.8\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.20.8-linux-amd64-87e42942](https://www.virustotal.com/gui/file-analysis/ZTk3NDMwNmQ0ZGY3OTJkN2ZlZTI0YzE3ZDI3NjIxMjE6MTc2ODA5NjE2Mg==/detection)\n* [usql_static-0.20.8-linux-arm64-29e2bc1b](https://www.virustotal.com/gui/file-analysis/ZDFiMjE4NTFkMDc1YWM1OGM3NzAxZjVjZDFlMmFiMDU6MTc2ODA5NjE2NQ==/detection)\n* [usql-0.20.8-darwin-amd64-3f3c30d6](https://www.virustotal.com/gui/file-analysis/Y2NlZmM2MmE1OWEzZDEzNDhiMGVkOWU2MWQ2YWMxYWI6MTc2ODA5NjE2OA==/detection)\n* [usql-0.20.8-darwin-arm64-39091ca1](https://www.virustotal.com/gui/file-analysis/ZDU1NjY1ZGMxMTRhNmU1ZTNhYWZkMTU4ODQzYThlYTE6MTc2ODA5NjE3Mg==/detection)\n* [usql-0.20.8-darwin-universal-5a19e9fb](https://www.virustotal.com/gui/file-analysis/ZjA0YzcwN2IxM2IwNjIzNzIzMWM5NzNlNGIzY2QyNDQ6MTc2ODA5NjIyMw==/detection)\n* [usql-0.20.8-linux-amd64-54a6f659](https://www.virustotal.com/gui/file-analysis/MDJlMmUxMTdmZmI3NWRiZDZkNzNjZjVhODhmYzZmMDk6MTc2ODA5NjIyOA==/detection)\n* [usql-0.20.8-linux-arm-2460d01a](https://www.virustotal.com/gui/file-analysis/YWM1ODkzZmNlZmRkZWFkOGNhOWFlM2M3NmNmOWVhOGU6MTc2ODA5NjIzMA==/detection)\n* [usql-0.20.8-linux-arm64-efd28739](https://www.virustotal.com/gui/file-analysis/ZmE4ZjEyNmI3NTE1YzUyOGQ2OWJlZWQyNTIyYTU1MWQ6MTc2ODA5NjIzNA==/detection)\n* [usql-0.20.8-windows-amd64-a661ba6d.exe](https://www.virustotal.com/gui/file-analysis/NzM3MmJhYjAzNjhiOTQ5OTZkMjcxNmQzNjUzYjIxODg6MTc2ODA5NjIzNw==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.20.8"
+        },
+        {
+            "tag": "v0.20.7",
+            "name": "usql v0.20.7",
+            "date": "2026-01-11",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.20.6...v0.20.7\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.20.7-linux-amd64-afa2933f](https://www.virustotal.com/gui/file-analysis/OTMxNGEyYTI1OWYxOGFjNzA2NGZmYWIyZTBjMjk3ODY6MTc2ODA5NTI5Nw==/detection)\n* [usql_static-0.20.7-linux-arm64-827884bd](https://www.virustotal.com/gui/file-analysis/YzFkZDU4Y2ZlZDA5NDBlMmU4ZjgzODNjYjMyMDU0OWU6MTc2ODA5NTI5OQ==/detection)\n* [usql-0.20.7-darwin-amd64-09bf1378](https://www.virustotal.com/gui/file-analysis/MGYyZDVjOTY0MDU1ZjU0MzZkYmMyYjUyZGZjMWUxMGU6MTc2ODA5NTMwMw==/detection)\n* [usql-0.20.7-darwin-arm64-8815811d](https://www.virustotal.com/gui/file-analysis/MzViOGU2NDMzMTQxZmRjNGNkZWRmYWQyYmVjN2Q0NWE6MTc2ODA5NTMwNQ==/detection)\n* [usql-0.20.7-darwin-universal-3f85cab8](https://www.virustotal.com/gui/file-analysis/MmRjNmQzYWY1ODkzYTdmNjFlY2RiOWVkNjUwZGVjNDE6MTc2ODA5NTM1OQ==/detection)\n* [usql-0.20.7-linux-amd64-54a4eca5](https://www.virustotal.com/gui/file-analysis/ZGY1OTJkYzZjNGE4MDgwN2VlYjA2Y2IzNTQyNmZlNTQ6MTc2ODA5NTM2NA==/detection)\n* [usql-0.20.7-linux-arm-2a25d29b](https://www.virustotal.com/gui/file-analysis/MGJjNzJiYWJkYTVjODhjMjcyYWVhMmNjMWM0NGUwMzE6MTc2ODA5NTM2Ng==/detection)\n* [usql-0.20.7-linux-arm64-b85ac620](https://www.virustotal.com/gui/file-analysis/NjVjYjA4Yzk0ZGNhMDY3OGNjOTg3MjAzMzY3NGM3MWI6MTc2ODA5NTM2OQ==/detection)\n* [usql-0.20.7-windows-amd64-78fd352e.exe](https://www.virustotal.com/gui/file-analysis/OTE4ZjgyYmZhYTEyMGE5M2YxMDI3OWNlNmE3MTg1NDY6MTc2ODA5NTM3Mg==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.20.7"
+        },
+        {
+            "tag": "v0.20.6",
+            "name": "usql v0.20.6",
+            "date": "2026-01-08",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.20.5...v0.20.6\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.20.6-linux-amd64-78c660b0](https://www.virustotal.com/gui/file-analysis/OGQxMTg2OWJmNzEyMGM1NGRiMjQxNDMzMmMyMzBkMDA6MTc2Nzg2NTE3MA==/detection)\n* [usql_static-0.20.6-linux-arm64-69619013](https://www.virustotal.com/gui/file-analysis/OWMwMDI3OWRmNWY2ODRjOTNlZTA3ZWU3NzZkMTlhYmI6MTc2Nzg2NTE3Mw==/detection)\n* [usql-0.20.6-darwin-amd64-c6522d3c](https://www.virustotal.com/gui/file-analysis/OTY1NWJiZWM0YjNkYjAyZjgwNzYyMzhiYTk4Nzc4MmM6MTc2Nzg2NTE3Nw==/detection)\n* [usql-0.20.6-darwin-arm64-a5f446e4](https://www.virustotal.com/gui/file-analysis/ZTI2MmY4ZTc1NzUyYjBiMDJmOGVlYzJjMzhjZDlmN2Y6MTc2Nzg2NTE4MQ==/detection)\n* [usql-0.20.6-darwin-universal-c9b967e1](https://www.virustotal.com/gui/file-analysis/YmMyNzg5YmYxNGFlODVhMDY0YjJkYzM1M2NmNWE0NmU6MTc2Nzg2NTIzMg==/detection)\n* [usql-0.20.6-linux-amd64-f42be038](https://www.virustotal.com/gui/file-analysis/NTU5ZTE5NDE1YmIzNDM1MjcyNWE5YmNiNmE3ODkxNWE6MTc2Nzg2NTIzNg==/detection)\n* [usql-0.20.6-linux-arm-de2bdc0b](https://www.virustotal.com/gui/file-analysis/Nzg3ZjY2NTU0NjM5OWUwOTZmN2QzMDE5MmQ2ZWVlNTM6MTc2Nzg2NTIzOA==/detection)\n* [usql-0.20.6-linux-arm64-8e5a6b67](https://www.virustotal.com/gui/file-analysis/ZDA4YTQ5MTI3ZWVhMjEzM2M0ZTExN2ZhY2Y1MDFlNzM6MTc2Nzg2NTI0MQ==/detection)\n* [usql-0.20.6-windows-amd64-09bfcd1a.exe](https://www.virustotal.com/gui/file-analysis/NzA2OTU4NWMyMjEzNDAzMDU4NTFjMjcxYzdhYWUzZTQ6MTc2Nzg2NTI0NQ==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.20.6"
+        },
+        {
+            "tag": "v0.20.5",
+            "name": "usql v0.20.5",
+            "date": "2026-01-08",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.20.4...v0.20.5\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.20.5-linux-amd64-d4b85fc8](https://www.virustotal.com/gui/file-analysis/NDdhNDVjNzUxODFkNjYxMGU2YWQ3YWY1N2IwZDAwNjc6MTc2NzgzODY3OQ==/detection)\n* [usql_static-0.20.5-linux-arm64-968ecafe](https://www.virustotal.com/gui/file-analysis/MmE1NWM1MDAwY2Y4MGJhMmQ3MjBlZmE4NTgxMmQ1NTA6MTc2NzgzODY4Mg==/detection)\n* [usql-0.20.5-darwin-amd64-1f1ae44f](https://www.virustotal.com/gui/file-analysis/NjMwMTgzMTg3OGIxMDRhNjM4NWYwZDg1OGUyMjM1YWU6MTc2NzgzODY4Ng==/detection)\n* [usql-0.20.5-darwin-arm64-781353c1](https://www.virustotal.com/gui/file-analysis/OTA2MWRjYTg4MGM0NzA5ZGY3ZjZmOTI3NWJhM2IxOTE6MTc2NzgzODY5MA==/detection)\n* [usql-0.20.5-darwin-universal-309d78a6](https://www.virustotal.com/gui/file-analysis/Y2E2N2VlZDc1OWQ3NmU2MjI2NWE3MTZhMjViYjlkY2I6MTc2NzgzODc0Mg==/detection)\n* [usql-0.20.5-linux-amd64-1d041c2b](https://www.virustotal.com/gui/file-analysis/OWM0OTViZDNjMzlkNmYyYzIzNDM1NTMyYzc0OTFiZGM6MTc2NzgzODc0Ng==/detection)\n* [usql-0.20.5-linux-arm-af32b7a7](https://www.virustotal.com/gui/file-analysis/NDg4YTQ2OGI4OTc3ZDQxYzE2M2Q0ZTYyMDcwOWJmZDc6MTc2NzgzODc0OQ==/detection)\n* [usql-0.20.5-linux-arm64-d49781c0](https://www.virustotal.com/gui/file-analysis/MGY3Y2Q0MWRjZTZmNGZmZmNlZWE0NDI0NGE2MGI4MGQ6MTc2NzgzODc1MQ==/detection)\n* [usql-0.20.5-windows-amd64-d2022fd9.exe](https://www.virustotal.com/gui/file-analysis/MDBjZDRhNmQ2YWI3N2Q1M2RmYjcyZmYxOGZmMTFlNzc6MTc2NzgzODc1NA==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.20.5"
+        },
+        {
+            "tag": "v0.20.4",
+            "name": "usql v0.20.4",
+            "date": "2026-01-08",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.20.3...v0.20.4\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.20.4-linux-amd64-e1495b80](https://www.virustotal.com/gui/file-analysis/MGI0ZWMzMjJlZjdjMTcxOWVkNmQ4OWU3MGQ3ZWIzMWE6MTc2NzgzNzYyNw==/detection)\n* [usql_static-0.20.4-linux-arm64-1ebcfe36](https://www.virustotal.com/gui/file-analysis/ZmI3MDgyYTg1ZWUzMDVmYTM0ZGViNGViZDZmNGMxM2Q6MTc2NzgzNzYzMA==/detection)\n* [usql-0.20.4-darwin-amd64-a7b470f8](https://www.virustotal.com/gui/file-analysis/ZDQ0ODZiNTQ0ZjhmOTI2YzliNjc3ZDMxYThhNzZhYjI6MTc2NzgzNzYzNA==/detection)\n* [usql-0.20.4-darwin-arm64-e291fba8](https://www.virustotal.com/gui/file-analysis/ZGZiOTM0MWRkYzNiNDdjNWI4NjA4ZTk2ZDBhNWJhNDg6MTc2NzgzNzYzNw==/detection)\n* [usql-0.20.4-darwin-universal-4af9140d](https://www.virustotal.com/gui/file-analysis/MjMyZjFlYTdhZTllMWY5ZmZiMDk3Nzc5NmMwZGZiYzA6MTc2NzgzNzY4Nw==/detection)\n* [usql-0.20.4-linux-amd64-2329864b](https://www.virustotal.com/gui/file-analysis/NmFhZDc0YTExNzU5MDE5OGFjZWFhNzcwNjRmZmNjZGU6MTc2NzgzNzY5MA==/detection)\n* [usql-0.20.4-linux-arm-85db14d9](https://www.virustotal.com/gui/file-analysis/NGY4ZGVmZjk3ZmJjN2QzNTA3ODc3YTZkZWRkZGQ3OTE6MTc2NzgzNzY5Mg==/detection)\n* [usql-0.20.4-linux-arm64-90f10bf2](https://www.virustotal.com/gui/file-analysis/MDIwZGZlNWExNTU2MGI4ZjM1ZmUwZGVmYzcyOTc1Y2U6MTc2NzgzNzY5NA==/detection)\n* [usql-0.20.4-windows-amd64-2e94608a.exe](https://www.virustotal.com/gui/file-analysis/ODc0ZGFlNjhhYzAwNDcxNDU1YTI3MWRlMjY4OWQ5ZTk6MTc2NzgzNzcwMA==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.20.4"
+        },
+        {
+            "tag": "v0.20.3",
+            "name": "usql v0.20.3",
+            "date": "2026-01-08",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.20.2...v0.20.3\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.20.3-linux-amd64-6a02a372](https://www.virustotal.com/gui/file-analysis/ZmMzYmY3NDU5NTM2Njc0NDQzZGMyMWRlYzVjZGMzOGY6MTc2NzgzMjU0MQ==/detection)\n* [usql_static-0.20.3-linux-arm64-72bb689e](https://www.virustotal.com/gui/file-analysis/OGE1ZjJmODRlMWNhODQ2OTI3NGQwZGQ3ZTFlZmQ2NTM6MTc2NzgzMjU0NA==/detection)\n* [usql-0.20.3-darwin-amd64-8aa48d9c](https://www.virustotal.com/gui/file-analysis/NTExYzk5ZGVlZDUwZTIxM2IyZTFiNDM2ZTNjOTcxN2U6MTc2NzgzMjU0OQ==/detection)\n* [usql-0.20.3-darwin-arm64-89443ab9](https://www.virustotal.com/gui/file-analysis/NTk0ODdhZmU3OWFhYWViMTJjZmIwNTBkYTAxMWM4M2E6MTc2NzgzMjU1NA==/detection)\n* [usql-0.20.3-darwin-universal-1bd3198a](https://www.virustotal.com/gui/file-analysis/ZjJjMGUyNGY4ZTdhNGMxNDFhOTE0MzRlN2ViMWEzMDU6MTc2NzgzMjYwMw==/detection)\n* [usql-0.20.3-linux-amd64-eab5dfb1](https://www.virustotal.com/gui/file-analysis/YTcwMWVhN2ZlMDBmMGE4MDc5M2U1YTgzOTJhOGE5YWI6MTc2NzgzMjYwNw==/detection)\n* [usql-0.20.3-linux-arm-c3dd567c](https://www.virustotal.com/gui/file-analysis/ZTZjY2Q1NzkzMGY4ZmY4YjRhMmY2NDhlYWVjN2M3YWI6MTc2NzgzMjYxMA==/detection)\n* [usql-0.20.3-linux-arm64-856ac892](https://www.virustotal.com/gui/file-analysis/NTQyOWY0YmNjNjg0ODM1M2EwZDRjODIzZmVhOTJhNjY6MTc2NzgzMjYxMw==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.20.3"
+        },
+        {
+            "tag": "v0.20.2",
+            "name": "usql v0.20.2",
+            "date": "2026-01-07",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.20.1...v0.20.2\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.20.2-linux-amd64-4864f244](https://www.virustotal.com/gui/file-analysis/YmFiMzQwZWM5ZGNlMTcwYjlhNmFmNjlmMmFmZWI3NTU6MTc2NzgzMDE3Mw==/detection)\n* [usql_static-0.20.2-linux-arm64-0ec9feef](https://www.virustotal.com/gui/file-analysis/ZDgzOWM5ZjIyYmIyYmU1NjBhMjI3NDcwYTY2NjY5OTQ6MTc2NzgzMDE3Ng==/detection)\n* [usql-0.20.2-darwin-amd64-4c2b4f24](https://www.virustotal.com/gui/file-analysis/Y2E5OWQ5MTM0MzI1ZWEyZWRhZWUyZjIwZmE5ZmI4ODg6MTc2NzgzMDE4MQ==/detection)\n* [usql-0.20.2-darwin-arm64-0948f800](https://www.virustotal.com/gui/file-analysis/MjhkMjZkMmU2M2Y0Y2VmN2YwNDBiYmNhZDdmZWMyMDY6MTc2NzgzMDE4NQ==/detection)\n* [usql-0.20.2-darwin-universal-78f1cd57](https://www.virustotal.com/gui/file-analysis/Mzg4M2I2ZTJiMTdiMDdlYTQ5ODU4MzA0NmExYTkwOTY6MTc2NzgzMDIzNQ==/detection)\n* [usql-0.20.2-linux-amd64-5efc6f9c](https://www.virustotal.com/gui/file-analysis/YjM4Y2UxNWJmYjlmZThhZTE3OTQ3ZTU5ZTZhNjMxMTY6MTc2NzgzMDIzOQ==/detection)\n* [usql-0.20.2-linux-arm-a36fb7ee](https://www.virustotal.com/gui/file-analysis/MzU4OGYyZWNhMTViZDQxODM5MzQ2NjYyYjUwMjc5OTM6MTc2NzgzMDI0Mw==/detection)\n* [usql-0.20.2-linux-arm64-3eda7eb0](https://www.virustotal.com/gui/file-analysis/NzY2N2NhMGVkMTcwNDJlOTA0OTYzYzczZTAyYWJjNDc6MTc2NzgzMDI0Ng==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.20.2"
+        },
+        {
+            "tag": "v0.20.1",
+            "name": "usql v0.20.1",
+            "date": "2026-01-07",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.20.0...v0.20.1\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.20.1-linux-amd64-a9bdc81b](https://www.virustotal.com/gui/file-analysis/MmNhZDZmYjczNmQ2MTJmZDkzYmRlNDBjNjZmOWE2ODA6MTc2NzgyODgzOA==/detection)\n* [usql_static-0.20.1-linux-arm64-3a312853](https://www.virustotal.com/gui/file-analysis/MzdiODFlZjA5NGRiNjAzMmFlYTUyNTMyYmRhOGFhMjM6MTc2NzgyODg0MQ==/detection)\n* [usql-0.20.1-darwin-amd64-c1cd403d](https://www.virustotal.com/gui/file-analysis/MzM0MDMzZTE4ODgzMjA0ZTAzNTc5OTM3ZDU3ZDdjZGE6MTc2NzgyODg0NA==/detection)\n* [usql-0.20.1-darwin-arm64-7e77a718](https://www.virustotal.com/gui/file-analysis/ZTJhODY4NDgwYWU4MGM0MzJiMWY4NWM1Y2MwMzRkOTY6MTc2NzgyODg0Nw==/detection)\n* [usql-0.20.1-darwin-universal-06c6bfdd](https://www.virustotal.com/gui/file-analysis/OGM4NmQ0NDA5N2Y2MjFhNGI3ZTc3ODg5YWQwYjk3ZDE6MTc2NzgyODkwMA==/detection)\n* [usql-0.20.1-linux-amd64-5b8d7cfe](https://www.virustotal.com/gui/file-analysis/N2I5YmRjZTMyNzY0ZTBlMmY5OGE3NTI5MjUyN2IyMzI6MTc2NzgyODkwMw==/detection)\n* [usql-0.20.1-linux-arm-b6d8378d](https://www.virustotal.com/gui/file-analysis/ZTljMjNlMjUxNWVlNTIzY2ZhMmRmZTY0MGIxNjEzNjE6MTc2NzgyODkwNg==/detection)\n* [usql-0.20.1-linux-arm64-7c7ad46f](https://www.virustotal.com/gui/file-analysis/ZDQ1YWY1MTY0YmJlMzg0ZjYwMmRiZTUyYTAzM2VjM2Q6MTc2NzgyODkwOA==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.20.1"
+        },
+        {
+            "tag": "v0.20.0",
+            "name": "usql v0.20.0",
+            "date": "2025-12-20",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.26...v0.20.0\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.20.0-linux-amd64-e285eb22](https://www.virustotal.com/gui/file-analysis/ZTgzZTY1MmU1ODhmYTZkYTgzYmQzNTFmYWU3MmQ2Yzc6MTc2NjE4ODk1Mw==/detection)\n* [usql_static-0.20.0-linux-arm64-3769038f](https://www.virustotal.com/gui/file-analysis/MmE0NmExN2ZhZjY4YzE1N2UwZjdiZjI0YjFkMWQxYWY6MTc2NjE4ODk1Ng==/detection)\n* [usql-0.20.0-darwin-amd64-b87a1742](https://www.virustotal.com/gui/file-analysis/YmY4MTZiZDdiOTllMmIwNzYxOTYyYjViZDEzYzBmODk6MTc2NjE4ODk2MA==/detection)\n* [usql-0.20.0-darwin-arm64-6a4049d1](https://www.virustotal.com/gui/file-analysis/MjllNDA4YzdmMjNkZWM1Y2I1OTk3ZWFhZDgyMWVhM2E6MTc2NjE4ODk2NA==/detection)\n* [usql-0.20.0-darwin-universal-34d1370a](https://www.virustotal.com/gui/file-analysis/YjVkMGJiYmE2YjIyZGIxNmNmNDhkOTc2NDY4ZTlkZDI6MTc2NjE4OTAxNQ==/detection)\n* [usql-0.20.0-linux-amd64-dd7177be](https://www.virustotal.com/gui/file-analysis/Y2RjMjkzOTYyNjJkMzZiNDE4ZmExNTZmMmRkZjZiYTY6MTc2NjE4OTAxOQ==/detection)\n* [usql-0.20.0-linux-arm-e959767c](https://www.virustotal.com/gui/file-analysis/MmQxNzI2MjU2NjJlM2FlMTI1NmI2NTNkN2U5NmZlYWM6MTc2NjE4OTAyMQ==/detection)\n* [usql-0.20.0-linux-arm64-e6a82a04](https://www.virustotal.com/gui/file-analysis/OTFjM2YyNWNjMzE2MGFmYzA2Y2E4ZGNmMmY2YTAzOGM6MTc2NjE4OTAyNA==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.20.0"
+        },
+        {
+            "tag": "v0.19.26",
+            "name": "usql v0.19.26",
+            "date": "2025-09-30",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.25...v0.19.26\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.26-linux-amd64-2adbe8c7](https://www.virustotal.com/gui/file-analysis/Nzc0ZjMyNmNiOTM4ZWZhMTU0ZGZiMGFkN2ExZjhkYzI6MTc1OTI2NzQwMQ==/detection)\n* [usql_static-0.19.26-linux-arm64-94e4cb13](https://www.virustotal.com/gui/file-analysis/YzFkZDNhNTNkODA5YzM2ODFjZGMyMzgwNGY1MTc1NjQ6MTc1OTI2NzQwNA==/detection)\n* [usql-0.19.26-darwin-amd64-e5687bb6](https://www.virustotal.com/gui/file-analysis/NTUzOTRkZjM3MTFiY2I3OWYzODk1ZDY0Y2UyN2Y4NmQ6MTc1OTI2NzQwNw==/detection)\n* [usql-0.19.26-darwin-arm64-feb88b3d](https://www.virustotal.com/gui/file-analysis/MDlmNjBiNTliNWQ5NzFlNWY5ZWIyZDk1ZTZhNzI2OTE6MTc1OTI2NzQxMQ==/detection)\n* [usql-0.19.26-darwin-universal-0c01be62](https://www.virustotal.com/gui/file-analysis/NzdkZmI5NDQ0NDU5Mjk2ZGRiY2Q3M2Y3ZDZhOWNkZWY6MTc1OTI2NzQ2Mw==/detection)\n* [usql-0.19.26-linux-amd64-0eef998e](https://www.virustotal.com/gui/file-analysis/MmE5MzQzMDlmNDQyYTZjMmY0M2MzODU4MTQ5Y2IxODk6MTc1OTI2NzQ2Nw==/detection)\n* [usql-0.19.26-linux-arm-e5472ab5](https://www.virustotal.com/gui/file-analysis/NzU3MTY2OWFiNjIwOWI0ZTdmMDk5ZDEyOTUyOTJkZDM6MTc1OTI2NzQ3MA==/detection)\n* [usql-0.19.26-linux-arm64-dd9c2f28](https://www.virustotal.com/gui/file-analysis/OGFlNWY1YmMwZWIzMjczMjEzNzIwYjI5MTBmNmE3ZmE6MTc1OTI2NzQ3Mw==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.26"
+        },
+        {
+            "tag": "v0.19.25",
+            "name": "usql v0.19.25",
+            "date": "2025-07-20",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.24...v0.19.25\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.25-linux-amd64-f2b0aa9b](https://www.virustotal.com/gui/file-analysis/M2IxNTM3MzNlYjM1NWQ5M2FmYjY0M2FkZjRmYjk0ODQ6MTc1Mjk3NTk4MQ==/detection)\n* [usql_static-0.19.25-linux-arm64-f39153a7](https://www.virustotal.com/gui/file-analysis/YTI0YWVlN2U0ZjBlMGY3NGE1YmJkZTY2YjZmNmQ3OGU6MTc1Mjk3NTk4NA==/detection)\n* [usql-0.19.25-darwin-amd64-57a12d05](https://www.virustotal.com/gui/file-analysis/ZTFiN2E1NzY5MzU0ZGJkOTg5NWFjOWM2ZjRlZmJhYzc6MTc1Mjk3NTk4Nw==/detection)\n* [usql-0.19.25-darwin-arm64-26209db6](https://www.virustotal.com/gui/file-analysis/MDVlNTU0NTYzNzg3NmQzZDZmZjFlMmVmZmNhMjJlOTI6MTc1Mjk3NTk5MQ==/detection)\n* [usql-0.19.25-darwin-universal-e5d56989](https://www.virustotal.com/gui/file-analysis/YTMxYWM5MjI4NmE4MWRhYzVlZDkwM2IxY2VkMjY4ZWI6MTc1Mjk3NjA0Mw==/detection)\n* [usql-0.19.25-linux-amd64-d044f563](https://www.virustotal.com/gui/file-analysis/ODgwODRjMTBkMDEyNmI2MjUyZGMyZjMyMjA3ODQzYTc6MTc1Mjk3NjA0Ng==/detection)\n* [usql-0.19.25-linux-arm-0fd19c84](https://www.virustotal.com/gui/file-analysis/NmFjMGFhZGU0ZWZmZGQ5ZmE5MjkwZTMyZTM2YjJjZTI6MTc1Mjk3NjA0OQ==/detection)\n* [usql-0.19.25-linux-arm64-0e68823e](https://www.virustotal.com/gui/file-analysis/NjNiNjlkMWRhNTFmYjNjZTIxYzlkNzMxM2I2NmI2ZWI6MTc1Mjk3NjA1Mg==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.25"
+        },
+        {
+            "tag": "v0.19.24",
+            "name": "usql v0.19.24",
+            "date": "2025-05-19",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.23...v0.19.24\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.24-linux-amd64-cb2cbfb6](https://www.virustotal.com/gui/file-analysis/MDJjZWI2OGQwOWZjMDdkMTg2ZWMzMmFhY2RmN2U1Y2U6MTc0NzY5NTcwNw==/detection)\n* [usql_static-0.19.24-linux-arm64-74f333c5](https://www.virustotal.com/gui/file-analysis/NzYyYTdmOWEyZDQ4MjYxYTlmZThhNzg3YTQ1YWM0MGI6MTc0NzY5NTcwOQ==/detection)\n* [usql-0.19.24-darwin-amd64-7cb3267f](https://www.virustotal.com/gui/file-analysis/MzZmODg1MzQ4Yjg0MWEwY2FmMGZkMjlkYmEzNDM1NDI6MTc0NzY5NTcxMw==/detection)\n* [usql-0.19.24-darwin-arm64-fd6f38a8](https://www.virustotal.com/gui/file-analysis/NjMxZDUwYzZmMzA0Y2ExNGE4MmZmMzQxNWRiNWUyZjg6MTc0NzY5NTcxNw==/detection)\n* [usql-0.19.24-darwin-universal-dcdcda7d](https://www.virustotal.com/gui/file-analysis/YjI2MDFjOTY0OWZiMmMxOWZjNDNlZmMwODUwMWM4Y2Q6MTc0NzY5NTc2OQ==/detection)\n* [usql-0.19.24-linux-amd64-28f126eb](https://www.virustotal.com/gui/file-analysis/NTNiNDNmYThmM2ZhYzE1ZTM5OTY0NzUyNmU2NWE5YTc6MTc0NzY5NTc3Mw==/detection)\n* [usql-0.19.24-linux-arm-fe918b91](https://www.virustotal.com/gui/file-analysis/NGM0NGJlM2E1YjYzZmRhM2E2ZGI1Njk5N2M3OTRhMDc6MTc0NzY5NTc3Ng==/detection)\n* [usql-0.19.24-linux-arm64-42c8e637](https://www.virustotal.com/gui/file-analysis/OGVlMGJjZTIzYjRkNmM5Nzk4ZmE1ZTVkYTk1ZjA2NmM6MTc0NzY5NTc3OQ==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.24"
+        },
+        {
+            "tag": "v0.19.23",
+            "name": "usql v0.19.23",
+            "date": "2025-05-09",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.22...v0.19.23\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.23-linux-amd64-889e5e8b](https://www.virustotal.com/gui/file-analysis/ZWNjMDdjOGVlNmQzMWExM2YxOTdkYzIwMWVjMzU0YTk6MTc0NjgyMzgwOA==/detection)\n* [usql_static-0.19.23-linux-arm64-bb0923e9](https://www.virustotal.com/gui/file-analysis/ZWMzNGVhODg3OTlkZmY3NmJhY2JlYWRkOWNjOTEwOWU6MTc0NjgyMzgxMQ==/detection)\n* [usql-0.19.23-darwin-amd64-c3b71634](https://www.virustotal.com/gui/file-analysis/NzJhZjU3ZmMzZjNjYWM4YTI4NTVkYzQ0ZTU5YWMyMWU6MTc0NjgyMzgxNA==/detection)\n* [usql-0.19.23-darwin-arm64-8369fbb0](https://www.virustotal.com/gui/file-analysis/NWFkZTdlYWFmNGYwYTM0YWJhYWY1NzQwYzMzNzU3N2I6MTc0NjgyMzgxNw==/detection)\n* [usql-0.19.23-darwin-universal-8b1145bb](https://www.virustotal.com/gui/file-analysis/OWY5NGNlOTgwOGIyMjNkNTM2ZmJkM2ZhN2ZkYTgzZTM6MTc0NjgyMzg2OQ==/detection)\n* [usql-0.19.23-linux-amd64-93561779](https://www.virustotal.com/gui/file-analysis/MTViMTM4MjM0M2ZjNWRiMzUwYWRjMDE4ZDZjYjI4YmY6MTc0NjgyMzg3Mw==/detection)\n* [usql-0.19.23-linux-arm-3e51ffaa](https://www.virustotal.com/gui/file-analysis/YzAwNDlhN2E0MTFmNDVhYmFhZjFlYzdjYzE5NDI0NmQ6MTc0NjgyMzg3Ng==/detection)\n* [usql-0.19.23-linux-arm64-1ac1e462](https://www.virustotal.com/gui/file-analysis/NDM3ODdkY2U2ZjZlZjU5NmM4Y2MzNWU3NWIzOWQ3ZDc6MTc0NjgyMzg3OA==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.23"
+        },
+        {
+            "tag": "v0.19.21",
+            "name": "usql v0.19.21",
+            "date": "2025-04-06",
+            "body": "## What's Changed\n* feat: Bring back Impala support by @murfffi in https://github.com/xo/usql/pull/518\n\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.19.20...v0.19.21\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.21-linux-amd64-0a28f833](https://www.virustotal.com/gui/file-analysis/YzU1YmM2ODQ2NmFkYjBkYjAwZDNjZjAwYWUyZDUyZmU6MTc0Mzk3MzYwNw==/detection)\n* [usql_static-0.19.21-linux-arm64-5a0573d8](https://www.virustotal.com/gui/file-analysis/NjA5Yjg1YTJkNmViY2RkYjA0Yjk4MGEwN2ZhNTQwMWY6MTc0Mzk3MzYxMA==/detection)\n* [usql-0.19.21-darwin-amd64-dc5bb34a](https://www.virustotal.com/gui/file-analysis/ODE0YTUyNmE0MWMwYTc0ZjMwNzc0ZWRlOTJjMDM4NzY6MTc0Mzk3MzYxMw==/detection)\n* [usql-0.19.21-darwin-arm64-61dd8055](https://www.virustotal.com/gui/file-analysis/Y2U1MmY1OTc4NWJjZmY5MGZhMmI1NDFkMjBlNTIzNGI6MTc0Mzk3MzYxNw==/detection)\n* [usql-0.19.21-darwin-universal-fcbacbba](https://www.virustotal.com/gui/file-analysis/YzE0NWRiNzRkMmI5MDQ4ZWM3NDJlMzA5MjBkMjY2ZmI6MTc0Mzk3MzY2OQ==/detection)\n* [usql-0.19.21-linux-amd64-a8d3937c](https://www.virustotal.com/gui/file-analysis/NTI5OTU0MDU0YzE4YzAzMmNjMjcxMGEzNTM5ZDg3OGY6MTc0Mzk3MzY3Mg==/detection)\n* [usql-0.19.21-linux-arm-c552fd74](https://www.virustotal.com/gui/file-analysis/OGRkNGM5ZTU2NzNkYTc0NTBlNGI5ZGQ2ZjY2MTdjY2Q6MTc0Mzk3MzY3NQ==/detection)\n* [usql-0.19.21-linux-arm64-c469114f](https://www.virustotal.com/gui/file-analysis/OTNmNDBiYjc3MDQ1OTVmMTRlZTg4Y2M1MDQwZDg2MzU6MTc0Mzk3MzY3Nw==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.21"
+        },
+        {
+            "tag": "v0.19.20",
+            "name": "usql v0.19.20",
+            "date": "2025-04-05",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.19...v0.19.20\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.20-linux-amd64-ac17e108](https://www.virustotal.com/gui/file-analysis/OTA2ZDc0N2I0Njc5OGQyNDFjNjE3N2I1NjM2Y2E5MjM6MTc0Mzg5MTYzMg==/detection)\n* [usql_static-0.19.20-linux-arm64-29ba6e09](https://www.virustotal.com/gui/file-analysis/ZDkyNWQyZGJhOTgzZGU4MTI0NWE3YmQyODNjYTczNjk6MTc0Mzg5MTYzNQ==/detection)\n* [usql-0.19.20-darwin-amd64-97183547](https://www.virustotal.com/gui/file-analysis/NmIxYzdmNTM0ODI1MmQwNDY4ZTEwYzRhOWM4YTdjNGY6MTc0Mzg5MTYzOQ==/detection)\n* [usql-0.19.20-darwin-arm64-61c60948](https://www.virustotal.com/gui/file-analysis/MDIyOTVlOTIxOWI1Y2VhNDcyMzlkNjdjNDMxNjUyMmM6MTc0Mzg5MTY0Mg==/detection)\n* [usql-0.19.20-darwin-universal-07b6e4bb](https://www.virustotal.com/gui/file-analysis/MzdmYTQ5MWE4YzI5ZTdjZmQ3MjFkOTUzNmJhY2M5MGE6MTc0Mzg5MTY5NA==/detection)\n* [usql-0.19.20-linux-amd64-5116d0f1](https://www.virustotal.com/gui/file-analysis/ODEwZTkxMjZiZmM3NzM1YTI2ZGQ5ZWMxNTJmZjAyZGQ6MTc0Mzg5MTY5OA==/detection)\n* [usql-0.19.20-linux-arm-549e0f6f](https://www.virustotal.com/gui/file-analysis/NmFjOTFiZjBjODliNjdmMGEwZDA2ZTViMjk2MDI2MDY6MTc0Mzg5MTcwMQ==/detection)\n* [usql-0.19.20-linux-arm64-fe3f17e5](https://www.virustotal.com/gui/file-analysis/ZTAwODY2ZTAxMmIxNThhOTgzYTJjYWIxZDM1YTNmNDU6MTc0Mzg5MTcwNA==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.20"
+        },
+        {
+            "tag": "v0.19.19",
+            "name": "usql v0.19.19",
+            "date": "2025-03-05",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.18...v0.19.19\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.19-linux-amd64-6e9df753](https://www.virustotal.com/gui/file-analysis/MjI0NjIyMDIzZDczOTI0NDMxYjExYzhjODhiYjc3MGU6MTc0MTE0MjAzMA==/detection)\n* [usql_static-0.19.19-linux-arm64-44bd4c01](https://www.virustotal.com/gui/file-analysis/NTk3NGZmMDllM2Y3MzQ3MDBiYWJlMzI3ZWE5YjIxYTI6MTc0MTE0MjAzMw==/detection)\n* [usql-0.19.19-darwin-amd64-9a539ce7](https://www.virustotal.com/gui/file-analysis/MWIxMzFiN2VlNzAwODc4YWQyYmNjODJhZGVmMTcwYjY6MTc0MTE0MjAzNw==/detection)\n* [usql-0.19.19-darwin-arm64-c2ca0af5](https://www.virustotal.com/gui/file-analysis/ZGU1NDJkNmMyYWYwZDYyMGZiYjk5N2E3OTQ4MGM4ZDM6MTc0MTE0MjA0MA==/detection)\n* [usql-0.19.19-darwin-universal-bd795ce7](https://www.virustotal.com/gui/file-analysis/MTU4N2QyZWI0NTY2OGRhZDU5NjliNjY0MjU2ODQ3ZjM6MTc0MTE0MjA5Mw==/detection)\n* [usql-0.19.19-linux-amd64-e698ed60](https://www.virustotal.com/gui/file-analysis/Njk4YjdmMmQxMDc1YWE4MzY4MDA3ZTNmMTAzNDMzMmE6MTc0MTE0MjA5Ng==/detection)\n* [usql-0.19.19-linux-arm-9664647e](https://www.virustotal.com/gui/file-analysis/YmJkNzkxZTA1NWYzNThmNzQ3N2NkMjFhM2NlZGNkZDY6MTc0MTE0MjA5OQ==/detection)\n* [usql-0.19.19-linux-arm64-c73aa216](https://www.virustotal.com/gui/file-analysis/ZTk4NTEyNmYxOTlhMGQ3MjA3NTdmYTNkNjc0ZTFjZjQ6MTc0MTE0MjEwMg==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.19"
+        },
+        {
+            "tag": "v0.19.18",
+            "name": "usql v0.19.18",
+            "date": "2025-03-03",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.17...v0.19.18\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.18-linux-amd64-9c0c251f](https://www.virustotal.com/gui/file-analysis/NGE2NWY4YzYzNDExZDY1YjdiY2JkNzY2MWJkNTlkZjE6MTc0MTA0NDY2Mw==/detection)\n* [usql_static-0.19.18-linux-arm64-6f9044b6](https://www.virustotal.com/gui/file-analysis/Zjk0YmMwZWNkM2FiNWIwMjJiMzNmYjAyNDg1YjUxMDA6MTc0MTA0NDY2Ng==/detection)\n* [usql-0.19.18-darwin-amd64-e46aa1ee](https://www.virustotal.com/gui/file-analysis/OTVmODQ4NGUwODQ5OWZkOWY0YzVkNGVkYTJiZDNhZmE6MTc0MTA0NDY3MA==/detection)\n* [usql-0.19.18-darwin-arm64-2cbc64a7](https://www.virustotal.com/gui/file-analysis/ZGZlZjljNWY4OTQwZjBlZjk5YWRmYmM0Y2I5NDQ1MGY6MTc0MTA0NDY3NA==/detection)\n* [usql-0.19.18-darwin-universal-5014b60a](https://www.virustotal.com/gui/file-analysis/OGM3MjcyYTEyZjFhZTgwZjJlNjM0ZTMyZGUzYzY2Y2Q6MTc0MTA0NDcyNQ==/detection)\n* [usql-0.19.18-linux-amd64-907db425](https://www.virustotal.com/gui/file-analysis/M2U3ZDg2ZmQ3NWFhMjI1ODU4YTU0ODVkMWY2MjlkODY6MTc0MTA0NDczMA==/detection)\n* [usql-0.19.18-linux-arm-11b6a935](https://www.virustotal.com/gui/file-analysis/MGU2MWVhMmUwOTFkMzBjYjdhNjg4MjI1NDdkN2UzMzk6MTc0MTA0NDczNA==/detection)\n* [usql-0.19.18-linux-arm64-1a3f486b](https://www.virustotal.com/gui/file-analysis/MGFlOTJlNzRlZDc1NDkyNDA4YzA0ZDBiODRmNTY2MGE6MTc0MTA0NDczNw==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.18"
+        },
+        {
+            "tag": "v0.19.17",
+            "name": "usql v0.19.17",
+            "date": "2025-02-11",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.16...v0.19.17\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.17-linux-amd64-b2751267](https://www.virustotal.com/gui/file-analysis/NTU4MTQ3ZWJjOTE0Y2EyN2IyOTFhNzdjYzQ3MjAwOTQ6MTczOTIzNDEzMg==/detection)\n* [usql_static-0.19.17-linux-arm64-52f9b97e](https://www.virustotal.com/gui/file-analysis/NTE0YzQwNmZlMzUzZmMwMTFjZDhjZTc1MDkwMWVhZDU6MTczOTIzNDEzOA==/detection)\n* [usql-0.19.17-darwin-amd64-e8ae403e](https://www.virustotal.com/gui/file-analysis/MzE0ZDRkMGY1MTJlMTk2YTJhMWFlYjMyMjA1ODQwZWM6MTczOTIzNDE0Mw==/detection)\n* [usql-0.19.17-darwin-arm64-1a12cf23](https://www.virustotal.com/gui/file-analysis/Y2QxZjM1ODQwYWFlZjY1MTk2N2FiMmRlMTBiMzE1MjY6MTczOTIzNDE0OQ==/detection)\n* [usql-0.19.17-darwin-universal-dec696c1](https://www.virustotal.com/gui/file-analysis/MTI5NDQzMmI3YWRmZGYxNjE4NzUxZjdiMTEzMjY3NWQ6MTczOTIzNDE5Nw==/detection)\n* [usql-0.19.17-linux-amd64-83958e3d](https://www.virustotal.com/gui/file-analysis/N2VmNWMzM2YyYzgxOGY1MzJjNTU3M2Y1MWQzZjUwZjI6MTczOTIzNDIwMw==/detection)\n* [usql-0.19.17-linux-arm-1dfcee31](https://www.virustotal.com/gui/file-analysis/NWE5NmY3MzNhZGFlMTYxZTM0NzM0NTBhOTBlMjA5M2Q6MTczOTIzNDIwNw==/detection)\n* [usql-0.19.17-linux-arm64-065bbf44](https://www.virustotal.com/gui/file-analysis/NzVlMmY5NWZiNmNhNDA1Mjc0ZDhkNzk4ODVkY2ZkNDQ6MTczOTIzNDIxMg==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.17"
+        },
+        {
+            "tag": "v0.19.16",
+            "name": "usql v0.19.16",
+            "date": "2025-01-14",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.15...v0.19.16\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.16-linux-amd64-ea2fdc14](https://www.virustotal.com/gui/file-analysis/YTA5YmEwZWUwNjkyZWZkYjA5MDJkYWZkMmI5ZmJmMDM6MTczNjgwMTE0OQ==/detection)\n* [usql_static-0.19.16-linux-arm64-8c8024af](https://www.virustotal.com/gui/file-analysis/MGRjMjU3Yzk4YzY3OGU1NWQ0ZGE4NzlkMGM4ZDQ2ZGI6MTczNjgwMTE1Mg==/detection)\n* [usql-0.19.16-darwin-amd64-1ce53f17](https://www.virustotal.com/gui/file-analysis/NDRlNTU4NGFjNDVhNjJlMDM3ZjljMDhiMGMwOWRlNDY6MTczNjgwMTE1Ng==/detection)\n* [usql-0.19.16-darwin-arm64-5699a66e](https://www.virustotal.com/gui/file-analysis/YmEzN2I2ZGE1NjliNzk3NmM3ZTZhYzk0NzQwN2MxZGE6MTczNjgwMTE1OQ==/detection)\n* [usql-0.19.16-darwin-universal-b92d7666](https://www.virustotal.com/gui/file-analysis/ZDE1NzYzOTc4ZDcwYTc4MzZhMDk1YjRhN2ZiYTAzMzU6MTczNjgwMTIxMg==/detection)\n* [usql-0.19.16-linux-amd64-d557b0ba](https://www.virustotal.com/gui/file-analysis/MzhkZGFlOGE4MTQ0YWMyMzU1Nzg3NTA3MzRiODg2ODc6MTczNjgwMTIxNg==/detection)\n* [usql-0.19.16-linux-arm-d549f219](https://www.virustotal.com/gui/file-analysis/YjY2OWUyNzJkOTdjZGU2OTcyMDhhYzUxNDIwMTUxZTc6MTczNjgwMTIxOQ==/detection)\n* [usql-0.19.16-linux-arm64-54742f8b](https://www.virustotal.com/gui/file-analysis/OTI2OGMwYTk0N2RhNjVkMTVkZGQxMzYwYzc4ZjViMGY6MTczNjgwMTIyMg==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.16"
+        },
+        {
+            "tag": "v0.19.15",
+            "name": "usql v0.19.15",
+            "date": "2024-12-25",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.14...v0.19.15\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.15-linux-amd64-720f5c51](https://www.virustotal.com/gui/file-analysis/MmQ1MWRiNWE5ZjkzOGIyMDBjNmY3NTBlNmUzNjQ5ODI6MTczNTEyOTQxMw==/detection)\n* [usql_static-0.19.15-linux-arm64-88599b95](https://www.virustotal.com/gui/file-analysis/NmQ3N2Q5NGJlODUwNTE3Y2U0MDY1NTQxNTM4ZjRkZTU6MTczNTEyOTQxNg==/detection)\n* [usql-0.19.15-darwin-amd64-7e8fa3dc](https://www.virustotal.com/gui/file-analysis/YzQ3MTM0MGZiMmQwYzE3ZDViMjBmMDJlZWNmYjEyYWE6MTczNTEyOTQyMg==/detection)\n* [usql-0.19.15-darwin-arm64-36ef1d46](https://www.virustotal.com/gui/file-analysis/NzIyMTg5ODJiMjVmYTI1YTUxZjFlOTMzOTliYjM1Y2Q6MTczNTEyOTQyOA==/detection)\n* [usql-0.19.15-darwin-universal-87760a3f](https://www.virustotal.com/gui/file-analysis/YjAyZmE4MGUzNmE4MzVkMDk4NWZhYzY0YTc0MTFkODM6MTczNTEyOTQ3Ng==/detection)\n* [usql-0.19.15-linux-amd64-a571ea1f](https://www.virustotal.com/gui/file-analysis/YTgzZmEzYTFmZDE5ZTRkMjhhODhlOWM1MzE0MGMwZjg6MTczNTEyOTQ4MA==/detection)\n* [usql-0.19.15-linux-arm-fc290b63](https://www.virustotal.com/gui/file-analysis/M2EyNzI4ZmQyYjJhNjg3ZWUzZTFiNzM5MmM5N2VmYmQ6MTczNTEyOTQ4NA==/detection)\n* [usql-0.19.15-linux-arm64-250e203c](https://www.virustotal.com/gui/file-analysis/ODkxMzNhOThmNGRhMTY5OGJlNGRlNGQ4YjY1MjQ5NmQ6MTczNTEyOTQ4Nw==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.15"
+        },
+        {
+            "tag": "v0.19.14",
+            "name": "usql v0.19.14",
+            "date": "2024-12-09",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.13...v0.19.14\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.14-linux-amd64-effb6752](https://www.virustotal.com/gui/file-analysis/ZjNjODczMjMyMDNjYWY0YjljNDRjYWM0MTBjMWI2Zjg6MTczMzcwNTMyNw==/detection)\n* [usql_static-0.19.14-linux-arm64-693765fc](https://www.virustotal.com/gui/file-analysis/MDI4M2E3ZDNlNzA1YjIwMjhjZjdkNmRjMWFiYjRkNzc6MTczMzcwNTMzMg==/detection)\n* [usql-0.19.14-darwin-amd64-c9c53420](https://www.virustotal.com/gui/file-analysis/OWZjNWJhMDY3NDk1YTA3MGZjYzZhMTAxMDE5MWVlZjY6MTczMzcwNTMzOA==/detection)\n* [usql-0.19.14-darwin-arm64-b323d630](https://www.virustotal.com/gui/file-analysis/MmQyZTM5MWNmNTJjMzhkNmNjNjUzYzMzYmMyNGQwZTY6MTczMzcwNTM0NA==/detection)\n* [usql-0.19.14-darwin-universal-a6232db6](https://www.virustotal.com/gui/file-analysis/ZGNiOWIxYWFiMDMwY2FjMzUzZDU1NWM3NmQ2ZGJmOGE6MTczMzcwNTM5MQ==/detection)\n* [usql-0.19.14-linux-amd64-1435f731](https://www.virustotal.com/gui/file-analysis/NTQ5NjkxMjAzMGY3MDkxZWI5NzhkMzQxYTI0NTVjNGQ6MTczMzcwNTM5OA==/detection)\n* [usql-0.19.14-linux-arm-f5ba13f0](https://www.virustotal.com/gui/file-analysis/MjJhZTI2NzdlNDA4NWQzZTNjYWMwYTVmNWY0MDQyNWE6MTczMzcwNTQwMg==/detection)\n* [usql-0.19.14-linux-arm64-86d1df20](https://www.virustotal.com/gui/file-analysis/MzcwZTZmMzhhYzhhNDQ3MWIyYzVmOTViMzU3ZmViZTI6MTczMzcwNTQwNw==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.14"
+        },
+        {
+            "tag": "v0.19.12",
+            "name": "usql v0.19.12",
+            "date": "2024-10-24",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.11...v0.19.12\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.12-linux-amd64-0c7b2b4a](https://www.virustotal.com/gui/file-analysis/NjE1MDQ5NDA1NWQ5ZGI1OTljNjdhYmFkNzFiNjg5ODg6MTcyOTc1NjgxNw==/detection)\n* [usql_static-0.19.12-linux-arm64-791192c1](https://www.virustotal.com/gui/file-analysis/OGJhNjRkMzljYTNkM2MwZjAzMWI5ZDI0MjNmOWJhZTM6MTcyOTc1NjgyMQ==/detection)\n* [usql-0.19.12-darwin-amd64-df701d18](https://www.virustotal.com/gui/file-analysis/Mjc5ODY2MGM1NTdmNjJiNzFkNmI0MGU0MTE4Njg0Mjk6MTcyOTc1NjgyNg==/detection)\n* [usql-0.19.12-darwin-arm64-9a5e0e63](https://www.virustotal.com/gui/file-analysis/NjhkMzgyOGY0ZjJmZGY0ZWFiODczNWFjMGNiMzVjMDY6MTcyOTc1NjgzMA==/detection)\n* [usql-0.19.12-darwin-universal-76ffbfc8](https://www.virustotal.com/gui/file-analysis/ZmRkZjIwMjAxNTg3OTMwYTFmMDc4Y2IwMDQyOGM5MmQ6MTcyOTc1Njg3OQ==/detection)\n* [usql-0.19.12-linux-amd64-a09cc903](https://www.virustotal.com/gui/file-analysis/NmUwZGQxYmY5MTM3ZmU3ZTE0MjdiMDJiZWI4NDRiMDQ6MTcyOTc1Njg4Mw==/detection)\n* [usql-0.19.12-linux-arm-5a74512a](https://www.virustotal.com/gui/file-analysis/MjQ2OTY5YTRkNmY3ZGNmYzRhMDQ4MzNmNTkxYjJiMzY6MTcyOTc1Njg4Nw==/detection)\n* [usql-0.19.12-linux-arm64-db3aedf2](https://www.virustotal.com/gui/file-analysis/MWQ5YzcyMmI3ZWZhYWJmNDk4OGFhNWFkY2I2YzZjNmY6MTcyOTc1Njg5MA==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.12"
+        },
+        {
+            "tag": "v0.19.11",
+            "name": "usql v0.19.11",
+            "date": "2024-10-24",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.10...v0.19.11\n\n[VirusTotal](https://www.virustotal.com) analysis:\n* [usql_static-0.19.11-linux-amd64-2bb511fa](https://www.virustotal.com/gui/file-analysis/OGIyNDQ0ZGY2YTk1MzkxZmI0N2VkM2QzN2E0NzRhMTI6MTcyOTc1NTk3MQ==/detection)\n* [usql_static-0.19.11-linux-arm64-fedcfa15](https://www.virustotal.com/gui/file-analysis/MzE3ODEwY2Y3M2YzMjY1MDQ4YzU3ZDBmZGNiYzZhMmE6MTcyOTc1NTk3Mw==/detection)\n* [usql-0.19.11-darwin-amd64-4f5cbb4c](https://www.virustotal.com/gui/file-analysis/Mjk0Mzk2ZDUwNGQ0ZDdkODc0ODRlY2VlNWEzNmIxY2Y6MTcyOTc1NTk3Ng==/detection)\n* [usql-0.19.11-darwin-arm64-7f1c3509](https://www.virustotal.com/gui/file-analysis/MWU0ZmEyNmJjMjhlYzcwMDNiOWRkNzRkZjZhMTM5YTk6MTcyOTc1NTk3OQ==/detection)\n* [usql-0.19.11-darwin-universal-4fc3d969](https://www.virustotal.com/gui/file-analysis/Mzg3MjJmMTA4NmI4N2QwMGFmNDNlYWVlZGVjZTY0Njc6MTcyOTc1NjAzMg==/detection)\n* [usql-0.19.11-linux-amd64-74aa395e](https://www.virustotal.com/gui/file-analysis/MDk5Y2Q0ZWNlMTQyN2ViMjkwZGQ3MTkyODg5ODcyYWM6MTcyOTc1NjAzNQ==/detection)\n* [usql-0.19.11-linux-arm-888e6dbd](https://www.virustotal.com/gui/file-analysis/YTEyMzBmZjdhNTI2ZDEyNzZhMmZmYTRkMTM5MDc1ODA6MTcyOTc1NjAzNw==/detection)\n* [usql-0.19.11-linux-arm64-84d3afc6](https://www.virustotal.com/gui/file-analysis/M2ZjODBhMzEwZGE2ZTE0MWFmMzM3OTk4YjE1N2Q3YzI6MTcyOTc1NjA0MA==/detection)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.11"
+        },
+        {
+            "tag": "v0.19.4",
+            "name": "usql v0.19.4",
+            "date": "2024-10-21",
+            "body": "Removed snowflake driver.\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.19.3...v0.19.4",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.4"
+        },
+        {
+            "tag": "v0.19.3",
+            "name": "usql v0.19.3",
+            "date": "2024-06-10",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.2...v0.19.3",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.3"
+        },
+        {
+            "tag": "v0.19.2",
+            "name": "usql v0.19.2",
+            "date": "2024-06-05",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.19.1...v0.19.2",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.2"
+        },
+        {
+            "tag": "v0.19.1",
+            "name": "usql v0.19.1",
+            "date": "2024-05-11",
+            "body": "Add support for Clickhouse transports (`clickhouse+http://` + `clickhouse+https://`)\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.19.0...v0.19.1",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.1"
+        },
+        {
+            "tag": "v0.19.0",
+            "name": "usql v0.19.0",
+            "date": "2024-05-11",
+            "body": "## What's Changed\n* Fix Clickhouse Test by @murfffi in https://github.com/xo/usql/pull/455\n* chore: fix function name in comment by @oftenoccur in https://github.com/xo/usql/pull/456\n* Fixes in \\copy implementation for Clickhouse by @murfffi in https://github.com/xo/usql/pull/457\n\n## New Contributors\n* @murfffi made their first contribution in https://github.com/xo/usql/pull/455\n* @oftenoccur made their first contribution in https://github.com/xo/usql/pull/456\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.18.1...v0.19.0",
+            "url": "https://github.com/xo/usql/releases/tag/v0.19.0"
+        },
+        {
+            "tag": "v0.18.1",
+            "name": "usql v0.18.1",
+            "date": "2024-03-28",
+            "body": "Fixes a connection issue with the vertica driver.\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.18.0...v0.18.1",
+            "url": "https://github.com/xo/usql/releases/tag/v0.18.1"
+        },
+        {
+            "tag": "v0.18.0",
+            "name": "usql v0.18.0",
+            "date": "2024-03-28",
+            "body": "Bug fixes and additional meta commands:\n\n* Add `usql_trim` option to odbc, adodb drivers\n* Add `LISTEN` and `RAISE` support to pgx driver\n* Moved to Go 1.22\n* Fix `UNIQUEIDENTIFIER` column type in sqlserver driver\n* Fix `\\timing` meta command to work with all queries\n* Add `\\getenv` meta command\n* Add `\\bind` meta command\n* Fix dollar string literals (postgres)\n* Update dependencies to latest database drivers\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.17.5...v0.18.0",
+            "url": "https://github.com/xo/usql/releases/tag/v0.18.0"
+        },
+        {
+            "tag": "v0.17.5",
+            "name": "usql v0.17.5",
+            "date": "2024-01-06",
+            "body": "Adding ramsql\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.17.4...v0.17.5",
+            "url": "https://github.com/xo/usql/releases/tag/v0.17.5"
+        },
+        {
+            "tag": "v0.17.4",
+            "name": "usql v0.17.4",
+            "date": "2024-01-03",
+            "body": "Renamed genji -> chai, updated driver package paths, dependency updates, fixed build issue for ARM\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.17.3...v0.17.4",
+            "url": "https://github.com/xo/usql/releases/tag/v0.17.4"
+        },
+        {
+            "tag": "v0.17.2",
+            "name": "usql v0.17.2",
+            "date": "2023-12-21",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.17.1...v0.17.2",
+            "url": "https://github.com/xo/usql/releases/tag/v0.17.2"
+        },
+        {
+            "tag": "v0.17.1",
+            "name": "usql v0.17.1",
+            "date": "2023-12-20",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.17.0...v0.17.1",
+            "url": "https://github.com/xo/usql/releases/tag/v0.17.1"
+        },
+        {
+            "tag": "v0.17.0",
+            "name": "usql v0.17.0",
+            "date": "2023-12-03",
+            "body": "Adding databricks, dynamodb, ydb drivers\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.16.1...v0.17.0",
+            "url": "https://github.com/xo/usql/releases/tag/v0.17.0"
+        },
+        {
+            "tag": "v0.16.1",
+            "name": "usql v0.16.1",
+            "date": "2023-11-30",
+            "body": "Reenables hive driver for release builds\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.16.0...v0.16.1",
+            "url": "https://github.com/xo/usql/releases/tag/v0.16.1"
+        },
+        {
+            "tag": "v0.16.0",
+            "name": "usql v0.16.0",
+            "date": "2023-11-14",
+            "body": "## What's Changed\n* Update Runtime Configuration section in README by @exastone in https://github.com/xo/usql/pull/431\n\n## New Contributors\n* @exastone made their first contribution in https://github.com/xo/usql/pull/431\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.15.6...v0.16.0",
+            "url": "https://github.com/xo/usql/releases/tag/v0.16.0"
+        },
+        {
+            "tag": "v0.15.2",
+            "name": "usql v0.15.2",
+            "date": "2023-10-26",
+            "body": "## What's Changed\n* feat: add schema in create command by @rubiagatra in https://github.com/xo/usql/pull/428\n\n## New Contributors\n* @rubiagatra made their first contribution in https://github.com/xo/usql/pull/428\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.15.1...v0.15.2",
+            "url": "https://github.com/xo/usql/releases/tag/v0.15.2"
+        },
+        {
+            "tag": "v0.15.1",
+            "name": "usql v0.15.1",
+            "date": "2023-09-30",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.15.0...v0.15.1",
+            "url": "https://github.com/xo/usql/releases/tag/v0.15.1"
+        },
+        {
+            "tag": "v0.15.0",
+            "name": "usql v0.15.0",
+            "date": "2023-08-16",
+            "body": "## What's Changed\n* Add support for custom tls config in Vertica driver by @vilderxyz in https://github.com/xo/usql/pull/417\n* Fixes issues with `azuresql://`\n\n## New Contributors\n* @vilderxyz made their first contribution in https://github.com/xo/usql/pull/417\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.14.12...v0.15.0",
+            "url": "https://github.com/xo/usql/releases/tag/v0.15.0"
+        },
+        {
+            "tag": "v0.14.12",
+            "name": "usql v0.14.12",
+            "date": "2023-07-19",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.14.11...v0.14.12",
+            "url": "https://github.com/xo/usql/releases/tag/v0.14.12"
+        },
+        {
+            "tag": "v0.14.10",
+            "name": "usql v0.14.10",
+            "date": "2023-07-03",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.14.9...v0.14.10",
+            "url": "https://github.com/xo/usql/releases/tag/v0.14.10"
+        },
+        {
+            "tag": "v0.14.8",
+            "name": "usql v0.14.8",
+            "date": "2023-06-05",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.14.7...v0.14.8",
+            "url": "https://github.com/xo/usql/releases/tag/v0.14.8"
+        },
+        {
+            "tag": "v0.14.6",
+            "name": "usql v0.14.6",
+            "date": "2023-05-14",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.14.5...v0.14.6",
+            "url": "https://github.com/xo/usql/releases/tag/v0.14.6"
+        },
+        {
+            "tag": "v0.14.5",
+            "name": "usql v0.14.5",
+            "date": "2023-05-01",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.14.4...v0.14.5",
+            "url": "https://github.com/xo/usql/releases/tag/v0.14.5"
+        },
+        {
+            "tag": "v0.14.3",
+            "name": "usql v0.14.3",
+            "date": "2023-04-15",
+            "body": "## What's Changed\n* Fix FlightSQL driver by @srebhan in https://github.com/xo/usql/pull/407\n* Bump FlightSQL driver to support backends without Prepare statement by @srebhan in https://github.com/xo/usql/pull/408\n\n## New Contributors\n* @srebhan made their first contribution in https://github.com/xo/usql/pull/407\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.14.2...v0.14.3",
+            "url": "https://github.com/xo/usql/releases/tag/v0.14.3"
+        },
+        {
+            "tag": "v0.14.2",
+            "name": "usql v0.14.2",
+            "date": "2023-04-13",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.14.1...v0.14.2",
+            "url": "https://github.com/xo/usql/releases/tag/v0.14.2"
+        },
+        {
+            "tag": "v0.14.1",
+            "name": "usql v0.14.1",
+            "date": "2023-04-06",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.14.0...v0.14.1",
+            "url": "https://github.com/xo/usql/releases/tag/v0.14.1"
+        },
+        {
+            "tag": "v0.14.0",
+            "name": "usql v0.14.0",
+            "date": "2023-04-02",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.13.13...v0.14.0",
+            "url": "https://github.com/xo/usql/releases/tag/v0.14.0"
+        },
+        {
+            "tag": "v0.13.12",
+            "name": "usql v0.13.12",
+            "date": "2023-03-16",
+            "body": "## What's Changed\n* snowflake: enable multi-line comments by @sfc-gh-pbennes in https://github.com/xo/usql/pull/400\n\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.13.11...v0.13.12",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.12"
+        },
+        {
+            "tag": "v0.13.11",
+            "name": "usql v0.13.11",
+            "date": "2023-03-12",
+            "body": "FIx issue with syntax highlighting and Windows Terminal, update dependencies.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.11"
+        },
+        {
+            "tag": "v0.13.10",
+            "name": "usql v0.13.10",
+            "date": "2023-03-08",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.13.9...v0.13.10",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.10"
+        },
+        {
+            "tag": "v0.13.8",
+            "name": "usql v0.13.8",
+            "date": "2023-01-30",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.13.7...v0.13.8",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.8"
+        },
+        {
+            "tag": "v0.13.7",
+            "name": "usql v0.13.7",
+            "date": "2023-01-30",
+            "body": "## What's Changed\n* Fetch correct fk constraints for mysql by @nineinchnick in https://github.com/xo/usql/pull/393\n\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.13.6...v0.13.7",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.7"
+        },
+        {
+            "tag": "v0.13.6",
+            "name": "usql v0.13.6",
+            "date": "2023-01-26",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.13.5...v0.13.6",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.6"
+        },
+        {
+            "tag": "v0.13.5",
+            "name": "usql v0.13.5",
+            "date": "2023-01-04",
+            "body": "## What's Changed\n* Support ANSI escape codes (colors) in prompt by @nineinchnick in https://github.com/xo/usql/pull/388\n\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.13.4...v0.13.5",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.5"
+        },
+        {
+            "tag": "v0.13.4",
+            "name": "usql v0.13.4",
+            "date": "2022-12-21",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.13.3...v0.13.4",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.4"
+        },
+        {
+            "tag": "v0.13.3",
+            "name": "usql v0.13.3",
+            "date": "2022-12-19",
+            "body": "## What's Changed\n* Implement help subcommands by @nineinchnick in https://github.com/xo/usql/pull/387\n\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.13.2...v0.13.3",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.3"
+        },
+        {
+            "tag": "v0.13.2",
+            "name": "usql v0.13.2",
+            "date": "2022-12-19",
+            "body": "## What's Changed\n* Add support for Databend by @everpcpc in https://github.com/xo/usql/pull/381\n\n## New Contributors\n* @everpcpc made their first contribution in https://github.com/xo/usql/pull/381\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.13.1...v0.13.2",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.2"
+        },
+        {
+            "tag": "v0.13.1",
+            "name": "usql v0.13.1",
+            "date": "2022-11-13",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.13.0...v0.13.1",
+            "url": "https://github.com/xo/usql/releases/tag/v0.13.1"
+        },
+        {
+            "tag": "v0.12.13",
+            "name": "usql v0.12.13",
+            "date": "2022-08-26",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.12.12...v0.12.13",
+            "url": "https://github.com/xo/usql/releases/tag/v0.12.13"
+        },
+        {
+            "tag": "v0.12.12",
+            "name": "usql v0.12.12",
+            "date": "2022-08-26",
+            "body": "Minor fixes/changes to workflows to enable automated version bumps for the Homebrew and AUR repos.\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.12.11...v0.12.12",
+            "url": "https://github.com/xo/usql/releases/tag/v0.12.12"
+        },
+        {
+            "tag": "v0.12.4",
+            "name": "usql v0.12.4",
+            "date": "2022-08-25",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.12.3...v0.12.4",
+            "url": "https://github.com/xo/usql/releases/tag/v0.12.4"
+        },
+        {
+            "tag": "v0.12.0",
+            "name": "usql v0.12.0",
+            "date": "2022-08-04",
+            "body": "**Full Changelog**: https://github.com/xo/usql/compare/v0.11.12...v0.12.0",
+            "url": "https://github.com/xo/usql/releases/tag/v0.12.0"
+        },
+        {
+            "tag": "v0.11.12",
+            "name": "usql v0.11.12",
+            "date": "2022-08-03",
+            "body": "Not \"real\" release, as no changes to actual `usql` code have been made between `v0.11.1` and `v0.11.12`. Please see the release notes below.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.11.12"
+        },
+        {
+            "tag": "v0.11.1",
+            "name": "usql v0.11.1",
+            "date": "2022-08-03",
+            "body": "## What's Changed\n* Correct a typo in main.go by @felixonmars in https://github.com/xo/usql/pull/345\n* Add dataTypeFormatter to information schema reader by @henlue in https://github.com/xo/usql/pull/343\n* Bump trino-go-client version by @nineinchnick in https://github.com/xo/usql/pull/346\n* Downgrade thrift (again) by @anthonyroussel in https://github.com/xo/usql/pull/347\n\n## New Contributors\n* @felixonmars made their first contribution in https://github.com/xo/usql/pull/345\n* @henlue made their first contribution in https://github.com/xo/usql/pull/343\n* @anthonyroussel made their first contribution in https://github.com/xo/usql/pull/347\n\n**Full Changelog**: https://github.com/xo/usql/compare/v0.11.0...v0.11.1",
+            "url": "https://github.com/xo/usql/releases/tag/v0.11.1"
+        },
+        {
+            "tag": "v0.11.0",
+            "name": "usql v0.11.0",
+            "date": "2022-07-11",
+            "body": "General point release:\n\n* Adding support for Alibaba Tablestore database\n* Use correct type for ndistinct for Postgres `\\ss`\n* Enable autocomplete for `\\d`\n* Disable pager for `\\watch`\n* Fix issues with `\\raw`\n* Fix issue with AWS Athena driver name\n* Fix display issues from `tblfmt` dependency\n* Updated database dependencies",
+            "url": "https://github.com/xo/usql/releases/tag/v0.11.0"
+        },
+        {
+            "tag": "v0.10.0",
+            "name": "usql v0.10.0",
+            "date": "2022-03-22",
+            "body": "Fixes hash comments for MySQL, updates to latest database drivers.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.10.0"
+        },
+        {
+            "tag": "v0.9.7",
+            "name": "usql v0.9.7",
+            "date": "2022-03-15",
+            "body": "Point release; updated database dependencies.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.9.7"
+        },
+        {
+            "tag": "v0.9.5",
+            "name": "usql v0.9.5",
+            "date": "2021-11-20",
+            "body": "Point release; fixes formatting issues and updates database drivers.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.9.5"
+        },
+        {
+            "tag": "v0.9.4",
+            "name": "usql v0.9.4",
+            "date": "2021-08-29",
+            "body": "Point release:\n* Adds Exasol database support\n* Adds support for ClickHouse metadata",
+            "url": "https://github.com/xo/usql/releases/tag/v0.9.4"
+        },
+        {
+            "tag": "v0.9.3",
+            "name": "usql v0.9.3",
+            "date": "2021-08-21",
+            "body": "General updates and enhancements:\n\n1. Fixes to MySQL and Oracle metadata completion\n2. Reworked `\\i` and `\\ir` commands to work better with large files\n3. The `go-ora` and `godror` drivers now share common package\n4. Updated database drivers",
+            "url": "https://github.com/xo/usql/releases/tag/v0.9.3"
+        },
+        {
+            "tag": "v0.9.2",
+            "name": "usql v0.9.2",
+            "date": "2021-07-08",
+            "body": "Point release:\n- Added additional query recognition for `sqlserver` and `oracle` databases\n- Fixed issues with some queries for `oracle`\n- Updated database drivers\n- General code cleanup",
+            "url": "https://github.com/xo/usql/releases/tag/v0.9.2"
+        },
+        {
+            "tag": "v0.9.1",
+            "name": "usql v0.9.1",
+            "date": "2021-05-08",
+            "body": "Point release: bug fixes and fully static builds.\n\n* Updated all drivers to latest versions\n* Fixed column alignment issues with the `mysql` driver\n* Fixed logic to prevent panics in certain situations\n* `build-release.sh` script updated to support fully\n* Converted environment variable `TIME_FORMAT` to `\\pset time <format>` variable, and fixed formatting issues",
+            "url": "https://github.com/xo/usql/releases/tag/v0.9.1"
+        },
+        {
+            "tag": "v0.9.0",
+            "name": "usql v0.9.0",
+            "date": "2021-04-29",
+            "body": "New major features:\n* Enabled autocomplete for `\\` commands (including files for `\\i`, DSNs for `\\c`, fields for `\\pset`) and context-based completion for `SELECT`, `UPDATE`, `INSERT`, `DELETE` queries and variables\n* Added a `\\copy` command to copy data between _different_ databases (local files are not supported yet)\n* Added a `\\crosstab` command\n* Added a `\\G` exec command that outputs in a vertical format (ala `mysql`)\n* Added a `\\watch` command\n* `PAGER` support\n* Added `\\o` and `\\qecho` commands to send output to files or pipe to other system commands\n* Added the optional `FILE` argument to `\\g` and `\\gx` to send their output to a file or pipe to other system commands; the commands also support passing formatting options\n* Support the `unaligned`, `tuples_only`, `html` and `asciidoc` output formats\n* Context propagation and cancellation (`CTRL+C`) for in-flight queries\n\nNew Database Support:\n* [Netezza](https://github.com/IBM/nzgo/)\n* [csvq](https://github.com/mithrandie/csvq/) - supports CSV, TSV, JSON and other flat files\n\nOther fixes/improvements:\n* Added a `-G`  for vertical output (see `\\G` above)\n* Added a `-q` flag and associated `QUIET` environment variable to enable quiet output\n* Implement the `auto` option for the `\\x` command\n* Fixed issues with escaped and other special characters when `\\set`-ting variables \n* The `\\begin` transaction command now supports all of Go's transaction isolation levels, and read-only support\n* `\\d` updated to print relations, foreign keys, and other constraints for tables\n* The `\\d*`  commands now provide more information and work better with some databases; they also do a better job of hiding system objects by default\n* `\\d` command support for the Snowflake database\n* Now sets the `ROW_COUNT` variable for DML queries\n* Fixes table titles\n\nNotes:\n* CONTRIBUTING.md has been updated with details on implementing `\\d*` / autocomplete for other databases",
+            "url": "https://github.com/xo/usql/releases/tag/v0.9.0"
+        },
+        {
+            "tag": "v0.8.2",
+            "name": "usql v0.8.2",
+            "date": "2021-03-07",
+            "body": "General release with:\n- Bug fixes\n- Native Go driver for Oracle now included by default (previous driver still available as `godror`)\n- Added support for a number of experimental databases\n- Minor enhancements to table output to better mimic `psql`\n- Initial `\\d*` and other meta/introspection commands",
+            "url": "https://github.com/xo/usql/releases/tag/v0.8.2"
+        },
+        {
+            "tag": "v0.7.8",
+            "name": "usql v0.7.8",
+            "date": "2020-01-12",
+            "body": "Maintenance release:\n\n* Updates driver dependencies\n* Fixes propagation of statement configuration based on the driver for included scripts (\\i, \\ir, -f)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.7.8"
+        },
+        {
+            "tag": "v0.7.7",
+            "name": "usql v0.7.7",
+            "date": "2019-11-15",
+            "body": "Minor update from previous release, updating to fixed Vertica driver.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.7.7"
+        },
+        {
+            "tag": "v0.7.6",
+            "name": "usql v0.7.6",
+            "date": "2019-11-15",
+            "body": "Addition of Vertica database and updates to latest drivers/package dependencies.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.7.6"
+        },
+        {
+            "tag": "v0.7.5",
+            "name": "usql v0.7.5",
+            "date": "2019-08-11",
+            "body": "No substantial feature updates from previous v0.7.x builds; maintenance release, primarily updating third-party package dependencies.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.7.5"
+        },
+        {
+            "tag": "v0.7.1",
+            "name": "usql v0.7.1",
+            "date": "2019-01-06",
+            "body": "Point release, updates database dependencies, and fixes some minor issues.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.7.1"
+        },
+        {
+            "tag": "v0.7.0",
+            "name": "usql v0.7.0",
+            "date": "2018-06-13",
+            "body": "Release v0.7.0 fixes issues with syntax highlighting, initial support for Cassandra databases via CQL, and general code cleanup. The major changes:\n\n* Cassandra (CQL) support\n* Syntax highlighting fixes\n* Added `-v` / `--set` command line parameter (compatibility with `psql`)\n* Added \"batch query\" support for databases (`ql` + `cql`)\n* Fixed issues with query prefix detection / parsing\n* Switched from `dep` to `vgo` for dependency management\n\nTo install using the binary release:\n\n* Download the archive (`.zip` or `.bz2`) for your platform (Windows, OSX, Linux)\n* Extract `usql` from the downloaded archive and place somewhere in `$PATH`\n\nTo install on OSX via Homebrew:\n\n```sh\n# add tap\n$ brew tap xo/xo\n\n# install usql with \"most\" drivers\n$ brew install usql\n\n# install usql with oracle and odbc support\n$ brew install --with-oracle --with-odbc usql\n```",
+            "url": "https://github.com/xo/usql/releases/tag/v0.7.0"
+        },
+        {
+            "tag": "v0.6.0",
+            "name": "usql v0.6.0",
+            "date": "2018-01-15",
+            "body": "Release v0.6.0 has some minor feature additions (syntax highlighting), and general code cleanup. A list of the major changes:\n\n* Syntax highlighting\n* Better compatibility with `psql` commands\n* Homebrew support\n\nTo install on OSX via Homebrew:\n\n```sh\n# add tap\n$ brew tap xo/xo\n\n# install usql with \"most\" drivers\n$ brew install usql\n\n# install usql with oracle and odbc support\n$ brew install --with-oracle --with-odbc usql\n```",
+            "url": "https://github.com/xo/usql/releases/tag/v0.6.0"
+        },
+        {
+            "tag": "v0.5.0",
+            "name": "usql v0.5.0",
+            "date": "2017-04-02",
+            "body": "Compatibility fixes! Now almost equal to `psql` for the major features (variables, passwords, etc), and some major code organization/documentation overhauls. Included in this release:\n\n* Variables working\n* Parameters to backslash commands now correctly evaluated\n* Added `\\password` command (for PostgreSQL, MySQL, Oracle, and SQL Server drivers)\n* Added `\\set`, `\\unset`, `\\prompt` commands for working with variables\n* Fixed `\\gset` and `\\gexec` commands\n* Fixed `\\!` command\n* Added `-1` / `--single-transaction` command line option\n* Added `\\begin`, `\\commit` and `\\rollback` commands for working with transactions\n* Fixed logic for `~` in paths\n* Added support for a `.usqlpass` file, similar to PostgreSQL's `.pgpass`. Please see `contrib/usqlpass` for example file\n* Various code and documentation cleanup\n* Minor logic/bug fixes for command execution\n\nPlus more. Stay tuned for more -- Google Spanner is coming Very Soon&trade;",
+            "url": "https://github.com/xo/usql/releases/tag/v0.5.0"
+        },
+        {
+            "tag": "v0.4.0",
+            "name": "usql v0.4.0",
+            "date": "2017-03-29",
+            "body": "Significant updates to meta command handling, including improved help / support as well as a massive retooling of how drivers are built/supported.\n\n* `.usqlrc` support\n* Now prompts for a password on connect, as well as `psql` compatible `-w` and `-W` cli options\n* `\\i` and `\\ir` and their `\\include` and `\\include_relative` variant meta commands have been fixed\n* Better meta command help\n* Issues with database URLs fixed\n* Output issues on Windows fixed\n* Standardized/better driver error messages\n* Additional `psql` compatibility command line options, meta commands\n* Drivers can now be included using `go build -tags <driver>` or, alternatively, excluded using `go build -tags no_<driver>`\n* Additional build tags `all` and `most` added (`most` is same as all, but excludes the `cgo` drivers `odbc` and `oracle`)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.4.0"
+        },
+        {
+            "tag": "v0.3.0",
+            "name": "usql v0.3.0",
+            "date": "2017-03-23",
+            "body": "Another general release, adding:\n* Support for more databases (`mymymsql`, `pgx`, others)\n* New meta command  `\\connect_dsn` to directly type a DSN\n* Other meta commands\n* Proper handling of file paths for Unix domain sockets for `postgres` and `mysql` drivers\n\nPlus much much more!",
+            "url": "https://github.com/xo/usql/releases/tag/v0.3.0"
+        },
+        {
+            "tag": "v0.2.0",
+            "name": "usql v0.2.0",
+            "date": "2017-03-17",
+            "body": "Included in this release:\n\n* Full overhaul of input handling; now better and more accurate, and almost identical to `psql`\n* Fixed various windows issues\n* Added ADODB support for Windows\n* Significant addition of various `psql` backslash (\\\\) meta commands (not yet documented)",
+            "url": "https://github.com/xo/usql/releases/tag/v0.2.0"
+        },
+        {
+            "tag": "v0.1.1",
+            "name": "usql v0.1.1",
+            "date": "2017-03-11",
+            "body": "Minor point release, fixing issues with Windows and readline.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.1.1"
+        },
+        {
+            "tag": "v0.1.0",
+            "name": "usql v0.1.0",
+            "date": "2017-03-06",
+            "body": "This is a an initial proof of concept, working example of `usql`. \n\nWhile `usql` is not yet stable or ready for production use, this release is being made available for testing purposes.",
+            "url": "https://github.com/xo/usql/releases/tag/v0.1.0"
+        }
+    ]
+}

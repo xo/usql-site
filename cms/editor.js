@@ -73,17 +73,25 @@ CMS.registerEditorComponent({
   toPreview: () => "<p><strong>The table of every database</strong></p>",
 });
 
-// :::tabs, which src/lib/tabs.mjs reads. A tab is ::::tab[label], its
-// Markdown, and :::: on a line of its own. The block ends at the first line
-// ::: that follows a line ::::, so an aside in a tab, which ends with :::,
-// does not end it.
-const tabsRE = /^:::tabs\n([\s\S]*?\n::::)\n:::$/m;
+// :::tabs, or :::tabs{sync="key"}, which src/lib/tabs.mjs reads. A tab is
+// ::::tab[label], its Markdown, and :::: on a line of its own. The block ends
+// at the first line ::: that follows a line ::::, so an aside in a tab, which
+// ends with :::, does not end it.
+const tabsRE = /^:::tabs(?:\{sync="([a-z0-9-]+)"\})?\n([\s\S]*?\n::::)\n:::$/m;
 const tabRE = /^::::tab\[([^\]\n]*)\]\n([\s\S]*?)\n?::::$/gm;
 
 CMS.registerEditorComponent({
   id: "tabs",
   label: "Tabs",
   fields: [
+    {
+      name: "sync",
+      label:
+        "Sync key (optional). Tabs with the same key keep the choice of the reader across pages",
+      widget: "string",
+      required: false,
+      pattern: ["^([a-z0-9][a-z0-9-]*)?$", "Use a-z, 0-9 and -"],
+    },
     {
       name: "tabs",
       label: "Tabs",
@@ -96,11 +104,12 @@ CMS.registerEditorComponent({
   ],
   pattern: tabsRE,
   fromBlock: (match) => ({
-    tabs: [...match[1].matchAll(tabRE)].map((m) => ({ label: m[1], body: m[2] })),
+    sync: match[1] ?? "",
+    tabs: [...match[2].matchAll(tabRE)].map((m) => ({ label: m[1], body: m[2] })),
   }),
-  toBlock: ({ tabs }) =>
+  toBlock: ({ sync, tabs }) =>
     [
-      ":::tabs",
+      sync ? `:::tabs{sync="${sync}"}` : ":::tabs",
       ...(tabs ?? []).map(
         ({ label, body }) =>
           `::::tab[${(label ?? "").replaceAll("]", "")}]\n` +
@@ -109,6 +118,29 @@ CMS.registerEditorComponent({
       ),
       ":::",
     ].join("\n"),
-  toPreview: ({ tabs }) =>
-    `<p><strong>Tabs</strong>: ${escape((tabs ?? []).map((t) => t.label).join(", "))}</p>`,
+  toPreview: ({ sync, tabs }) =>
+    `<p><strong>Tabs</strong>${sync ? ` (sync key ${escape(sync)})` : ""}: ` +
+    `${escape((tabs ?? []).map((t) => t.label).join(", "))}</p>`,
+});
+
+// ::releases and ::releases{limit="20"}, which src/lib/releases.mjs reads.
+const releasesRE = /^::releases(?:\{limit="([1-9][0-9]*)"\})?$/m;
+
+CMS.registerEditorComponent({
+  id: "releases",
+  label: "Release notes",
+  fields: [
+    {
+      name: "limit",
+      label: "Number of the newest releases to show (empty for every release)",
+      widget: "string",
+      required: false,
+      pattern: ["^([1-9][0-9]*)?$", "Use a number above 0, or leave it empty"],
+    },
+  ],
+  pattern: releasesRE,
+  fromBlock: (match) => ({ limit: match[1] ?? "" }),
+  toBlock: ({ limit }) => (limit ? `::releases{limit="${limit}"}` : "::releases"),
+  toPreview: ({ limit }) =>
+    `<p><strong>Release notes</strong>: ${limit ? `the ${escape(limit)} newest releases` : "every release"}</p>`,
 });

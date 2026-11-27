@@ -1,7 +1,8 @@
 // Checks the built site in dist/ for a page that loads something from
 // another host (D6): a script, a style, a font, an image, a frame or a media
-// file. A link that a reader follows is not a load, and is not checked. The
-// editor at dist/admin/ is not checked.
+// file. An SVG file, such as a chart, is checked for an image, a script or a
+// style that it loads. A link that a reader follows is not a load, and is not
+// checked. The editor at dist/admin/ is not checked.
 //
 //   node scripts/check-dist.mjs
 
@@ -37,6 +38,9 @@ const links = /<link\b([^>]*)>/gi;
 const loadingRel =
   /\brel="[^"]*\b(stylesheet|preload|modulepreload|prefetch|icon|manifest|apple-touch-icon)\b/i;
 const cssURL = /url\(\s*["']?([^"')]+)["']?\s*\)|@import\s+["']([^"']+)["']/gi;
+// The attributes of SVG that load what they name. xmlns names a namespace and
+// loads nothing.
+const svgLoads = /\s(?:href|xlink:href|src)="([^"]+)"/gi;
 
 const problems = [];
 for await (const path of walk(dist)) {
@@ -51,6 +55,15 @@ for await (const path of walk(dist)) {
       if (href && loadingRel.test(attrs) && foreign(href)) {
         problems.push(`${name}: <link> loads ${href}`);
       }
+    }
+  } else if (path.endsWith(".svg")) {
+    const svg = await readFile(path, "utf8");
+    for (const [, url] of svg.matchAll(svgLoads)) {
+      if (foreign(url)) problems.push(`${name}: loads ${url}`);
+    }
+    for (const [, a, b] of svg.matchAll(cssURL)) {
+      const url = a ?? b;
+      if (foreign(url)) problems.push(`${name}: loads ${url}`);
     }
   } else if (path.endsWith(".css")) {
     const css = await readFile(path, "utf8");

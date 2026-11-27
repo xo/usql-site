@@ -7,6 +7,8 @@ sidebar:
 
 usql opens a database from a URL. The command line, `\connect` (or `\c`) and `\copy` all take the same URLs. A URL is also called a DSN, a data source name.
 
+::cast[Open PostgreSQL and MySQL by the names of their connections, change from one to the other with \c, and run one query with -c.]{name="connect"}
+
 ## The forms of a URL
 
 ```txt
@@ -43,11 +45,13 @@ If a URL has no driver, usql reads it as a path. usql opens a Unix domain socket
 
 ## Defaults
 
-Most parts of a URL are optional. usql fills in what it can. This command connects to PostgreSQL as the local user, through the socket in `/var/run/postgresql`:
+Most parts of a URL are optional. usql fills in what it can. This command connects to PostgreSQL as the local user, through the Unix domain socket of the local server:
 
 ```sh
 usql pg://
 ```
+
+The driver looks for the socket in the first of these directories that exists: `/var/run/postgresql`, `/private/tmp` and `/tmp`.
 
 ## Keep a password off the command line
 
@@ -57,4 +61,4 @@ Every user of a machine can read the command line of a program. If the URL holds
 USQL_DSN="pg://app:$PASSWORD@localhost:15432/app" usql
 ```
 
-usql reads `USQL_DSN` only when the command line names no database. It removes the variable from its own environment after it reads it, so the shell of `\!`, the pager and the editor do not get the password.
+usql reads `USQL_DSN` only when the command line names no database. It removes the variable from its own environment after it reads it, so the shell of `\!`, the pager and the editor do not get the password. [Passwords](/guides/passwords/) shows the other ways to give a password.

@@ -7,7 +7,7 @@ sidebar:
 
 usql is one program, `usql` (`usql.exe` on Windows). Every way to install it below gives you every database driver. Pick the tab for your system.
 
-:::tabs
+:::tabs{sync="install"}
 ::::tab[Release]
 1. Download the file for your system from the [releases of usql](https://github.com/xo/usql/releases).
 2. Extract `usql` or `usql.exe` from the `.tar.bz2` or `.zip` file.

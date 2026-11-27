@@ -1,0 +1,27 @@
+# The page databases/postgres. It lists the tables of the northwind database
+# and runs a query on it. It needs the PostgreSQL server of
+# docs/RECORDING.md, with the northwind fixture.
+title: usql and PostgreSQL
+size: 100x30
+needs: [USQL_SITE_PG]
+files:
+  .config/usql/config.yaml: |
+    connections:
+      pg: ${USQL_SITE_PG}
+steps:
+  - type: usql pg
+  - wait: "=> "
+  - sleep: 1s
+  - type: \dt
+  - wait: "=> "
+  - sleep: 2s
+  - type: select ship_country, count(*) as orders
+  - wait: "-> "
+  - type: from orders group by ship_country
+  - wait: "-> "
+  - type: order by orders desc limit 5;
+  - wait: "=> "
+  - sleep: 2s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms

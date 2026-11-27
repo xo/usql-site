@@ -4,6 +4,7 @@ import { satteri } from "@astrojs/markdown-satteri";
 import starlight from "@astrojs/starlight";
 import starlightLinksValidator from "starlight-links-validator";
 import { cast } from "./src/lib/cast.mjs";
+import { releases } from "./src/lib/releases.mjs";
 import { schemes } from "./src/lib/schemes.mjs";
 import { tabs } from "./src/lib/tabs.mjs";
 
@@ -15,7 +16,7 @@ export default defineConfig({
   trailingSlash: "ignore",
   output: "static",
   build: { format: "directory" },
-  markdown: { processor: satteri({ mdastPlugins: [cast(), schemes(), tabs()] }) },
+  markdown: { processor: satteri({ mdastPlugins: [cast(), schemes(), tabs(), releases()] }) },
   integrations: [
     starlight({
       title: "usql",

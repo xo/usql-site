@@ -1,0 +1,41 @@
+# The script of chart-script, run with -f, on the page charts/script. usql
+# turns the graphics off for -f, so \chart stops, and -U term_graphics turns
+# them on. The database is a SQLite file that the setup makes. This script has
+# no init.sql, so that the recording shows what usql does.
+title: Charts in a script with -f
+size: 100x26
+files:
+  cafe.sql: |
+    create table sales (
+      month_no integer primary key,
+      month text not null,
+      coffee integer not null,
+      tea integer not null,
+      cocoa integer not null
+    );
+    insert into sales values
+      (1, 'Jan', 1240, 860, 610), (2, 'Feb', 1180, 820, 560),
+      (3, 'Mar', 1310, 790, 420), (4, 'Apr', 1360, 740, 280),
+      (5, 'May', 1420, 700, 150), (6, 'Jun', 1490, 680, 90);
+    create table hours (hour integer primary key, cups integer not null);
+    insert into hours values
+      (7, 38), (8, 92), (9, 71), (10, 54), (11, 47), (12, 66),
+      (13, 58), (14, 41), (15, 49), (16, 35), (17, 22);
+  charts.sql: |
+    -- The sales of each month, and the cups of each hour.
+    select month, coffee, tea, cocoa from sales order by month_no
+    \chart title='Cups sold' file=sales.svg
+    select hour, cups from hours order by hour
+    \chart title='Cups by hour' file=hours.svg
+setup:
+  - usql -X -q -f cafe.sql sq:cafe.db
+steps:
+  - type: usql -f charts.sql cafe.db
+  - wait: "$ "
+  - sleep: 2s
+  - type: usql -U term_graphics=kitty -f charts.sql cafe.db
+  - wait: "$ "
+  - sleep: 1.5s
+  - type: ls *.svg
+  - wait: "$ "
+  - sleep: 1.5s

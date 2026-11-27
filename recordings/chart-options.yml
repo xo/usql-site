@@ -1,0 +1,52 @@
+# A title, a subtitle, the names of the series and a size, on the page
+# charts/size-colors-titles. The database is a SQLite file that the setup
+# makes. The SVG files go to public/charts/chart-options/.
+#
+# In usql 0.0.0-85d27b9, \chart stops with "graphics not supported" when the
+# terminal draws no images, even with file=. The recorder sets
+# TERM_GRAPHICS=none, so init.sql turns the kitty graphics on. It turns quiet
+# on first, so that no message of \uset and no logo reaches the recording.
+title: Size, colors and titles of a chart
+size: 100x26
+files:
+  .config/usql/init.sql: |
+    \uset quiet on
+    \uset term_graphics kitty
+  cafe.sql: |
+    create table sales (
+      month_no integer primary key,
+      month text not null,
+      coffee integer not null,
+      tea integer not null,
+      cocoa integer not null
+    );
+    insert into sales values
+      (1, 'Jan', 1240, 860, 610), (2, 'Feb', 1180, 820, 560),
+      (3, 'Mar', 1310, 790, 420), (4, 'Apr', 1360, 740, 280),
+      (5, 'May', 1420, 700, 150), (6, 'Jun', 1490, 680, 90);
+    create table hours (hour integer primary key, cups integer not null);
+    insert into hours values
+      (7, 38), (8, 92), (9, 71), (10, 54), (11, 47), (12, 66),
+      (13, 58), (14, 41), (15, 49), (16, 35), (17, 22);
+setup:
+  - usql -X -q -f cafe.sql sq:cafe.db
+steps:
+  - type: usql cafe.db
+  - wait: "=> "
+  - sleep: 1s
+  - type: select month, coffee as "Coffee", tea as "Tea"
+  - wait: "-> "
+  - type: from sales order by month_no
+  - wait: "-> "
+  - type: \chart title='Cups sold' subtitle='January to June 2026' file=titled.svg
+  - wait: "writing to titled.svg"
+  - sleep: 1.5s
+  - type: \chart title='Cups sold' size=640x320 file=small.svg
+  - wait: "writing to small.svg"
+  - sleep: 1.5s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms
+keep:
+  - titled.svg
+  - small.svg

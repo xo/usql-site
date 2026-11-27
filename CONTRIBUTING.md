@@ -24,8 +24,8 @@ bash scripts/precommit.sh
 ```
 
 The last line says whether the change passes. The check runs gofmt,
-`go vet`, `go test`, prettier, `astro check`, the build, and a check of the
-built pages.
+`go vet`, `go test`, the tests of the plugins of `src/lib/`, prettier,
+`astro check`, the build, and a check of the built pages.
 
 ## Rules
 

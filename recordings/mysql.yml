@@ -1,0 +1,27 @@
+# The page databases/mysql. It lists the tables of the northwind database
+# and runs a query on it. It needs the MySQL server of docs/RECORDING.md,
+# with the northwind fixture.
+title: usql and MySQL
+size: 100x30
+needs: [USQL_SITE_MY]
+files:
+  .config/usql/config.yaml: |
+    connections:
+      my: ${USQL_SITE_MY}
+steps:
+  - type: usql my
+  - wait: "=> "
+  - sleep: 1s
+  - type: \dt northwind.*
+  - wait: "=> "
+  - sleep: 2s
+  - type: select c.company_name, count(*) as orders
+  - wait: "-> "
+  - type: from orders o join customers c using (customer_id)
+  - wait: "-> "
+  - type: group by c.company_name order by orders desc limit 5;
+  - wait: "=> "
+  - sleep: 2s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms

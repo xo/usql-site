@@ -31,6 +31,7 @@ gofmt_clean() {
 step gofmt gofmt_clean
 step "go vet" go vet ./cmd/... ./internal/...
 step "go test" go test ./cmd/... ./internal/...
+step "node test" node --test "src/lib/*.test.mjs"
 step prettier npx prettier --check .
 step "astro check" npx astro check
 step build npm run build --silent

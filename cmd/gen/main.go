@@ -1,16 +1,28 @@
-// Command gen writes the data files of the site that come from a Go module
-// that go.mod pins. It writes src/data/generated/schemes.json, the URL
-// schemes of dburl's registry. The ::schemes and ::databases directives of
-// the pages read that file (src/lib/schemes.mjs). Run it in the root of the
-// repository after go.mod moves to another release of dburl:
+// Command gen writes the data files of src/data/generated, which the
+// directives of the pages read. With no flag, it writes
+// src/data/generated/schemes.json, the URL schemes of the registry of the
+// release of dburl that go.mod pins. The ::schemes and ::databases
+// directives of the pages read that file (src/lib/schemes.mjs). Run it in the
+// root of the repository after go.mod moves to another release of dburl:
 //
 //	go run ./cmd/gen
 //
 // A test fails when the file differs from what the program makes. See D7.
+//
+// With -releases, it fetches the releases of usql from the GitHub API and
+// writes src/data/generated/releases.json, which the ::releases directive
+// reads (src/lib/releases.mjs). Run it after a release of usql:
+//
+//	go run ./cmd/gen -releases
+//
+// Only -releases uses the network. It sends the token in GITHUB_TOKEN or
+// GH_TOKEN when one is set, so that GitHub allows more requests.
 package main
 
 import (
 	"bytes"
+	"cmp"
+	"context"
 	"encoding/json"
 	"errors"
 	"flag"
@@ -24,24 +36,35 @@ import (
 	"github.com/xo/dburl"
 )
 
-// schemesFile is the file that the program writes, from the repository root.
+// schemesFile is the file that the program writes with no flag, from the
+// repository root.
 const schemesFile = "src/data/generated/schemes.json"
 
 func main() {
-	out := flag.String("out", schemesFile, "the file to write")
+	out := flag.String("out", "", "the file to write (default "+schemesFile+", or "+releasesFile+" with -releases)")
+	releases := flag.Bool("releases", false, "fetch the releases of usql from GitHub and write them, in place of the schemes")
 	flag.Parse()
-	if err := run(*out); err != nil {
+	if err := run(context.Background(), *releases, *out); err != nil {
 		fmt.Fprintln(os.Stderr, "gen:", err)
 		os.Exit(1)
 	}
 }
 
-// run writes the schemes to out.
-func run(out string) error {
+// run writes the schemes to out, or the releases when releases is true. An
+// empty out is the default file of each.
+func run(ctx context.Context, releases bool, out string) error {
 	if _, err := os.Stat("astro.config.mjs"); err != nil {
 		return errors.New("run it in the root of the repository")
 	}
-	buf, err := generate()
+	var buf []byte
+	var err error
+	if releases {
+		out = cmp.Or(out, releasesFile)
+		buf, err = generateReleases(ctx)
+	} else {
+		out = cmp.Or(out, schemesFile)
+		buf, err = generate()
+	}
 	if err != nil {
 		return err
 	}

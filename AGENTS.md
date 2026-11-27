@@ -40,9 +40,12 @@ add a row for it or delete it.
 
 1. Do not edit generated files. `public/admin/` is made by
    `scripts/prepare.mjs` from `cms/`. A file of `public/casts/` is made by
-   `cmd/record` from the script of the same name in `recordings/`.
-   `src/data/generated/` is made by `cmd/gen` from the Go modules that
-   `go.mod` pins. Change the source, then make the file again.
+   `cmd/record` from the script of the same name in `recordings/`, and so is
+   a folder of `public/charts/`. `src/data/generated/schemes.json` is made by
+   `cmd/gen` from the Go modules that `go.mod` pins.
+   `src/data/generated/releases.json` is made by `go run ./cmd/gen -releases`
+   from the releases of usql on GitHub. Change the source, then make the file
+   again.
 
 2. A page is a `.md` file, never `.mdx`, so that the web editor can open it.
    A page imports no component. Anything that is more than Markdown is a
@@ -82,7 +85,8 @@ add a row for it or delete it.
    fails when a recording shows the value of one of them.
 
 9. Do not record a recording on a machine with another usql than the release
-   that the site documents. `docs/RECORDING.md` says how to check it.
+   that the site documents. `recordings/usql-version` holds its version, and
+   `cmd/record` stops when the usql on the `PATH` prints another.
 
 10. The repository root holds four documents: `README.md`, `AGENTS.md`,
     `CLAUDE.md` and `CONTRIBUTING.md`. Every other document goes under
@@ -111,8 +115,9 @@ for a rule or for something still to decide.
 bash scripts/precommit.sh
 ```
 
-It runs gofmt, `go vet`, `go test`, prettier, `astro check`, the build, and a
-check of the built pages, and prints one verdict on its last line.
+It runs gofmt, `go vet`, `go test`, the tests of the plugins of `src/lib/`,
+prettier, `astro check`, the build, and a check of the built pages, and
+prints one verdict on its last line.
 
 `go.mod` sits next to `node_modules`, which can hold Go files. Name the Go
 packages, `./cmd/...` and `./internal/...`, and never `./...`.

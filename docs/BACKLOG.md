@@ -58,14 +58,19 @@ organization, and a service that exchanges its code for a token, such as
 service exists. Until then, an editor signs in with a token. Open question 2
 of [PLAN.md](PLAN.md).
 
-## W4. Record against database servers
+## W4. Record against database servers: Done
 
 A script names the variables that it needs, such as `USQL_SITE_PG`, and
 `files:` writes them into the `config.yaml` of the temporary home as named
 connections. The recording then types `usql pg`, and shows no address.
-Add a script for each guide that needs a server. Start each server with
-dbmeta's `dbrun`, as `docs/RECORDING.md` says, and add the sample data that
-the guides use, such as the `sales` table of usql's `_samples/chart.sql`.
+`docs/RECORDING.md` lists the variables. The recordings `connect`,
+`postgres`, `mysql` and `passwords` use PostgreSQL 18 and MySQL with the
+northwind fixture of dbrun. The step `secret:` types the value of a variable
+at the password prompt, which does not show it.
+
+The example URLs of the pages of PostgreSQL, MySQL and SQL Server were run
+against their servers on 2026-11-27. The named instance form of SQL Server,
+and the pages of Oracle and ClickHouse, were not run.
 
 ## W5. Show the chart of a recording
 
@@ -75,9 +80,13 @@ typing, and the chart as the SVG file that the same session writes with
 
 1. usql: `\chart file=` must work when the terminal draws no images. Today
    `doExecChart` in usql's `handler/handler.go` checks for an encoder before
-   it reads the options, and stops with "graphics not supported".
-2. `cmd/record`: a `keep:` list of files that it copies from the temporary
-   home to `public/charts/<name>/` after the recording.
+   it reads the options, and stops with "graphics not supported". Until it
+   is fixed, a chart script writes an `init.sql` with `\uset quiet on` and
+   `\uset term_graphics kitty`, as `docs/RECORDING.md` says. When usql
+   fixes it, remove that `init.sql` from the chart scripts, and the notes
+   about the current release from the chart pages.
+2. `cmd/record`: `keep:` copies files from the temporary home to
+   `public/charts/<name>/` after the recording. Done.
 
 ## W6. Charts from a Vega-Lite file
 
@@ -85,12 +94,13 @@ usql reads the directory `charts.path` at startup, and no command uses it.
 The guide "Charts from a Vega-Lite file" waits for usql to draw a chart from
 a file in that directory, with the result of a query as its data.
 
-## W7. Pin the usql of the recordings
+## W7. Pin the usql of the recordings: Done
 
-Write the release of usql that the recordings use to
-`recordings/usql-version`, or take it from `go.mod` once W2 pins it, and make `cmd/record` stop when `usql --version` on the `PATH`
-prints another version. Record every script again for each release with
-`go run ./cmd/record -all`.
+`recordings/usql-version` holds the version of usql that the recordings use,
+and `cmd/record` stops when `usql --version` on the `PATH` prints another
+one. Record every script again for each release with
+`go run ./cmd/record -all`. Once W2 pins usql in `go.mod`, take the version
+from there.
 
 ## W8. Write the guides of the plan
 
@@ -102,14 +112,17 @@ On 2026-11-27, three agents wrote 14 guides and 10 recordings, with a build
 of usql main at 85d27b9 that held the SQLite and DuckDB drivers. What is
 left:
 
-- Passwords, and Databases in Kubernetes. They need a server or a cluster
-  to run the commands against.
-- The chart pages after "Your first chart", which wait for W5 and W6.
+- Databases in Kubernetes. It needs a cluster to run the commands against.
+- Charts from a Vega-Lite file, which waits for W6.
 - The recipes.
 - The command line options that the guides leave out, such as `-1`, `-o`,
   `-U` and `--dump`, until the move of usql to ox (usql's W83) is released.
-- The parts that the bugs of W14 hide: `\copy` with named connections, the
-  `DRIVER PARAMS` form of `\c`, `\dn` and `\d` of an index on DuckDB.
+- The parts that the bugs of W14 hid, once usql's fixes are released:
+  `\copy` with named connections, the `DRIVER PARAMS` form of `\c`, and
+  `\dn` and `\d` of an index on DuckDB.
+
+A second round on the same day wrote Passwords, with recordings against
+PostgreSQL and MySQL (W4), and five chart pages with eight SVG charts (W5).
 
 The recorder types each key on its own, so a script cannot type a key that
 sends more than one byte, such as Up. The line-editing recording uses
@@ -136,13 +149,12 @@ refused. Run each against its server when W4 has them.
 `:::tabs`, with one `::::tab[label]` section for each tab, is drawn by
 `src/lib/tabs.mjs` with the markup and the look of Starlight's Tabs
 component. `src/scripts/tabs.ts` switches the tabs. The editor component in
-`cms/editor.js` holds a list of tabs, each with a label and its Markdown. The
-install page uses it. The paths of the configuration directory belong to
-the guide "Configure usql" of W8, which can use the tabs.
+`cms/editor.js` holds a list of tabs, each with a label and its Markdown.
 
-The tabs do not remember the choice of the reader from one page to the
-next, as Starlight's `syncKey` does. Add it when two pages have tabs with
-the same labels.
+`:::tabs{sync="key"}` keeps the choice of the reader for every tabs with the
+same key, on the page and on the next pages, in the storage of the browser.
+A short script in the tabs opens the saved tab before the page shows. The
+install page uses `sync="install"`.
 
 ## W11. Move the guide of the README to the site
 
@@ -150,10 +162,18 @@ Once the guides are on the site, the README of usql can shrink to an
 introduction, the install commands and a link to usql.app. A maintainer
 decides it in usql. Open question 3 of [PLAN.md](PLAN.md).
 
-## W12. Release notes
+## W12. Release notes: Done
 
-A page for each release of usql, from its GitHub release, made by `cmd/gen`
-(W2).
+`go run ./cmd/gen -releases` reads the releases of usql from GitHub and
+writes `src/data/generated/releases.json`. It is the only mode of `cmd/gen`
+that uses the network. `::releases`, on the page `project/releases`, draws
+them. The notes are Markdown, and the plugin draws them safely: raw HTML
+shows as text, an image becomes a link, and a link keeps its target only
+when it is http, https or mailto. `src/lib/releases.test.mjs` checks these
+rules, and `scripts/precommit.sh` runs it.
+
+Run `go run ./cmd/gen -releases` after each release of usql. The workflow
+does not run it yet.
 
 ## W13. Check the links: Done
 
@@ -165,38 +185,41 @@ to a file of `public/` passes. `astro.config.mjs` excludes `/admin/`, which
 ## W14. Fix the usql bugs found while writing the guides
 
 The agents that wrote the guides of W8 found these with usql main at
-85d27b9. Each one is a change to usql, which a maintainer makes there. The
-first three were run again by hand, and failed the same way.
+85d27b9. On 2026-11-27 they were fixed in usql, each with a test, and the
+fixes wait in usql's checkout for a maintainer to commit them. usql's
+`docs/RELEASE.md` lists them under "Fixes found while writing usql.app":
 
-1. `\copy` does not look up a named connection, though the README says it
-   does. After `\cset shop sq:shop.db`,
-   `\copy shop dk:warehouse.duckdb 'select id, name from products' products`
-   prints `error: invalid database scheme`. `metacmd.Copy` passes the name
-   to `dburl.Parse`.
-2. `\c DRIVER PARAMS` fails, and so do `\cset NAME DRIVER PARAMS` and the
-   list form of `connections:` in `config.yaml`. `\c sqlite3 books.db`
-   prints `error: : driver not available`. `handler.Open` builds the URL
-   with no `SchemeName`.
-3. `usql nothere.db` makes an empty SQLite file. The README says that a path
-   with no driver must exist.
-4. `\timing on` from `init.sql`, from `\i`, or from an earlier `-c` prints
-   "Timing is on.", and the next query prints no time.
-5. When the last statement of `init.sql` fails, usql exits, though
-   `on_error_stop` is off. `\i` of a file whose last statement fails prints
-   the error twice and skips the next `-c`.
-6. `\set ON_ERROR_STOP on` is accepted and does nothing.
-7. `\begin -read-only` on SQLite lets an `INSERT` run.
-8. DuckDB: `\d products` shows no primary key, `\d` of an index lists no
-   columns, `\dn` leaves out `main`, and `\dnS` lists `main` three times.
-   These come from dbmeta.
-9. Time: after `\pset timezone America/New_York`, a DuckDB `date` of
-   2026-11-02 prints as Nov 1. `\pset timezone` prints an empty line. A
-   SQLite `timestamp` prints in the time zone of the machine, and DuckDB
-   prints it as stored.
-10. On SQLite, a statement prints the row count of an earlier one, such as
-    `CREATE INDEX 3`, `BEGIN 1` and `COMMIT 1`.
-11. Smaller ones: DuckDB `4.50::decimal(8,2)` prints `4.5`. With `\t`,
-    `\pset border 2` and `\pset linestyle unicode`, the top border is
-    missing. The error of `\pset format bogus` leaves `vertical` out of its
-    list. A script that fails only in `\gset` exits 0. The prompt escape `%x`
-    does nothing. `\uset term_graphics bogus` is accepted.
+- `\copy` with named connections, and `\c DRIVER PARAMS`.
+- A bare path that does not exist, which created an empty SQLite file.
+- `-W` with a named connection.
+- `\set ON_ERROR_STOP`, the `\pset format` error, `\gset` exit codes, and
+  the prompt escape `%x`.
+- `\timing` lost after `\i` and `init.sql`, the error of the last statement
+  of `init.sql`, and `\i` that printed its error twice.
+- `\begin -read-only` on SQLite, which is now an error.
+- `\pset timezone`, which moved a date.
+- Stale row counts on SQLite, and the scale of a DuckDB decimal.
+- `\chart bg=`, and a NULL in a series of `\chart`.
+- `\dnS` on DuckDB. dbmeta v0.50.1 fixed the other gaps of `\d` and `\dn`
+  on DuckDB.
+
+What is left:
+
+1. dburl: `file:` with an absolute path that does not exist opens the
+   directory above it as PostgreSQL, so it does not create a SQLite file as
+   usql's README says. The dburl session confirmed it on 2026-11-27, and a
+   maintainer decides the fix, because it changes how a bare path resolves
+   too.
+2. usql: an error of a meta command starts with the name of the driver, as
+   in `error: sqlite3: \chart: graphics not supported in terminal`, and the
+   error of `\chart file=` comes after `writing to` was printed.
+3. usql: a meta command after a failed statement resets the exit status of a
+   script.
+4. usql: a `\o` in a file of `\i` is lost when the file ends.
+5. usql: `\chart file=` needs a terminal that draws images (W5).
+
+The missing top border with `\t` and `\pset border 2` is not a bug: psql
+18.7 draws the same, and tblfmt matches it. A SQLite `timestamp` that prints
+in the time zone of the machine is not a bug either: dburl's D67 sets
+`_loc=auto` on purpose, and `?_loc=UTC` in the URL keeps UTC.
+`\uset term_graphics bogus` is accepted on purpose, as none.

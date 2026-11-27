@@ -18,6 +18,21 @@ npm run build
 | `SITE_URL`     | the address of the site, for the sitemap and the links | `https://usql.app`                       |
 | `CMS_AUTH_URL` | the service that signs an editor in to GitHub (W3)     | none, so an editor signs in with a token |
 
+## The release notes
+
+The page of the release notes shows `src/data/generated/releases.json`. The
+build does not fetch the releases. A person makes the file again after each
+release of usql, and commits it:
+
+```bash
+go run ./cmd/gen -releases
+```
+
+The command reads the releases of usql from the GitHub API. If the variable
+`GITHUB_TOKEN` or `GH_TOKEN` holds a token, the command sends it, so that
+GitHub allows more requests. It needs no token for the few requests that it
+makes. The workflow does not run it yet.
+
 ## GitHub Pages
 
 `.github/workflows/site.yml` runs `scripts/precommit.sh` for every push and

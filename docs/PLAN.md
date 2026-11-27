@@ -74,7 +74,7 @@ A page marked "Written" is on the site. The rest are W8.
 | --------------------------- | -------------------------------------------------------------------------------------------- |
 | Connect to a database       | Written. The URLs, the short names, the paths on disk and `USQL_DSN`                         |
 | Named connections           | Written. `\cset`, the `connections:` of `config.yaml`, recording                             |
-| Passwords                   | `-W`, `-w`, `USQL_DSN`, and why there is no password file                                    |
+| Passwords                   | Written. `-W`, `-w`, `USQL_DSN`, and why there is no password file                           |
 | Databases in Kubernetes     | The `k8s` URLs of dbfwd                                                                      |
 | Run queries and scripts     | Written. The query buffer, `\g`, `\gx`, `\gset`, `\watch`, `\e`, `-c`, `-f`, `\i`, recording |
 | Variables and conditionals  | Written. `\set`, interpolation, backticks, `\if`, recording                                  |
@@ -90,15 +90,15 @@ A page marked "Written" is on the site. The rest are W8.
 
 ### Charts
 
-| Page                         | Notes                                                                |
-| ---------------------------- | -------------------------------------------------------------------- |
-| Your first chart             | Written. The shape of the result and the options                     |
-| Bar and line charts          | The series, the labels and the precision, with the chart images (W5) |
-| Size, colors and titles      | The options, each with an image                                      |
-| Save a chart to a file       | `file=`. Needs the change to usql of W5                              |
-| Charts in a script           | `\i`, and why `-f` draws no chart                                    |
-| Charts from a Vega-Lite file | Needs the feature of usql of W6                                      |
-| Gallery                      | Every chart of the pages above, each with the query that makes it    |
+| Page                         | Notes                                                                         |
+| ---------------------------- | ----------------------------------------------------------------------------- |
+| Your first chart             | Written. The shape of the result and the options                              |
+| Bar and line charts          | Written. The series, the labels and the precision, with the chart images (W5) |
+| Size, colors and titles      | Written. The options, each with an image                                      |
+| Save a chart to a file       | Written. `file=`. Needs the change to usql of W5                              |
+| Charts in a script           | Written. `\i`, and why `-f` draws no chart                                    |
+| Charts from a Vega-Lite file | Needs the feature of usql of W6                                               |
+| Gallery                      | Written. Every chart of the pages above, each with the query that makes it    |
 
 The player of the recordings draws text and no images, so a chart page shows
 two things: the recording of the typing, and the chart as an SVG file that
@@ -129,7 +129,7 @@ All generated (W2):
 
 Recipes are short pages for one task each, such as "Export a query to CSV",
 "Import a CSV file", "Compare two databases" and "Run usql in CI". The
-project group has "Edit this site" (written), the release notes (W12), and
+project group has "Edit this site" (written), the release notes (written, W12), and
 how to contribute to usql.
 
 ## Recordings

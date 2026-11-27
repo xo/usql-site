@@ -2,14 +2,16 @@
 // from recordings/<name>.yml, runs a shell in a pseudo-terminal, types each
 // step of the script into it, and writes what the terminal showed to
 // public/casts/<name>.cast in the asciicast v2 format, which the player of the
-// site reads.
+// site reads. The files that the script names in keep, such as the SVG file of
+// a chart, are copied to public/charts/<name>/.
 //
 //	go run ./cmd/record tour
 //	go run ./cmd/record -all
 //
 // A script runs in a new temporary directory, which is also the home
 // directory of the shell, so that no configuration of the person who records
-// it reaches the recording. See docs/RECORDING.md.
+// it reaches the recording. The recorder stops when the usql on the PATH is
+// not the version in recordings/usql-version. See docs/RECORDING.md.
 package main
 
 import (
@@ -39,6 +41,7 @@ func main() {
 	all := flag.Bool("all", false, "record every script in the scripts directory")
 	dir := flag.String("dir", "recordings", "the directory of the scripts")
 	out := flag.String("out", filepath.Join("public", "casts"), "the directory of the recordings")
+	charts := flag.String("charts", filepath.Join("public", "charts"), "the directory of the files that the scripts keep")
 	flag.Parse()
 	names := flag.Args()
 	if *all {
@@ -53,9 +56,14 @@ func main() {
 		os.Exit(2)
 	}
 	ctx := context.Background()
+	if err := checkVersion(ctx, filepath.Join(*dir, versionFile)); err != nil {
+		fmt.Fprintln(os.Stderr, "error:", err)
+		os.Exit(1)
+	}
 	failed := false
 	for _, name := range names {
-		if err := record(ctx, filepath.Join(*dir, name+".yml"), filepath.Join(*out, name+".cast")); err != nil {
+		err := record(ctx, filepath.Join(*dir, name+".yml"), filepath.Join(*out, name+".cast"), filepath.Join(*charts, name))
+		if err != nil {
 			fmt.Fprintf(os.Stderr, "error: %s: %v\n", name, err)
 			failed = true
 			continue
@@ -81,6 +89,47 @@ func scripts(dir string) ([]string, error) {
 	return names, nil
 }
 
+// versionFile is the name of the file, in the directory of the scripts, that
+// holds the version of usql that the recordings use.
+const versionFile = "usql-version"
+
+// checkVersion makes sure that the usql on the PATH prints the version in
+// file.
+func checkVersion(ctx context.Context, file string) error {
+	usql, err := exec.LookPath("usql")
+	if err != nil {
+		return fmt.Errorf("finding usql on the PATH: %w", err)
+	}
+	return compareVersion(ctx, usql, file)
+}
+
+// compareVersion runs usql --version, and compares the version that it prints
+// with the version in file.
+func compareVersion(ctx context.Context, usql, file string) error {
+	buf, err := os.ReadFile(file)
+	if err != nil {
+		return fmt.Errorf("reading the version of usql for the recordings: %w", err)
+	}
+	want := strings.TrimSpace(string(buf))
+	if want == "" {
+		return fmt.Errorf("%s is empty, want a version of usql such as 0.20.0", file)
+	}
+	out, err := exec.CommandContext(ctx, usql, "--version").Output()
+	if err != nil {
+		return fmt.Errorf("running %s --version: %w", usql, err)
+	}
+	got, ok := strings.CutPrefix(strings.TrimSpace(string(out)), "usql ")
+	if !ok {
+		return fmt.Errorf("%s --version printed %q, want usql VERSION", usql, tail(string(out), 200))
+	}
+	if got != want {
+		return fmt.Errorf("%s is version %s, and %s holds %s: "+
+			"put usql %s first on the PATH, or change %s and record every script again with -all",
+			usql, got, file, want, want, file)
+	}
+	return nil
+}
+
 // Script is one recording.
 type Script struct {
 	// Title is the title of the recording.
@@ -99,6 +148,9 @@ type Script struct {
 	Setup []string `yaml:"setup"`
 	// Steps are typed into the terminal, in order.
 	Steps []Step `yaml:"steps"`
+	// Keep names files of the home directory, such as the SVG file of a
+	// chart, that are copied out of it after the recording.
+	Keep []string `yaml:"keep"`
 }
 
 // Step is one step of a script. Exactly one of its fields is set.
@@ -112,6 +164,11 @@ type Step struct {
 	Wait string `yaml:"wait"`
 	// Sleep pauses, as a Go duration such as 1.5s.
 	Sleep string `yaml:"sleep"`
+	// Secret types the value of the variable of Needs that it names, and
+	// then Enter. It is for a prompt that does not show what is typed, such
+	// as the password prompt of usql. The recording still fails when it
+	// shows the value.
+	Secret string `yaml:"secret"`
 }
 
 // The timing of the typing and of the waits.
@@ -124,8 +181,9 @@ const (
 	idleLimit = 2.0
 )
 
-// record runs the script in file and writes the recording to out.
-func record(ctx context.Context, file, out string) error {
+// record runs the script in file, writes the recording to out, and copies
+// the files of Keep to the directory keep.
+func record(ctx context.Context, file, out, keep string) error {
 	buf, err := os.ReadFile(file)
 	if err != nil {
 		return fmt.Errorf("reading script: %w", err)
@@ -164,11 +222,60 @@ func record(ctx context.Context, file, out string) error {
 			return fmt.Errorf("running setup %q: %w: %s", command, err, buf)
 		}
 	}
-	events, err := run(ctx, home, env, cols, rows, s.Steps, slices.Collect(maps.Values(vars)))
+	secrets := slices.Collect(maps.Values(vars))
+	events, err := run(ctx, home, env, cols, rows, s.Steps, vars)
 	if err != nil {
 		return err
 	}
-	return writeCast(out, s.Title, cols, rows, events)
+	kept, err := readKept(home, s.Keep, secrets)
+	if err != nil {
+		return err
+	}
+	if err := writeCast(out, s.Title, cols, rows, events); err != nil {
+		return err
+	}
+	return writeKept(keep, kept)
+}
+
+// readKept reads the files of names from home. It fails when a file is
+// missing, is outside home, or holds the value of one of secrets.
+func readKept(home string, names, secrets []string) (map[string][]byte, error) {
+	kept := make(map[string][]byte, len(names))
+	for _, name := range names {
+		path := filepath.Join(home, filepath.FromSlash(name))
+		if !strings.HasPrefix(path, home+string(filepath.Separator)) {
+			return nil, fmt.Errorf("the kept file %s is outside the home directory", name)
+		}
+		buf, err := os.ReadFile(path)
+		if err != nil {
+			return nil, fmt.Errorf("reading the kept file %s: %w", name, err)
+		}
+		for _, secret := range secrets {
+			if bytes.Contains(buf, []byte(secret)) {
+				return nil, fmt.Errorf("the kept file %s holds the value of a variable of needs", name)
+			}
+		}
+		kept[filepath.FromSlash(name)] = buf
+	}
+	return kept, nil
+}
+
+// writeKept replaces the directory dir with the files of kept. A script that
+// keeps no file has no directory, so that no file of an old recording stays.
+func writeKept(dir string, kept map[string][]byte) error {
+	if err := os.RemoveAll(dir); err != nil {
+		return fmt.Errorf("removing %s: %w", dir, err)
+	}
+	for name, buf := range kept {
+		path := filepath.Join(dir, name)
+		if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
+			return fmt.Errorf("making the directory of %s: %w", path, err)
+		}
+		if err := os.WriteFile(path, buf, 0o644); err != nil {
+			return fmt.Errorf("writing %s: %w", path, err)
+		}
+	}
+	return nil
 }
 
 // size parses COLSxROWS.
@@ -293,8 +400,8 @@ func (t *terminal) wait(ctx context.Context, s string) error {
 }
 
 // run runs the steps in a shell, and returns the events of the recording.
-// It fails when the recording shows one of secrets.
-func run(ctx context.Context, home string, env []string, cols, rows int, steps []Step, secrets []string) ([]event, error) {
+// It fails when the recording shows the value of one of vars.
+func run(ctx context.Context, home string, env []string, cols, rows int, steps []Step, vars map[string]string) ([]event, error) {
 	cmd := exec.CommandContext(ctx, "bash", "--noprofile", "--norc")
 	cmd.Dir, cmd.Env = home, env
 	f, err := pty.StartWithSize(cmd, &pty.Winsize{Cols: uint16(cols), Rows: uint16(rows)})
@@ -312,7 +419,7 @@ func run(ctx context.Context, home string, env []string, cols, rows int, steps [
 		return nil, err
 	}
 	for i, step := range steps {
-		if err := do(ctx, f, t, step); err != nil {
+		if err := do(ctx, f, t, step, vars); err != nil {
 			return nil, fmt.Errorf("step %d: %w", i+1, err)
 		}
 	}
@@ -333,7 +440,7 @@ func run(ctx context.Context, home string, env []string, cols, rows int, steps [
 	defer t.mu.Unlock()
 	events := t.events[:end]
 	for _, e := range events {
-		for _, secret := range secrets {
+		for _, secret := range slices.Collect(maps.Values(vars)) {
 			if strings.Contains(e.data, secret) {
 				return nil, errors.New("the recording shows the value of a variable of needs")
 			}
@@ -342,16 +449,17 @@ func run(ctx context.Context, home string, env []string, cols, rows int, steps [
 	return events, nil
 }
 
-// do runs one step.
-func do(ctx context.Context, w io.Writer, t *terminal, step Step) error {
+// do runs one step. vars holds the variables of needs.
+func do(ctx context.Context, w io.Writer, t *terminal, step Step, vars map[string]string) error {
 	switch {
 	case step.Type != "":
-		if err := typeText(ctx, w, step.Type); err != nil {
-			return err
+		return typeLine(ctx, w, step.Type)
+	case step.Secret != "":
+		v, ok := vars[step.Secret]
+		if !ok {
+			return fmt.Errorf("the step types %s, which is not in needs", step.Secret)
 		}
-		time.Sleep(enterDelay)
-		_, err := io.WriteString(w, "\r")
-		return err
+		return typeLine(ctx, w, v)
 	case step.Keys != "":
 		s, err := strconv.Unquote(`"` + strings.ReplaceAll(step.Keys, `"`, `\"`) + `"`)
 		if err != nil {
@@ -369,6 +477,16 @@ func do(ctx context.Context, w io.Writer, t *terminal, step Step) error {
 		return nil
 	}
 	return errors.New("the step is empty")
+}
+
+// typeLine types s, and then Enter.
+func typeLine(ctx context.Context, w io.Writer, s string) error {
+	if err := typeText(ctx, w, s); err != nil {
+		return err
+	}
+	time.Sleep(enterDelay)
+	_, err := io.WriteString(w, "\r")
+	return err
 }
 
 // typeText types s one character at a time.

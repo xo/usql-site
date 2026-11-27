@@ -17,6 +17,8 @@ Without a host, usql connects to the server on `localhost`:
 usql my://
 ```
 
+::cast[List the tables of the northwind database on MySQL, and run a query over three lines.]{name="mysql"}
+
 ## Schemes and aliases
 
 ::schemes{name="mysql"}

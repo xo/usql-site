@@ -26,7 +26,7 @@ order by sales.month
 | `subtitle` | the subtitle |
 | `type` | `bar` or `line` |
 | `size` | the size in pixels, as `WIDTHxHEIGHT`. The default is `800x600` |
-| `bg` | the color of the background. The default is white |
+| `bg` | the color of the background. In the current release of usql, it changes nothing |
 | `prec` | the number of decimal places of the values |
 | `file` | write the chart to this SVG file, and draw nothing |
 
