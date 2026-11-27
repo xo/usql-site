@@ -1,0 +1,42 @@
+# The formats of \pset, \x and the time format, on the page
+# guides/format-output. It needs only usql, because the database is a DuckDB
+# file that the setup makes.
+title: Format the output of usql
+size: 100x30
+files:
+  shop.sql: |
+    create table orders (id integer primary key, item varchar not null, qty integer not null, placed_at timestamp not null);
+    insert into orders values
+      (1, 'Green tea', 2, '2026-11-02 09:15:00'), (2, 'Coffee beans', 1, '2026-11-02 10:40:00'),
+      (3, 'Coffee beans', 3, '2026-11-03 08:05:00'), (4, 'Cocoa', 1, '2026-11-04 16:30:00');
+setup:
+  - usql -X -f shop.sql dk:shop.duckdb
+steps:
+  - type: usql shop.duckdb
+  - wait: "=> "
+  - sleep: 1s
+  - type: select * from orders limit 2;
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \pset format csv
+  - wait: "=> "
+  - type: select item, qty from orders;
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \pset format aligned
+  - wait: "=> "
+  - type: \x
+  - wait: "=> "
+  - type: select * from orders where id = 3;
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \x
+  - wait: "=> "
+  - type: \pset time '2006-01-02 15:04'
+  - wait: "=> "
+  - type: select id, placed_at from orders;
+  - wait: "=> "
+  - sleep: 2s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms

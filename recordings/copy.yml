@@ -1,0 +1,39 @@
+# \copy from a SQLite file to a DuckDB file, and the import of a CSV file, on
+# the page guides/copy. It needs only usql, because the setup makes both
+# database files and the CSV file.
+title: Copy data between databases with usql
+size: 120x26
+files:
+  shop.sql: |
+    create table products (id integer primary key, name text not null, price numeric(8,2) not null);
+    insert into products (id, name, price) values
+      (1, 'Green tea', 3.75), (2, 'Coffee beans', 12.25), (3, 'Cocoa', 5.25);
+  warehouse.sql: |
+    create table products (id integer, name varchar, price decimal(8,2));
+    create table customers (id integer, name varchar, city varchar);
+  customers.csv: |
+    id,name,city
+    1,Ana Silva,Lisbon
+    2,Ben Okafor,Lagos
+    3,Chen Wei,Taipei
+setup:
+  - usql -X -f shop.sql sq:shop.db
+  - usql -X -f warehouse.sql dk:warehouse.duckdb
+steps:
+  - type: usql
+  - wait: "=> "
+  - sleep: 1s
+  - type: \copy sq:shop.db dk:warehouse.duckdb 'select id, name, price from products' products
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: '\copy dk: dk:warehouse.duckdb "select * from read_csv(''customers.csv'')" customers'
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \c warehouse.duckdb
+  - wait: "=> "
+  - type: select * from customers;
+  - wait: "=> "
+  - sleep: 2s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms

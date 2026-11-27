@@ -1,0 +1,1153 @@
+{
+    "dburl": "v0.58.1",
+    "schemes": [
+        {
+            "name": "arangodb",
+            "desc": "ArangoDB",
+            "dialect": "arangodb",
+            "aliases": [
+                "ar",
+                "arango"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/arangodb",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://arangodb.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "athena",
+            "desc": "Amazon Athena",
+            "dialect": "athena",
+            "aliases": [
+                "s3",
+                "aws",
+                "awsathena"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/athena",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://aws.amazon.com/athena",
+            "cgo": false,
+            "deployment": [
+                "hosted"
+            ]
+        },
+        {
+            "name": "avatica",
+            "desc": "Apache Avatica",
+            "dialect": "avatica",
+            "aliases": [
+                "av",
+                "phoenix"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/avatica",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://calcite.apache.org/avatica",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "bigquery",
+            "desc": "Google BigQuery",
+            "dialect": "bigquery",
+            "aliases": [
+                "bq"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/bigquery",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://cloud.google.com/bigquery",
+            "cgo": false,
+            "deployment": [
+                "hosted"
+            ]
+        },
+        {
+            "name": "cassandra",
+            "desc": "Cassandra",
+            "dialect": "cassandra",
+            "aliases": [
+                "ca",
+                "cql",
+                "scy",
+                "cass",
+                "scylla",
+                "datastax"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/cassandra",
+            "driver_url": "https://github.com/xo/cassandra",
+            "home": "https://cassandra.apache.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "chai",
+            "desc": "ChaiSQL",
+            "dialect": "chai",
+            "aliases": [
+                "ci",
+                "genji",
+                "chaisql"
+            ],
+            "opaque": true,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/chaisql/chai",
+            "driver_url": "https://github.com/chaisql/chai",
+            "home": "https://chaisql.com",
+            "cgo": false,
+            "deployment": [
+                "embedded"
+            ]
+        },
+        {
+            "name": "clickhouse",
+            "desc": "ClickHouse",
+            "dialect": "clickhouse",
+            "aliases": [
+                "ch"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/clickhouse",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://clickhouse.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "cockroachdb",
+            "desc": "CockroachDB",
+            "dialect": "cockroachdb",
+            "aliases": [
+                "cr",
+                "cdb",
+                "crdb",
+                "cockroach"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/jackc/pgx/v5/stdlib",
+            "driver_url": "https://github.com/jackc/pgx",
+            "home": "https://www.cockroachlabs.com",
+            "cgo": false,
+            "deployment": [
+                "server",
+                "hosted"
+            ]
+        },
+        {
+            "name": "cosmos",
+            "desc": "Azure Cosmos DB",
+            "dialect": "cosmos",
+            "aliases": [
+                "cm"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/cosmos",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://azure.microsoft.com/products/cosmos-db",
+            "cgo": false,
+            "deployment": [
+                "hosted"
+            ]
+        },
+        {
+            "name": "couchbase",
+            "desc": "Couchbase",
+            "dialect": "couchbase",
+            "aliases": [
+                "n1",
+                "n1ql"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/couchbase",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://www.couchbase.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "cratedb",
+            "desc": "CrateDB",
+            "dialect": "cratedb",
+            "aliases": [
+                "ct",
+                "crate"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/jackc/pgx/v5/stdlib",
+            "driver_url": "https://github.com/jackc/pgx",
+            "home": "https://cratedb.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "csvq",
+            "desc": "CSVQ",
+            "dialect": "csvq",
+            "aliases": [
+                "cs",
+                "csv",
+                "tsv",
+                "json"
+            ],
+            "opaque": true,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/mithrandie/csvq-driver",
+            "driver_url": "https://github.com/mithrandie/csvq-driver",
+            "home": "https://mithrandie.github.io/csvq",
+            "cgo": false,
+            "deployment": [
+                "embedded"
+            ]
+        },
+        {
+            "name": "databend",
+            "desc": "Databend",
+            "dialect": "databend",
+            "aliases": [
+                "dd",
+                "bend"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/databend",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://www.databend.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "databricks",
+            "desc": "Databricks",
+            "dialect": "databricks",
+            "aliases": [
+                "br",
+                "brick",
+                "bricks",
+                "databrick"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/databricks",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://www.databricks.com",
+            "cgo": false,
+            "deployment": [
+                "hosted"
+            ]
+        },
+        {
+            "name": "drill",
+            "desc": "Apache Drill",
+            "dialect": "drill",
+            "aliases": [
+                "dl"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/drill",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://drill.apache.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "druid",
+            "desc": "Apache Druid",
+            "dialect": "druid",
+            "aliases": [
+                "dr"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/druid",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://druid.apache.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "duckdb",
+            "desc": "DuckDB",
+            "dialect": "duckdb",
+            "aliases": [
+                "dk",
+                "ddb",
+                "duck"
+            ],
+            "opaque": true,
+            "transport": [],
+            "file_type": true,
+            "driver": "github.com/duckdb/duckdb-go/v2",
+            "driver_url": "https://github.com/duckdb/duckdb-go",
+            "home": "https://duckdb.org",
+            "cgo": true,
+            "deployment": [
+                "embedded"
+            ]
+        },
+        {
+            "name": "dynamodb",
+            "desc": "DynamoDB",
+            "dialect": "dynamodb",
+            "aliases": [
+                "dy",
+                "dyn",
+                "dynamo"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/dynamodb",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://aws.amazon.com/dynamodb",
+            "cgo": false,
+            "deployment": [
+                "server",
+                "hosted"
+            ]
+        },
+        {
+            "name": "elasticsearch",
+            "desc": "Elasticsearch",
+            "dialect": "elasticsearch",
+            "aliases": [
+                "es",
+                "elastic"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/elasticsearch",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://www.elastic.co/elasticsearch",
+            "cgo": false,
+            "deployment": [
+                "server",
+                "hosted"
+            ]
+        },
+        {
+            "name": "exasol",
+            "desc": "Exasol",
+            "dialect": "exasol",
+            "aliases": [
+                "ex",
+                "exa"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/exasol",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://www.exasol.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "file",
+            "desc": "",
+            "dialect": "",
+            "aliases": [
+                "fi"
+            ],
+            "opaque": true,
+            "transport": [],
+            "file_type": false,
+            "driver": "",
+            "driver_url": "",
+            "home": "",
+            "cgo": false,
+            "deployment": [
+                "embedded"
+            ]
+        },
+        {
+            "name": "firebirdsql",
+            "desc": "Firebird",
+            "dialect": "firebirdsql",
+            "aliases": [
+                "fb",
+                "firebird"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/nakagami/firebirdsql",
+            "driver_url": "https://github.com/nakagami/firebirdsql",
+            "home": "https://firebirdsql.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "flightsql",
+            "desc": "FlightSQL",
+            "dialect": "flightsql",
+            "aliases": [
+                "fl",
+                "flight"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/apache/arrow-go/v18/arrow/flight/flightsql/driver",
+            "driver_url": "https://github.com/apache/arrow-go/tree/main/arrow/flight/flightsql/driver",
+            "home": "https://arrow.apache.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "hdb",
+            "desc": "SAP HANA",
+            "dialect": "hdb",
+            "aliases": [
+                "sa",
+                "sap",
+                "hana",
+                "saphana"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/SAP/go-hdb/driver",
+            "driver_url": "https://github.com/SAP/go-hdb",
+            "home": "https://www.sap.com/products/technology-platform/hana.html",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "hive",
+            "desc": "Apache Hive",
+            "dialect": "hive",
+            "aliases": [
+                "hi",
+                "hive2"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/hive",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://hive.apache.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "impala",
+            "desc": "Apache Impala",
+            "dialect": "impala",
+            "aliases": [
+                "im"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/hive",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://impala.apache.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "influxdb",
+            "desc": "InfluxDB",
+            "dialect": "influxdb",
+            "aliases": [
+                "in",
+                "influx"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/influxdb",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://www.influxdata.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "influxql",
+            "desc": "InfluxDB InfluxQL",
+            "dialect": "influxql",
+            "aliases": [
+                "iq"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/influxdb",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://www.influxdata.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "k8s",
+            "desc": "Kubernetes",
+            "dialect": "",
+            "aliases": [
+                "k",
+                "kc",
+                "k8",
+                "kube",
+                "kubernetes"
+            ],
+            "opaque": false,
+            "transport": [
+                "any"
+            ],
+            "file_type": false,
+            "driver": "github.com/xo/dbfwd",
+            "driver_url": "https://github.com/xo/dbfwd",
+            "home": "https://kubernetes.io",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "libsql",
+            "desc": "libSQL",
+            "dialect": "libsql",
+            "aliases": [
+                "ls",
+                "turso"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/libsql",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://turso.tech",
+            "cgo": false,
+            "deployment": [
+                "server",
+                "hosted"
+            ]
+        },
+        {
+            "name": "maxcompute",
+            "desc": "Alibaba MaxCompute",
+            "dialect": "maxcompute",
+            "aliases": [
+                "mc"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/maxcompute",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://www.alibabacloud.com/product/maxcompute",
+            "cgo": false,
+            "deployment": [
+                "hosted"
+            ]
+        },
+        {
+            "name": "memsql",
+            "desc": "SingleStore MemSQL",
+            "dialect": "memsql",
+            "aliases": [
+                "me"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/go-sql-driver/mysql",
+            "driver_url": "https://github.com/go-sql-driver/mysql",
+            "home": "https://www.singlestore.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "moderncsqlite",
+            "desc": "ModernC SQLite3",
+            "dialect": "sqlite3",
+            "aliases": [
+                "mq",
+                "modernsqlite"
+            ],
+            "opaque": true,
+            "transport": [],
+            "file_type": false,
+            "driver": "modernc.org/sqlite",
+            "driver_url": "https://gitlab.com/cznic/sqlite",
+            "home": "https://www.sqlite.org",
+            "cgo": false,
+            "deployment": [
+                "embedded"
+            ]
+        },
+        {
+            "name": "mysql",
+            "desc": "MySQL",
+            "dialect": "mysql",
+            "aliases": [
+                "my",
+                "maria",
+                "aurora",
+                "mariadb",
+                "percona"
+            ],
+            "opaque": false,
+            "transport": [
+                "tcp",
+                "udp",
+                "unix"
+            ],
+            "file_type": false,
+            "driver": "github.com/go-sql-driver/mysql",
+            "driver_url": "https://github.com/go-sql-driver/mysql",
+            "home": "https://www.mysql.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "neo4j",
+            "desc": "Neo4j",
+            "dialect": "neo4j",
+            "aliases": [
+                "nj",
+                "neo",
+                "n4j"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/neo4j",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://neo4j.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "odbc",
+            "desc": "ODBC",
+            "dialect": "odbc",
+            "aliases": [
+                "od"
+            ],
+            "opaque": false,
+            "transport": [
+                "any"
+            ],
+            "file_type": false,
+            "driver": "github.com/xo/odbc",
+            "driver_url": "https://github.com/xo/odbc",
+            "home": "https://learn.microsoft.com/en-us/sql/odbc/microsoft-open-database-connectivity-odbc",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "opensearch",
+            "desc": "OpenSearch",
+            "dialect": "opensearch",
+            "aliases": [
+                "os",
+                "open"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/opensearch",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://opensearch.org",
+            "cgo": false,
+            "deployment": [
+                "server",
+                "hosted"
+            ]
+        },
+        {
+            "name": "oracle",
+            "desc": "Oracle Database",
+            "dialect": "oracle",
+            "aliases": [
+                "or",
+                "ora",
+                "oci",
+                "oci8",
+                "odpi",
+                "odpi-c"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/oracle",
+            "driver_url": "https://github.com/xo/oracle",
+            "home": "https://www.oracle.com/database",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "pgx",
+            "desc": "PostgreSQL PGX",
+            "dialect": "postgres",
+            "aliases": [
+                "px"
+            ],
+            "opaque": false,
+            "transport": [
+                "unix"
+            ],
+            "file_type": false,
+            "driver": "github.com/jackc/pgx/v5/stdlib",
+            "driver_url": "https://github.com/jackc/pgx",
+            "home": "https://www.postgresql.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "pinot",
+            "desc": "Apache Pinot",
+            "dialect": "pinot",
+            "aliases": [
+                "pi"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/pinot",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://pinot.apache.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "postgres",
+            "desc": "PostgreSQL",
+            "dialect": "postgres",
+            "aliases": [
+                "pg",
+                "pgsql",
+                "postgresql"
+            ],
+            "opaque": false,
+            "transport": [
+                "unix"
+            ],
+            "file_type": false,
+            "driver": "github.com/jackc/pgx/v5/stdlib",
+            "driver_url": "https://github.com/jackc/pgx",
+            "home": "https://www.postgresql.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "pq",
+            "desc": "PostgreSQL lib/pq",
+            "dialect": "postgres",
+            "aliases": [
+                "libpq"
+            ],
+            "opaque": false,
+            "transport": [
+                "unix"
+            ],
+            "file_type": false,
+            "driver": "github.com/lib/pq",
+            "driver_url": "https://github.com/lib/pq",
+            "home": "https://www.postgresql.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "presto",
+            "desc": "Presto",
+            "dialect": "presto",
+            "aliases": [
+                "pr",
+                "prestodb"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/trino",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://prestodb.io",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "questdb",
+            "desc": "QuestDB",
+            "dialect": "questdb",
+            "aliases": [
+                "qs"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/jackc/pgx/v5/stdlib",
+            "driver_url": "https://github.com/jackc/pgx",
+            "home": "https://questdb.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "redshift",
+            "desc": "Amazon Redshift",
+            "dialect": "redshift",
+            "aliases": [
+                "rs"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/jackc/pgx/v5/stdlib",
+            "driver_url": "https://github.com/jackc/pgx",
+            "home": "https://aws.amazon.com/redshift",
+            "cgo": false,
+            "deployment": [
+                "hosted"
+            ]
+        },
+        {
+            "name": "rqlite",
+            "desc": "rqlite",
+            "dialect": "rqlite",
+            "aliases": [
+                "rq"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/rqlite",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://rqlite.io",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "snowflake",
+            "desc": "Snowflake",
+            "dialect": "snowflake",
+            "aliases": [
+                "sf"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/snowflake",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://www.snowflake.com",
+            "cgo": false,
+            "deployment": [
+                "hosted"
+            ]
+        },
+        {
+            "name": "solr",
+            "desc": "Apache Solr",
+            "dialect": "solr",
+            "aliases": [
+                "so"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/solr",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://solr.apache.org",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "spanner",
+            "desc": "Google Spanner",
+            "dialect": "spanner",
+            "aliases": [
+                "sp"
+            ],
+            "opaque": false,
+            "transport": [
+                "unix"
+            ],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/spanner",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://cloud.google.com/spanner",
+            "cgo": false,
+            "deployment": [
+                "hosted"
+            ]
+        },
+        {
+            "name": "sqlite3",
+            "desc": "SQLite3",
+            "dialect": "sqlite3",
+            "aliases": [
+                "sq",
+                "sqlite"
+            ],
+            "opaque": true,
+            "transport": [],
+            "file_type": true,
+            "driver": "github.com/mattn/go-sqlite3",
+            "driver_url": "https://github.com/mattn/go-sqlite3",
+            "home": "https://www.sqlite.org",
+            "cgo": true,
+            "deployment": [
+                "embedded"
+            ]
+        },
+        {
+            "name": "sqlserver",
+            "desc": "Microsoft SQL Server",
+            "dialect": "sqlserver",
+            "aliases": [
+                "ms",
+                "mssql",
+                "azuresql"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/microsoft/go-mssqldb",
+            "driver_url": "https://github.com/microsoft/go-mssqldb",
+            "home": "https://www.microsoft.com/sql-server",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "surrealdb",
+            "desc": "SurrealDB",
+            "dialect": "surrealdb",
+            "aliases": [
+                "sr",
+                "sur",
+                "surreal"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/surrealdb",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://surrealdb.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "tablestore",
+            "desc": "Alibaba Tablestore",
+            "dialect": "tablestore",
+            "aliases": [
+                "ot",
+                "ots"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/tablestore",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://www.alibabacloud.com/product/tablestore",
+            "cgo": false,
+            "deployment": [
+                "hosted"
+            ]
+        },
+        {
+            "name": "tidb",
+            "desc": "TiDB",
+            "dialect": "tidb",
+            "aliases": [
+                "ti"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/go-sql-driver/mysql",
+            "driver_url": "https://github.com/go-sql-driver/mysql",
+            "home": "https://www.pingcap.com/tidb",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "trino",
+            "desc": "Trino",
+            "dialect": "trino",
+            "aliases": [
+                "tr"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/xo/dbimp/trino",
+            "driver_url": "https://github.com/xo/dbimp",
+            "home": "https://trino.io",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "vertica",
+            "desc": "Vertica",
+            "dialect": "vertica",
+            "aliases": [
+                "ve"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/vertica/vertica-sql-go",
+            "driver_url": "https://github.com/vertica/vertica-sql-go",
+            "home": "https://www.vertica.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "vitess",
+            "desc": "Vitess Database",
+            "dialect": "vitess",
+            "aliases": [
+                "vt"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/go-sql-driver/mysql",
+            "driver_url": "https://github.com/go-sql-driver/mysql",
+            "home": "https://vitess.io",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "voltdb",
+            "desc": "VoltDB",
+            "dialect": "voltdb",
+            "aliases": [
+                "vo",
+                "vdb",
+                "volt"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/VoltDB/voltdb-client-go/voltdbclient",
+            "driver_url": "https://github.com/VoltDB/voltdb-client-go",
+            "home": "https://www.voltdb.com",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        },
+        {
+            "name": "ydb",
+            "desc": "YDB",
+            "dialect": "ydb",
+            "aliases": [
+                "yd"
+            ],
+            "opaque": false,
+            "transport": [],
+            "file_type": false,
+            "driver": "github.com/ydb-platform/ydb-go-sdk/v3",
+            "driver_url": "https://github.com/ydb-platform/ydb-go-sdk",
+            "home": "https://ydb.tech",
+            "cgo": false,
+            "deployment": [
+                "server"
+            ]
+        }
+    ]
+}

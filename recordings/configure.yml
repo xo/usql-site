@@ -1,0 +1,47 @@
+# The page guides/configure. config.yaml sets a prompt, the text of NULL and
+# a named connection, and init.sql sets a variable. The database is a SQLite
+# file that the setup makes.
+title: Configure usql
+size: 100x26
+files:
+  .config/usql/config.yaml: |
+    usql:
+      prompt1: "%033[1;32m%/%033[0m%R%# "
+    print:
+      null: (none)
+    connections:
+      books: sq:books.db
+  .config/usql/init.sql: |
+    \set since 1965
+  books.sql: |
+    create table books (
+      id integer primary key,
+      title text not null,
+      subtitle text,
+      published integer not null
+    );
+    insert into books (title, subtitle, published) values
+      ('Solaris', null, 1961),
+      ('The Cyberiad', 'Fables for the Cybernetic Age', 1965),
+      ('Kindred', null, 1979);
+setup:
+  - usql -X -q -f books.sql sq:books.db
+steps:
+  - type: cat .config/usql/config.yaml .config/usql/init.sql
+  - wait: "$ "
+  - sleep: 2s
+  - type: usql books
+  - wait: "=> "
+  - sleep: 1s
+  - type: select title, subtitle from books where published >= :since;
+  - wait: "=> "
+  - sleep: 2s
+  - type: \uset prompt1 '%S%/%R%# '
+  - wait: "=> "
+  - sleep: 1s
+  - type: \config print.null
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms

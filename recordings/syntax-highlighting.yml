@@ -1,0 +1,37 @@
+# The page guides/syntax-highlighting. The same statement in the default
+# style, in two other styles, and with highlighting off. The database is a
+# SQLite file that the setup makes.
+title: Syntax highlighting
+size: 100x26
+files:
+  books.sql: |
+    create table books (id integer primary key, title text not null, published integer not null);
+    insert into books (title, published) values
+      ('Solaris', 1961), ('The Cyberiad', 1965), ('Kindred', 1979);
+setup:
+  - usql -X -q -f books.sql sq:books.db
+steps:
+  - type: usql books.db
+  - wait: "=> "
+  - sleep: 1s
+  - type: select title, published from books where title like 'S%' and published < 1970;
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \uset syntax_hl_style dracula
+  - wait: "=> "
+  - type: select title, published from books where title like 'S%' and published < 1970;
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \uset syntax_hl_style catppuccin-mocha
+  - wait: "=> "
+  - type: select title, published from books where title like 'S%' and published < 1970;
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \uset syntax_hl off
+  - wait: "=> "
+  - type: select title, published from books where title like 'S%' and published < 1970;
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms

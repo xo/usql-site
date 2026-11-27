@@ -57,36 +57,36 @@ The tools that the models named, and what the site does with them:
 
 The site has six groups. A page marked "generated" comes from usql or dburl,
 and a person does not write it. A page marked "recording" has at least one.
-The first pages are written. The rest are W8.
+A page marked "Written" is on the site. The rest are W8.
 
 ### Get started
 
-| Page             | Notes                                                                             |
-| ---------------- | --------------------------------------------------------------------------------- |
-| Install usql     | Written. One block for each way to install it. Tabs for each system come with W10 |
-| First steps      | Written, with a recording                                                         |
-| Coming from psql | What works the same, what usql adds, and what it does not have                    |
-| Get help         | `\?`, `\help`, `--help`, and GitHub Discussions                                   |
+| Page             | Notes                                                                   |
+| ---------------- | ----------------------------------------------------------------------- |
+| Install usql     | Written. One tab for each way to install it (W10)                       |
+| First steps      | Written, with a recording                                               |
+| Coming from psql | Written. What works the same, what usql adds, and what it does not have |
+| Get help         | Written. `\?`, `\help`, `--help`, and GitHub Discussions                |
 
 ### Guides
 
-| Page                        | Notes                                                                               |
-| --------------------------- | ----------------------------------------------------------------------------------- |
-| Connect to a database       | Written. The URLs, the short names, the paths on disk and `USQL_DSN`                |
-| Named connections           | `\cset`, the `connections:` of `config.yaml`, recording                             |
-| Passwords                   | `-W`, `-w`, `USQL_DSN`, and why there is no password file                           |
-| Databases in Kubernetes     | The `k8s` URLs of dbfwd                                                             |
-| Run queries and scripts     | The query buffer, `\g`, `\gx`, `\gset`, `\watch`, `\e`, `-c`, `-f`, `\i`, recording |
-| Variables and conditionals  | `\set`, interpolation, backticks, `\if`, recording                                  |
-| Format the output           | `\pset`, the formats, `\x`, the pager, the time formats, recording                  |
-| Describe a database         | The `\d` commands, which read dbmeta, recording                                     |
-| Copy data between databases | `\copy` between two URLs, and the import of a CSV file, recording                   |
-| Dump a database             | `\dump`, `--dump`, and a dump for another database, recording                       |
-| Transactions                | `\begin`, `\commit`, `-1`                                                           |
-| Configure usql              | `config.yaml`, `init.sql`, `\uset`, `-U`, the prompt, the history, recording        |
-| Line editing and completion | The keys, the `inputrc` file, the completion of names, recording                    |
-| Syntax highlighting         | The styles, recording                                                               |
-| Terminal graphics           | The detection, the variables, and the terminals that draw images                    |
+| Page                        | Notes                                                                                        |
+| --------------------------- | -------------------------------------------------------------------------------------------- |
+| Connect to a database       | Written. The URLs, the short names, the paths on disk and `USQL_DSN`                         |
+| Named connections           | Written. `\cset`, the `connections:` of `config.yaml`, recording                             |
+| Passwords                   | `-W`, `-w`, `USQL_DSN`, and why there is no password file                                    |
+| Databases in Kubernetes     | The `k8s` URLs of dbfwd                                                                      |
+| Run queries and scripts     | Written. The query buffer, `\g`, `\gx`, `\gset`, `\watch`, `\e`, `-c`, `-f`, `\i`, recording |
+| Variables and conditionals  | Written. `\set`, interpolation, backticks, `\if`, recording                                  |
+| Format the output           | Written. `\pset`, the formats, `\x`, the pager, the time formats, recording                  |
+| Describe a database         | Written. The `\d` commands, which read dbmeta, recording                                     |
+| Copy data between databases | Written. `\copy` between two URLs, and the import of a CSV file, recording                   |
+| Dump a database             | Written. `\dump`, `--dump`, and a dump for another database, recording                       |
+| Transactions                | Written. `\begin`, `\commit`, `-1`                                                           |
+| Configure usql              | Written. `config.yaml`, `init.sql`, `\uset`, `-U`, the prompt, the history, recording        |
+| Line editing and completion | Written. The keys, the `inputrc` file, the completion of names, recording                    |
+| Syntax highlighting         | Written. The styles, recording                                                               |
+| Terminal graphics           | Written. The detection, the variables, and the terminals that draw images                    |
 
 ### Charts
 
@@ -106,11 +106,12 @@ the same session writes with `\chart file=`. W5 holds the steps.
 
 ### Databases
 
-One page for each database that usql connects to, generated from the scheme
-registry of dburl: the schemes and aliases, the driver, and an example URL
-(W9). A person adds notes to the page of a database, such as the options of
-its driver and what it does not support. The main databases get notes first:
-PostgreSQL, MySQL, SQLite, SQL Server, Oracle, DuckDB and ClickHouse.
+The list of every database that usql connects to, and a page for each main
+database, with the schemes and aliases from the scheme registry of dburl and
+an example URL (W9). The main databases have pages: PostgreSQL, MySQL,
+SQLite, SQL Server, Oracle, DuckDB and ClickHouse. A person adds notes to the
+page of a database, such as the options of its driver and what it does not
+support, and adds a page for another database.
 
 ### Reference
 

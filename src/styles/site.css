@@ -50,3 +50,50 @@
   --term-color-14: #56b6c2;
   --term-color-15: #ffffff;
 }
+
+/* The tabs of src/lib/tabs.mjs, with the look of Starlight's Tabs
+   component. */
+usql-tabs {
+  display: block;
+}
+
+usql-tabs .tablist-wrapper {
+  overflow-x: auto;
+}
+
+usql-tabs [role="tablist"] {
+  display: flex;
+  list-style: none;
+  border-bottom: 2px solid var(--sl-color-gray-5);
+  padding: 0;
+  margin: 0;
+}
+
+usql-tabs .tab {
+  display: flex;
+  margin: 0;
+}
+
+usql-tabs .tab > [role="tab"] {
+  --sl-tab-color-border: var(--sl-color-gray-5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: var(--sl-line-height-headings);
+  padding: 0.275rem 1.25rem;
+  text-decoration: none;
+  box-shadow: 0 2px 0 var(--sl-tab-color-border);
+  color: var(--sl-color-gray-3);
+  outline-offset: var(--sl-outline-offset-inside);
+  overflow-wrap: initial;
+}
+
+usql-tabs .tab [role="tab"][aria-selected="true"] {
+  --sl-tab-color-border: var(--sl-color-text-accent);
+  color: var(--sl-color-white);
+  font-weight: 600;
+}
+
+usql-tabs .tablist-wrapper ~ [role="tabpanel"] {
+  margin-top: 1rem;
+}

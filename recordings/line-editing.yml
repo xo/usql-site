@@ -1,0 +1,65 @@
+# The page guides/line-editing. A statement over several rows, Ctrl-P to
+# bring it back, Ctrl-R to search the history, and Tab to complete a name and
+# a meta command. The recorder types each key alone, so it types Ctrl-P and not
+# Up, which is an escape sequence of three keys. The database is a SQLite
+# file that the setup makes.
+title: Line editing and completion
+size: 100x26
+files:
+  books.sql: |
+    create table authors (id integer primary key, name text not null);
+    create table books (
+      id integer primary key,
+      author_id integer not null references authors (id),
+      title text not null,
+      published integer not null
+    );
+    insert into authors (id, name) values (1, 'Stanisław Lem'), (2, 'Octavia E. Butler');
+    insert into books (author_id, title, published) values
+      (1, 'Solaris', 1961), (1, 'The Cyberiad', 1965), (2, 'Kindred', 1979);
+setup:
+  - usql -X -q -f books.sql sq:books.db
+steps:
+  - type: usql books.db
+  - wait: "=> "
+  - sleep: 1s
+  - type: select title, published
+  - wait: "-> "
+  - type: from books
+  - wait: "-> "
+  - type: where published < 1970;
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: select count(*) from authors;
+  - wait: "=> "
+  - sleep: 1s
+  - keys: "\x10"
+  - sleep: 1s
+  - keys: "\x10"
+  - sleep: 1.5s
+  - keys: "\r"
+  - wait: "=> "
+  - sleep: 1.5s
+  - keys: "\x12"
+  - sleep: 500ms
+  - keys: "titl"
+  - sleep: 1.5s
+  - keys: "\x03"
+  - wait: "=> "
+  - keys: "select title from bo\t"
+  - sleep: 1s
+  - type: ;
+  - wait: "=> "
+  - sleep: 1s
+  - keys: '\\dt\t'
+  - sleep: 1.5s
+  - keys: "\t"
+  - sleep: 1s
+  - keys: "\r"
+  - sleep: 1s
+  - keys: "\r"
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms

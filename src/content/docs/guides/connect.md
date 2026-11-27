@@ -25,7 +25,7 @@ name
 | `dbname` | the database name, instance, or service name |
 | `?opt1=a&...` | options of the driver |
 | `/path/to/file` | a path on disk |
-| `name` | a connection that `\cset` or the configuration file named |
+| `name` | a [named connection](/guides/named-connections/) that `\cset` or the configuration file set |
 
 ## Short names
 

@@ -2,7 +2,8 @@
 
 ## Setup
 
-You need Node.js 22.23.4 or later, and Go to make recordings.
+You need Node.js 22.23.4 or later, and Go for the local check, the
+recordings and `cmd/gen`.
 
 ```bash
 npm ci

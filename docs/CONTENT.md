@@ -6,13 +6,14 @@ of a page is its group in the sidebar, and its file name is its address:
 
 ## The groups
 
-| Folder                      | Group of the sidebar | Editor collection                |
-| --------------------------- | -------------------- | -------------------------------- |
-| `src/content/docs/index.md` | the home page        | `cms/collections/00-home.yml`    |
-| `start/`                    | Get started          | `cms/collections/10-start.yml`   |
-| `guides/`                   | Guides               | `cms/collections/20-guides.yml`  |
-| `charts/`                   | Charts               | `cms/collections/30-charts.yml`  |
-| `project/`                  | Project              | `cms/collections/90-project.yml` |
+| Folder                      | Group of the sidebar | Editor collection                  |
+| --------------------------- | -------------------- | ---------------------------------- |
+| `src/content/docs/index.md` | the home page        | `cms/collections/00-home.yml`      |
+| `start/`                    | Get started          | `cms/collections/10-start.yml`     |
+| `guides/`                   | Guides               | `cms/collections/20-guides.yml`    |
+| `charts/`                   | Charts               | `cms/collections/30-charts.yml`    |
+| `databases/`                | Databases            | `cms/collections/40-databases.yml` |
+| `project/`                  | Project              | `cms/collections/90-project.yml`   |
 
 To add a group, add three things in one change: the folder, a group in the
 `sidebar` of `astro.config.mjs`, and a file in `cms/collections/`. A
@@ -45,7 +46,10 @@ previews show. `sidebar.order` sets the place of the page in its group, from
   runs.
 - Run every command in the release of usql that the site documents before
   you write it.
-- Link to another page by its address, such as `/guides/connect/`.
+- Link to another page by its address, such as `/guides/connect/`. The
+  build stops on a link to a page that does not exist, and on a link to a
+  heading that the page does not have. A link to a file of `public/`, such
+  as `/casts/tour.cast`, passes.
 - Do not copy a list of usql's options, commands or settings into a page.
   See rule 5 of `AGENTS.md`.
 
@@ -57,8 +61,57 @@ A page holds Markdown and these directives, and nothing else (D4):
 | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | `::cast[caption]{name="tour"}`                 | the recording `public/casts/tour.cast`. An optional `poster="0:12"` shows that frame before it plays |
 | `:::note`, `:::tip`, `:::caution`, `:::danger` | Starlight's asides, ended by `:::`                                                                   |
+| `::schemes{name="postgres"}`                   | the table of the URL schemes and aliases of one database, from dburl                                 |
+| `::databases`                                  | the table of every database, with a link to each page of `databases/`                                |
+| `:::tabs`                                      | tabs, one for each choice of the reader, such as a system. See below                                 |
 
 [RECORDING.md](RECORDING.md) says how to make a recording.
+
+The build stops on a directive that is wrong, such as a recording that does
+not exist or a database that dburl does not know. The editor has a form for
+each directive, under its Insert menu.
+
+### Tabs
+
+Use tabs when the reader picks one of several choices and reads only that
+one, such as the way to install usql. A `:::tabs` block holds one
+`::::tab[label]` section for each tab, and nothing else. A tab has four
+colons and ends with `::::`, so that an aside can be in it:
+
+```md
+:::tabs
+::::tab[macOS]
+Markdown for macOS.
+::::
+::::tab[Linux]
+Markdown for Linux.
+
+:::note
+An aside in a tab.
+:::
+::::
+:::
+```
+
+The first tab is open when the page loads. Do not put a heading in a tab,
+because the table of contents of the page lists every heading.
+
+## The page of a database
+
+The file name of the page of a database in `databases/` is the dialect of
+the database in dburl, such as `postgres.md` or `sqlite3.md`. `::databases`
+links to the page by that name, and `::schemes{name="..."}` takes the same
+name. The dialects are in `src/data/generated/schemes.json`. Each page has the
+same headings:
+
+1. `## Connect`, with a short example URL, and the forms of URL that this
+   database adds.
+2. `## Schemes and aliases`, with `::schemes{name="..."}`.
+
+Do not copy a scheme, an alias or a driver into a page by hand. `cmd/gen`
+writes `schemes.json` from the release of dburl that `go.mod` pins. When
+`go.mod` moves to another release, run `go run ./cmd/gen`. A test fails until
+the file matches.
 
 ## Pictures
 

@@ -40,8 +40,9 @@ add a row for it or delete it.
 
 1. Do not edit generated files. `public/admin/` is made by
    `scripts/prepare.mjs` from `cms/`. A file of `public/casts/` is made by
-   `cmd/record` from the script of the same name in `recordings/`. Change the
-   source, then make the file again.
+   `cmd/record` from the script of the same name in `recordings/`.
+   `src/data/generated/` is made by `cmd/gen` from the Go modules that
+   `go.mod` pins. Change the source, then make the file again.
 
 2. A page is a `.md` file, never `.mdx`, so that the web editor can open it.
    A page imports no component. Anything that is more than Markdown is a
@@ -62,8 +63,10 @@ add a row for it or delete it.
 
 5. Facts about usql come from usql. Do not copy a list of options, commands,
    settings, schemes or drivers into a page by hand. Such a list goes stale
-   the day usql changes. The reference pages will be generated from usql
-   (W2). Until then, a page links to the README of usql for the full list.
+   the day usql changes. The schemes of the databases come from dburl,
+   through `::schemes` and `::databases`. The reference pages will be
+   generated from usql (W2). Until then, a page links to the README of usql
+   for the full list.
 
 6. Every command that a page shows must work in the usql release that the
    site documents. Run it before you write it. A recording is the best proof.
@@ -119,7 +122,7 @@ packages, `./cmd/...` and `./internal/...`, and never `./...`.
 | Repository  | What it holds                                                                                                |
 | ----------- | ------------------------------------------------------------------------------------------------------------ |
 | `xo/usql`   | The program that the site documents. Its README is the source of most pages until the reference is generated |
-| `xo/dburl`  | The connection URL schemes, which the page of each database will come from                                   |
+| `xo/dburl`  | The connection URL schemes, which `cmd/gen` reads for the pages of the databases                             |
 | `xo/dbmeta` | Database metadata, and `dbrun`, which starts the databases of the recordings                                 |
 
 Do not change a sibling repository from here. If usql must change for a page,

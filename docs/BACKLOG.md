@@ -39,10 +39,10 @@ host.
 
 The reference pages list what usql has: the options of the command line, the
 meta commands, the settings, the print options, the variables, the
-environment variables and the keys of `config.yaml`. A Go program,
-`cmd/gen`, will write them as JSON to `src/data/generated/`, and Astro pages
-under `src/pages/reference/` will draw them with `StarlightPage`. The pages
-are not in the editor, because nobody edits them.
+environment variables and the keys of `config.yaml`. `cmd/gen`, which
+writes the schemes of W9, will write them as JSON to `src/data/generated/`,
+and Astro pages under `src/pages/reference/` will draw them with
+`StarlightPage`. The pages are not in the editor, because nobody edits them.
 
 `go.mod` pins the release of usql that the site documents, as usql pins
 dburl. usql must export the lists first. The options are in package main
@@ -98,17 +98,51 @@ The pages of [PLAN.md](PLAN.md) that are not written yet. Take each from the
 README of usql, run every command in the release, and add a recording where
 the plan says so.
 
-## W9. A page for each database
+On 2026-11-27, three agents wrote 14 guides and 10 recordings, with a build
+of usql main at 85d27b9 that held the SQLite and DuckDB drivers. What is
+left:
 
-Generate a page for each scheme of dburl's registry, with its aliases, its
-driver and an example URL, as usql's `gen.go` makes the README tables. A
-person adds notes to the main databases first.
+- Passwords, and Databases in Kubernetes. They need a server or a cluster
+  to run the commands against.
+- The chart pages after "Your first chart", which wait for W5 and W6.
+- The recipes.
+- The command line options that the guides leave out, such as `-1`, `-o`,
+  `-U` and `--dump`, until the move of usql to ox (usql's W83) is released.
+- The parts that the bugs of W14 hide: `\copy` with named connections, the
+  `DRIVER PARAMS` form of `\c`, `\dn` and `\d` of an index on DuckDB.
 
-## W10. Tabs for each system
+The recorder types each key on its own, so a script cannot type a key that
+sends more than one byte, such as Up. The line-editing recording uses
+Ctrl-P.
 
-A container directive, `:::tabs`, with one `::tab[macOS]` and so on in it,
-for the install page and the paths of the configuration directory. It needs
-a plugin in `src/lib/` and an editor component in `cms/editor.js` (D4).
+## W9. A page for each database: Done
+
+`cmd/gen` writes `src/data/generated/schemes.json` from the registry of the
+release of dburl that `go.mod` pins, as usql's `gen.go` makes the README
+tables. `TestSchemesAreCurrent` fails when the file is out of date.
+`src/lib/schemes.mjs` draws two directives from it: `::schemes{name="..."}`,
+the schemes, aliases and drivers of one database, and `::databases`, the
+table of every database. `src/content/docs/databases/` has the list, and a
+page with an example URL for PostgreSQL, MySQL, SQLite, SQL Server, Oracle,
+DuckDB and ClickHouse. A page for another database is a new Markdown file
+named by its dialect, as `docs/CONTENT.md` says.
+
+The example URLs of the pages of a server were not run against a server.
+usql read each of them and chose the right driver, and the connection was
+refused. Run each against its server when W4 has them.
+
+## W10. Tabs for each system: Done
+
+`:::tabs`, with one `::::tab[label]` section for each tab, is drawn by
+`src/lib/tabs.mjs` with the markup and the look of Starlight's Tabs
+component. `src/scripts/tabs.ts` switches the tabs. The editor component in
+`cms/editor.js` holds a list of tabs, each with a label and its Markdown. The
+install page uses it. The paths of the configuration directory belong to
+the guide "Configure usql" of W8, which can use the tabs.
+
+The tabs do not remember the choice of the reader from one page to the
+next, as Starlight's `syncKey` does. Add it when two pages have tabs with
+the same labels.
 
 ## W11. Move the guide of the README to the site
 
@@ -121,7 +155,48 @@ decides it in usql. Open question 3 of [PLAN.md](PLAN.md).
 A page for each release of usql, from its GitHub release, made by `cmd/gen`
 (W2).
 
-## W13. Check the links
+## W13. Check the links: Done
 
-Add `starlight-links-validator` to the build, so that a link to a page that
-does not exist stops it.
+`starlight-links-validator` runs in the build, so that a link to a page that
+does not exist, or to a heading that a page does not have, stops it. A link
+to a file of `public/` passes. `astro.config.mjs` excludes `/admin/`, which
+`scripts/prepare.mjs` makes.
+
+## W14. Fix the usql bugs found while writing the guides
+
+The agents that wrote the guides of W8 found these with usql main at
+85d27b9. Each one is a change to usql, which a maintainer makes there. The
+first three were run again by hand, and failed the same way.
+
+1. `\copy` does not look up a named connection, though the README says it
+   does. After `\cset shop sq:shop.db`,
+   `\copy shop dk:warehouse.duckdb 'select id, name from products' products`
+   prints `error: invalid database scheme`. `metacmd.Copy` passes the name
+   to `dburl.Parse`.
+2. `\c DRIVER PARAMS` fails, and so do `\cset NAME DRIVER PARAMS` and the
+   list form of `connections:` in `config.yaml`. `\c sqlite3 books.db`
+   prints `error: : driver not available`. `handler.Open` builds the URL
+   with no `SchemeName`.
+3. `usql nothere.db` makes an empty SQLite file. The README says that a path
+   with no driver must exist.
+4. `\timing on` from `init.sql`, from `\i`, or from an earlier `-c` prints
+   "Timing is on.", and the next query prints no time.
+5. When the last statement of `init.sql` fails, usql exits, though
+   `on_error_stop` is off. `\i` of a file whose last statement fails prints
+   the error twice and skips the next `-c`.
+6. `\set ON_ERROR_STOP on` is accepted and does nothing.
+7. `\begin -read-only` on SQLite lets an `INSERT` run.
+8. DuckDB: `\d products` shows no primary key, `\d` of an index lists no
+   columns, `\dn` leaves out `main`, and `\dnS` lists `main` three times.
+   These come from dbmeta.
+9. Time: after `\pset timezone America/New_York`, a DuckDB `date` of
+   2026-11-02 prints as Nov 1. `\pset timezone` prints an empty line. A
+   SQLite `timestamp` prints in the time zone of the machine, and DuckDB
+   prints it as stored.
+10. On SQLite, a statement prints the row count of an earlier one, such as
+    `CREATE INDEX 3`, `BEGIN 1` and `COMMIT 1`.
+11. Smaller ones: DuckDB `4.50::decimal(8,2)` prints `4.5`. With `\t`,
+    `\pset border 2` and `\pset linestyle unicode`, the top border is
+    missing. The error of `\pset format bogus` leaves `vertical` out of its
+    list. A script that fails only in `\gset` exits 0. The prompt escape `%x`
+    does nothing. `\uset term_graphics bogus` is accepted.

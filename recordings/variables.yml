@@ -1,0 +1,47 @@
+# Variables, interpolation, a backtick and \if, on the page guides/variables.
+# It needs only usql, because the database is a SQLite file that the setup
+# makes.
+title: Variables and conditionals in usql
+size: 100x26
+files:
+  shop.sql: |
+    create table products (id integer primary key, name text not null, price numeric(8,2) not null);
+    insert into products (id, name, price) values
+      (1, 'Green tea', 3.75), (2, 'Coffee beans', 12.25), (3, 'Cocoa', 5.25);
+setup:
+  - usql -X -f shop.sql sq:shop.db
+steps:
+  - type: usql shop.db
+  - wait: "=> "
+  - sleep: 1s
+  - type: \set col name
+  - wait: "=> "
+  - type: \set item 'Coffee beans'
+  - wait: "=> "
+  - type: select * from products where :"col" = :'item';
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \p
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \set day `date +%A`
+  - wait: "=> "
+  - type: \echo Today is :day
+  - wait: "=> "
+  - sleep: 1s
+  - type: select count(*) > 2 as many from products \gset
+  - wait: "=> "
+  - type: \if :many
+  - wait: "> "
+  - type: \echo More than two products
+  - wait: "> "
+  - type: \else
+  - wait: "> "
+  - type: \echo Two products or fewer
+  - wait: "> "
+  - type: \endif
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms

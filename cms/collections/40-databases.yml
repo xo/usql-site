@@ -1,0 +1,12 @@
+# The pages of the group "Databases" of the sidebar. index.md is the list of
+# every database. The file name of any other page is the dialect of its
+# database in dburl, such as postgres, so that ::databases links to it. The
+# editor asks for the file name of a new page. See docs/CONTENT.md.
+name: databases
+label: Databases
+folder: src/content/docs/databases
+extension: md
+format: frontmatter
+create: true
+slug: { template: "{{slug}}", editable: [create] }
+sortable_fields: [title]

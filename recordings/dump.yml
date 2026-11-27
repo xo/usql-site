@@ -1,0 +1,35 @@
+# \dump of a SQLite file, and a dump for DuckDB that usql -f loads, on the
+# page guides/dump. It needs only usql, because the database is a SQLite file
+# that the setup makes.
+title: Dump a database with usql
+size: 100x30
+files:
+  shop.sql: |
+    create table products (id integer primary key, name text not null, price numeric(8,2) not null);
+    create table orders (
+      id integer primary key,
+      product_id integer not null references products (id),
+      qty integer not null
+    );
+    insert into products (id, name, price) values
+      (1, 'Green tea', 3.75), (2, 'Coffee beans', 12.25), (3, 'Cocoa', 5.25);
+    insert into orders (product_id, qty) values (1, 2), (2, 1), (2, 3), (3, 1);
+setup:
+  - usql -X -f shop.sql sq:shop.db
+steps:
+  - type: usql shop.db
+  - wait: "=> "
+  - sleep: 1s
+  - type: \dump -schema-only -table orders
+  - wait: "=> "
+  - sleep: 3s
+  - type: \dump -target duckdb shop-duckdb.sql
+  - wait: "=> "
+  - type: \q
+  - wait: "$ "
+  - type: usql -f shop-duckdb.sql duckdb:shop.duckdb
+  - wait: "$ "
+  - sleep: 1.5s
+  - type: usql -c 'select * from orders' shop.duckdb
+  - wait: "$ "
+  - sleep: 2s

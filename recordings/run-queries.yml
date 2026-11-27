@@ -1,0 +1,51 @@
+# The query buffer, \g, \gx, \gset and \watch, on the page guides/run-queries.
+# It needs only usql, because the database is a SQLite file that the setup
+# makes.
+title: Run queries in usql
+size: 100x26
+files:
+  shop.sql: |
+    create table products (id integer primary key, name text not null, price numeric(8,2) not null);
+    create table orders (
+      id integer primary key,
+      product_id integer not null references products (id),
+      qty integer not null
+    );
+    insert into products (id, name, price) values
+      (1, 'Green tea', 3.75), (2, 'Coffee beans', 12.25), (3, 'Cocoa', 5.25);
+    insert into orders (product_id, qty) values (1, 2), (2, 1), (2, 3), (3, 1);
+setup:
+  - usql -X -f shop.sql sq:shop.db
+steps:
+  - type: usql shop.db
+  - wait: "=> "
+  - sleep: 1s
+  - type: select name, price from products
+  - wait: "-> "
+  - type: where price > 5
+  - wait: "-> "
+  - type: \p
+  - wait: "-> "
+  - sleep: 1s
+  - type: \g
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: select * from products where id = 2 \gx
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: select count(*) as n, sum(qty) as items from orders \gset
+  - wait: "=> "
+  - type: \echo :n orders, :items items
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: select count(*) as orders from orders \watch 1
+  - wait: "(every 1s)"
+  - sleep: 2.5s
+  - keys: \x03
+  - wait: "=> "
+  - sleep: 1s
+  - type: \q
+  - wait: "$ "
+  - type: usql -c 'select sum(qty) from orders' shop.db
+  - wait: "$ "
+  - sleep: 2s

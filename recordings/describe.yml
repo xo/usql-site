@@ -1,0 +1,46 @@
+# The \d commands on a DuckDB file, on the page guides/describe. It needs
+# only usql, because the database is a DuckDB file that the setup makes.
+title: Describe a database with usql
+size: 100x30
+files:
+  shop.sql: |
+    create table products (id integer primary key, name varchar not null, price decimal(8,2) not null);
+    create table orders (
+      id integer primary key,
+      product_id integer not null references products (id),
+      qty integer not null
+    );
+    create index orders_product on orders (product_id);
+    create view sales as
+      select p.name, sum(o.qty) as sold from orders o join products p on p.id = o.product_id group by p.name;
+    create macro with_tax(price) as price * 1.2;
+setup:
+  - usql -X -f shop.sql dk:shop.duckdb
+steps:
+  - type: usql shop.duckdb
+  - wait: "=> "
+  - sleep: 1s
+  - type: \d
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \d orders
+  - wait: "=> "
+  - sleep: 2s
+  - type: \dv
+  - wait: "=> "
+  - sleep: 1s
+  - type: \di
+  - wait: "=> "
+  - sleep: 1s
+  - type: \df
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \l
+  - wait: "=> "
+  - sleep: 1s
+  - type: \du
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms

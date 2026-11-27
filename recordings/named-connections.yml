@@ -1,0 +1,44 @@
+# The page guides/named-connections. config.yaml names a SQLite file, \cset
+# names a DuckDB file, and \c opens each by its name. The setup makes both
+# files.
+title: Named connections
+size: 100x26
+files:
+  .config/usql/config.yaml: |
+    connections:
+      books: sq:books.db
+  books.sql: |
+    create table books (id integer primary key, title text not null, published integer not null);
+    insert into books (title, published) values
+      ('Solaris', 1961), ('The Cyberiad', 1965), ('Kindred', 1979);
+  shelf.sql: |
+    create table shelves (id integer primary key, room text not null);
+    insert into shelves values (1, 'study'), (2, 'hall');
+setup:
+  - usql -X -q -f books.sql sq:books.db
+  - usql -X -q -f shelf.sql duckdb:shelf.duckdb
+steps:
+  - type: cat .config/usql/config.yaml
+  - wait: "$ "
+  - sleep: 1.5s
+  - type: usql books
+  - wait: "=> "
+  - sleep: 1s
+  - type: \cset shelf duckdb:shelf.duckdb
+  - wait: "=> "
+  - type: \cset
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: \c shelf
+  - wait: "=> "
+  - type: select * from shelves;
+  - wait: "=> "
+  - sleep: 2s
+  - type: \c books
+  - wait: "=> "
+  - type: select title from books where published < 1970;
+  - wait: "=> "
+  - sleep: 2s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms
