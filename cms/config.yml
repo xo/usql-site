@@ -1,0 +1,30 @@
+# The settings of the editor, Sveltia CMS. scripts/prepare.mjs adds a
+# collection for each file of cms/collections/, and writes the result to
+# public/admin/config.yml. A collection with no fields gets the fields of a
+# page, from cms/fields/page.yml.
+#
+# The editor edits this repository. A save is a commit to main, and the site
+# is built from main. See docs/CONTENT.md and D3.
+#
+# __AUTH_URL__ is filled in from the variable CMS_AUTH_URL: the address of the
+# service that signs an editor in to GitHub. Without it, an editor signs in
+# with a GitHub token. See docs/DEPLOY.md.
+
+backend:
+  name: github
+  repo: xo/usql-site
+  branch: main
+  base_url: __AUTH_URL__
+
+publish_mode: simple
+
+site_url: https://usql.app
+display_url: https://usql.app
+logo_url: /favicon.svg
+
+media_folder: public/images
+public_folder: /images
+
+slug:
+  encoding: ascii
+  clean_accents: true

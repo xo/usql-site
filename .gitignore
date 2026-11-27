@@ -1,7 +1,30 @@
-bin
-node_modules
-public
-resources
-# Local Netlify folder
-.netlify
-TODO
+# build output
+/dist/
+
+# made by scripts/prepare.mjs, from cms/ and the Sveltia CMS package
+/public/admin/
+
+# generated types
+/.astro/
+
+# dependencies
+/node_modules/
+
+# the recorder, when it is built with go build
+/record
+
+# logs and environment
+npm-debug.log*
+.env
+.env.*
+
+.DS_Store
+.idea/
+.vscode/
+
+# the agent skills are committed (D1), but the rest of .claude is one
+# person's settings and worktrees
+!/.agents/
+!/.claude/
+/.claude/settings.local.json
+/.claude/worktrees/

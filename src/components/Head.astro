@@ -1,0 +1,12 @@
+---
+// Starlight's head, with the script that plays the recordings of a page.
+import Default from "@astrojs/starlight/components/Head.astro";
+---
+
+<Default>
+  <slot />
+</Default>
+
+<script>
+  import "../scripts/cast.ts";
+</script>

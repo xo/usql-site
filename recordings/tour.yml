@@ -1,0 +1,40 @@
+# The tour on the page start/first-steps. It needs only usql, because the
+# database is a SQLite file that the setup makes.
+title: A first session with usql
+size: 100x26
+files:
+  books.sql: |
+    create table authors (id integer primary key, name text not null);
+    create table books (
+      id integer primary key,
+      author_id integer not null references authors (id),
+      title text not null,
+      published integer not null
+    );
+    insert into authors (id, name) values
+      (1, 'Ursula K. Le Guin'), (2, 'Octavia E. Butler'), (3, 'Stanisław Lem');
+    insert into books (author_id, title, published) values
+      (1, 'A Wizard of Earthsea', 1968), (1, 'The Left Hand of Darkness', 1969),
+      (1, 'The Dispossessed', 1974), (2, 'Kindred', 1979),
+      (2, 'Parable of the Sower', 1993), (3, 'Solaris', 1961),
+      (3, 'The Cyberiad', 1965);
+setup:
+  - usql -X -q -f books.sql sq:books.db
+steps:
+  - type: usql books.db
+  - wait: "=> "
+  - sleep: 1s
+  - type: \dt
+  - wait: "=> "
+  - sleep: 1.5s
+  - type: select a.name, count(*) as books, min(b.published) as first from authors a join books b on b.author_id = a.id group by a.name order by books desc;
+  - wait: "=> "
+  - sleep: 2s
+  - type: \pset format csv
+  - wait: "=> "
+  - type: select title, published from books where published < 1970;
+  - wait: "=> "
+  - sleep: 2s
+  - type: \q
+  - wait: "$ "
+  - sleep: 500ms

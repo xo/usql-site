@@ -1,0 +1,9 @@
+# The pages of the group "Get started" of the sidebar.
+name: start
+label: Get started
+folder: src/content/docs/start
+extension: md
+format: frontmatter
+create: true
+slug: "{{slug}}"
+sortable_fields: [title]

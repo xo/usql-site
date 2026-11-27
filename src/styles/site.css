@@ -1,0 +1,52 @@
+/* The colors of the site. The accent is the red of the usql logo. */
+:root {
+  --sl-color-accent-low: #3d1a1d;
+  --sl-color-accent: #e06c75;
+  --sl-color-accent-high: #f5c2c6;
+}
+
+:root[data-theme="light"] {
+  --sl-color-accent-low: #fbe3e5;
+  --sl-color-accent: #b8404b;
+  --sl-color-accent-high: #5c1d23;
+}
+
+/* A recording, and its caption. */
+.usql-cast {
+  margin: 1.5rem 0;
+}
+
+.usql-cast__player {
+  min-height: 4rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.usql-cast figcaption {
+  margin-top: 0.5rem;
+  font-size: var(--sl-text-sm);
+  color: var(--sl-color-gray-3);
+}
+
+/* The theme of the player: the colors of a dark terminal, in both themes of
+   the site, so that a recording looks as it did in the terminal. */
+.asciinema-player-theme-usql {
+  --term-color-foreground: #e6e6e6;
+  --term-color-background: #1b1d23;
+  --term-color-0: #282c34;
+  --term-color-1: #e06c75;
+  --term-color-2: #98c379;
+  --term-color-3: #e5c07b;
+  --term-color-4: #61afef;
+  --term-color-5: #c678dd;
+  --term-color-6: #56b6c2;
+  --term-color-7: #dcdfe4;
+  --term-color-8: #5c6370;
+  --term-color-9: #e06c75;
+  --term-color-10: #98c379;
+  --term-color-11: #e5c07b;
+  --term-color-12: #61afef;
+  --term-color-13: #c678dd;
+  --term-color-14: #56b6c2;
+  --term-color-15: #ffffff;
+}

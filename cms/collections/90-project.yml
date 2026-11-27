@@ -1,0 +1,9 @@
+# The pages of the group "Project" of the sidebar.
+name: project
+label: Project
+folder: src/content/docs/project
+extension: md
+format: frontmatter
+create: true
+slug: "{{slug}}"
+sortable_fields: [title]

@@ -1,0 +1,24 @@
+# The fields of a page of the site: Starlight's frontmatter, which
+# src/content.config.ts checks, and the Markdown body.
+- { name: title, label: Title, widget: string }
+- {
+    name: description,
+    label: "Description (for search engines and link previews)",
+    widget: text,
+    required: false,
+  }
+- name: sidebar
+  label: Sidebar
+  widget: object
+  required: false
+  collapsed: true
+  fields:
+    - {
+        name: order,
+        label: "Position in its group (1 is first)",
+        widget: number,
+        value_type: int,
+        required: false,
+      }
+    - { name: label, label: "Label, when it is not the title", widget: string, required: false }
+- { name: body, label: Body, widget: markdown }

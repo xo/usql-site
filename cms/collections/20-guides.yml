@@ -1,0 +1,9 @@
+# The pages of the group "Guides" of the sidebar.
+name: guides
+label: Guides
+folder: src/content/docs/guides
+extension: md
+format: frontmatter
+create: true
+slug: "{{slug}}"
+sortable_fields: [title]

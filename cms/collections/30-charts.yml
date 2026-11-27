@@ -1,0 +1,9 @@
+# The pages of the group "Charts" of the sidebar.
+name: charts
+label: Charts
+folder: src/content/docs/charts
+extension: md
+format: frontmatter
+create: true
+slug: "{{slug}}"
+sortable_fields: [title]

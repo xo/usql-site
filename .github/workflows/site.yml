@@ -1,0 +1,53 @@
+# Checks every push and pull request with the local check, and publishes the
+# site to GitHub Pages from main. It publishes only when the variable
+# PAGES_ENABLED of the repository is true, which a maintainer sets after
+# turning on GitHub Pages (W1). See docs/DEPLOY.md.
+name: site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - run: npm ci
+      - run: bash scripts/precommit.sh
+        env:
+          SITE_URL: https://usql.app
+      - if: vars.PAGES_ENABLED == 'true' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    if: vars.PAGES_ENABLED == 'true' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v5
